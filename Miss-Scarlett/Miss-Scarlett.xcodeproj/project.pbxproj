@@ -105,6 +105,7 @@
 		1630585F1DB257DC000D914E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BW;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = mortal;
 				TargetAttributes = {
@@ -273,8 +274,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = CB4RJ8S956;
 				INFOPLIST_FILE = "Miss-Scarlett/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "lbw.Miss-Scarlett";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -285,8 +288,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = CB4RJ8S956;
 				INFOPLIST_FILE = "Miss-Scarlett/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "lbw.Miss-Scarlett";
 				PRODUCT_NAME = "$(TARGET_NAME)";
