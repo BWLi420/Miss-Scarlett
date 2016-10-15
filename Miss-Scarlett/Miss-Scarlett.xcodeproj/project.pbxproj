@@ -17,6 +17,7 @@
 		163058AC1DB25F6D000D914E /* BWPublishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 163058AB1DB25F6D000D914E /* BWPublishVC.m */; };
 		163058AF1DB25FA0000D914E /* BWFriendTrendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 163058AE1DB25FA0000D914E /* BWFriendTrendVC.m */; };
 		163058B21DB25FCF000D914E /* BWMeTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 163058B11DB25FCF000D914E /* BWMeTabVC.m */; };
+		163058B61DB26D16000D914E /* UIImage+BWImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 163058B51DB26D16000D914E /* UIImage+BWImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,9 @@
 		163058AE1DB25FA0000D914E /* BWFriendTrendVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWFriendTrendVC.m; sourceTree = "<group>"; };
 		163058B01DB25FCF000D914E /* BWMeTabVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWMeTabVC.h; sourceTree = "<group>"; };
 		163058B11DB25FCF000D914E /* BWMeTabVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWMeTabVC.m; sourceTree = "<group>"; };
+		163058B41DB26D16000D914E /* UIImage+BWImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BWImage.h"; sourceTree = "<group>"; };
+		163058B51DB26D16000D914E /* UIImage+BWImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BWImage.m"; sourceTree = "<group>"; };
+		163058B71DB26DAC000D914E /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 			children = (
 				163058811DB25C29000D914E /* Classes */,
 				1630587B1DB257DD000D914E /* Info.plist */,
+				163058B71DB26DAC000D914E /* PrefixHeader.pch */,
 				163058761DB257DD000D914E /* Assets.xcassets */,
 				163058781DB257DD000D914E /* LaunchScreen.storyboard */,
 				1630586A1DB257DC000D914E /* Supporting Files */,
@@ -279,6 +284,7 @@
 		163058991DB25C29000D914E /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				163058B31DB26D02000D914E /* Category */,
 				1630589A1DB25C29000D914E /* main.m */,
 			);
 			path = Other;
@@ -315,6 +321,15 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		163058B31DB26D02000D914E /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				163058B41DB26D16000D914E /* UIImage+BWImage.h */,
+				163058B51DB26D16000D914E /* UIImage+BWImage.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,6 +406,7 @@
 			files = (
 				163058AF1DB25FA0000D914E /* BWFriendTrendVC.m in Sources */,
 				163058B21DB25FCF000D914E /* BWMeTabVC.m in Sources */,
+				163058B61DB26D16000D914E /* UIImage+BWImage.m in Sources */,
 				163058A61DB25F2A000D914E /* BWEssenceVC.m in Sources */,
 				163058AC1DB25F6D000D914E /* BWPublishVC.m in Sources */,
 				1630589F1DB25C29000D914E /* AppDelegate.m in Sources */,
@@ -510,6 +526,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = CB4RJ8S956;
+				GCC_PREFIX_HEADER = "Miss-Scarlett/PrefixHeader.pch";
 				INFOPLIST_FILE = "Miss-Scarlett/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -524,6 +541,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = CB4RJ8S956;
+				GCC_PREFIX_HEADER = "Miss-Scarlett/PrefixHeader.pch";
 				INFOPLIST_FILE = "Miss-Scarlett/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

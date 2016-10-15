@@ -23,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tabBarItem.image = [UIImage imageNamed:@"tabbar-light"];
     //添加子控制器
     [self addChildVC];
 }
