@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		163058721DB257DD000D914E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 163058711DB257DD000D914E /* ViewController.m */; };
 		163058751DB257DD000D914E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 163058731DB257DD000D914E /* Main.storyboard */; };
 		163058771DB257DD000D914E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 163058761DB257DD000D914E /* Assets.xcassets */; };
 		1630587A1DB257DD000D914E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 163058781DB257DD000D914E /* LaunchScreen.storyboard */; };
@@ -17,8 +16,6 @@
 
 /* Begin PBXFileReference section */
 		163058671DB257DC000D914E /* Miss-Scarlett.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Miss-Scarlett.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		163058701DB257DD000D914E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		163058711DB257DD000D914E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		163058741DB257DD000D914E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		163058761DB257DD000D914E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		163058791DB257DD000D914E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,9 +56,10 @@
 			isa = PBXGroup;
 			children = (
 				163058811DB25C29000D914E /* Classes */,
-				163058701DB257DD000D914E /* ViewController.h */,
-				163058711DB257DD000D914E /* ViewController.m */,
 				1630587B1DB257DD000D914E /* Info.plist */,
+				163058731DB257DD000D914E /* Main.storyboard */,
+				163058761DB257DD000D914E /* Assets.xcassets */,
+				163058781DB257DD000D914E /* LaunchScreen.storyboard */,
 				1630586A1DB257DC000D914E /* Supporting Files */,
 			);
 			path = "Miss-Scarlett";
@@ -70,9 +68,6 @@
 		1630586A1DB257DC000D914E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				163058731DB257DD000D914E /* Main.storyboard */,
-				163058761DB257DD000D914E /* Assets.xcassets */,
-				163058781DB257DD000D914E /* LaunchScreen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -370,7 +365,6 @@
 			files = (
 				1630589F1DB25C29000D914E /* AppDelegate.m in Sources */,
 				163058A01DB25C29000D914E /* main.m in Sources */,
-				163058721DB257DD000D914E /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
