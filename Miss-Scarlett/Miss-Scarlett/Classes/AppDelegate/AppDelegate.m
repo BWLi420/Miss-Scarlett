@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BWTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -16,8 +17,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    //1.创建窗口
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    //2.创建并设置窗口根控制器
+    BWTabBarController *tabBarVC = [[BWTabBarController alloc] init];
+    self.window.rootViewController = tabBarVC;
+    //3.显示窗口
+    [self.window makeKeyAndVisible];
+    
     return YES;
+}
+
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
+    
+    //内存警告时，清理图片缓存，SDWebImage、NSCache
 }
 
 
