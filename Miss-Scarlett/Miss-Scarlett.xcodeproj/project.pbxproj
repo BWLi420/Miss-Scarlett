@@ -21,6 +21,9 @@
 		167DF1BA1DB374DF0042640C /* UIBarButtonItem+BWItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 167DF1B91DB374DF0042640C /* UIBarButtonItem+BWItem.m */; };
 		167DF1C11DB393DD0042640C /* BWSettingTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 167DF1C01DB393DD0042640C /* BWSettingTabVC.m */; };
 		167DF1C41DB397980042640C /* BWNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 167DF1C31DB397980042640C /* BWNavController.m */; };
+		167DF1C71DB3B14A0042640C /* UIView+BWFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 167DF1C61DB3B14A0042640C /* UIView+BWFrame.m */; };
+		167DF1CA1DB3B59C0042640C /* BWNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 167DF1C91DB3B59C0042640C /* BWNavigationBar.m */; };
+		167DF1CD1DB3B6250042640C /* BWNavLeftBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 167DF1CC1DB3B6250042640C /* BWNavLeftBackView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,12 @@
 		167DF1C01DB393DD0042640C /* BWSettingTabVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSettingTabVC.m; sourceTree = "<group>"; };
 		167DF1C21DB397980042640C /* BWNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWNavController.h; sourceTree = "<group>"; };
 		167DF1C31DB397980042640C /* BWNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWNavController.m; sourceTree = "<group>"; };
+		167DF1C51DB3B14A0042640C /* UIView+BWFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BWFrame.h"; sourceTree = "<group>"; };
+		167DF1C61DB3B14A0042640C /* UIView+BWFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BWFrame.m"; sourceTree = "<group>"; };
+		167DF1C81DB3B59C0042640C /* BWNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWNavigationBar.h; sourceTree = "<group>"; };
+		167DF1C91DB3B59C0042640C /* BWNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWNavigationBar.m; sourceTree = "<group>"; };
+		167DF1CB1DB3B6250042640C /* BWNavLeftBackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWNavLeftBackView.h; sourceTree = "<group>"; };
+		167DF1CC1DB3B6250042640C /* BWNavLeftBackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWNavLeftBackView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +232,10 @@
 		163058901DB25C29000D914E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				167DF1C81DB3B59C0042640C /* BWNavigationBar.h */,
+				167DF1C91DB3B59C0042640C /* BWNavigationBar.m */,
+				167DF1CB1DB3B6250042640C /* BWNavLeftBackView.h */,
+				167DF1CC1DB3B6250042640C /* BWNavLeftBackView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -342,6 +355,8 @@
 				163058B51DB26D16000D914E /* UIImage+BWImage.m */,
 				167DF1B81DB374DF0042640C /* UIBarButtonItem+BWItem.h */,
 				167DF1B91DB374DF0042640C /* UIBarButtonItem+BWItem.m */,
+				167DF1C51DB3B14A0042640C /* UIView+BWFrame.h */,
+				167DF1C61DB3B14A0042640C /* UIView+BWFrame.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -455,11 +470,14 @@
 				163058B21DB25FCF000D914E /* BWMeTabVC.m in Sources */,
 				167DF1BA1DB374DF0042640C /* UIBarButtonItem+BWItem.m in Sources */,
 				167DF1C11DB393DD0042640C /* BWSettingTabVC.m in Sources */,
+				167DF1CD1DB3B6250042640C /* BWNavLeftBackView.m in Sources */,
+				167DF1CA1DB3B59C0042640C /* BWNavigationBar.m in Sources */,
 				163058B61DB26D16000D914E /* UIImage+BWImage.m in Sources */,
 				163058A61DB25F2A000D914E /* BWEssenceVC.m in Sources */,
 				163058AC1DB25F6D000D914E /* BWPublishVC.m in Sources */,
 				1630589F1DB25C29000D914E /* AppDelegate.m in Sources */,
 				163058A91DB25F55000D914E /* BWNewVC.m in Sources */,
+				167DF1C71DB3B14A0042640C /* UIView+BWFrame.m in Sources */,
 				163058A01DB25C29000D914E /* main.m in Sources */,
 				167DF1C41DB397980042640C /* BWNavController.m in Sources */,
 				163058A31DB25D8C000D914E /* BWTabBarController.m in Sources */,

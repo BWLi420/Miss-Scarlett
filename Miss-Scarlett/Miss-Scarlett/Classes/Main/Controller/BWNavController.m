@@ -7,6 +7,7 @@
 //
 
 #import "BWNavController.h"
+#import "BWNavigationBar.h"
 
 @interface BWNavController ()
 
@@ -39,12 +40,20 @@
      iOS7:appearance,修改短信界面，会导致联系人黑屏
      */
     UINavigationBar *navBar = [UINavigationBar appearanceWhenContainedIn:self, nil];
-    //设置导航控制器的文字大小
+    //设置导航条的文字大小
     navBar.titleTextAttributes = @{
                                    NSFontAttributeName:[UIFont systemFontOfSize:20]
                                    };
-    //设置导航控制器的背景图片
+    //设置导航条的背景图片
     [navBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+}
+
+//使用自定义的导航条
+- (void)viewDidLoad {
+    
+    BWNavigationBar *navBar = [[BWNavigationBar alloc] init];
+    navBar.frame = self.navigationBar.bounds;
+    [self setValue:navBar forKey:@"navigationBar"];
 }
 
 @end

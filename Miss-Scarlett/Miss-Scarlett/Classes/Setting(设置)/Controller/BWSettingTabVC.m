@@ -7,6 +7,7 @@
 //
 
 #import "BWSettingTabVC.h"
+#import "BWNavLeftBackView.h"
 
 @interface BWSettingTabVC ()
 
@@ -25,20 +26,9 @@
 //自定义导航控制器的返回按钮
 - (void)customBackBtn {
     
-    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [backBtn setImage:[UIImage imageNamed:@"navigationButtonReturn"] forState:UIControlStateNormal];
-    [backBtn setImage:[UIImage imageNamed:@"navigationButtonReturnClick"] forState:UIControlStateHighlighted];
-    [backBtn setTitle:@"返回" forState:UIControlStateNormal];
-    [backBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [backBtn setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-    [backBtn sizeToFit];
-    [backBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    BWNavLeftBackView *backView = [BWNavLeftBackView backViewWithTitle:@"返回" image:[UIImage imageNamed:@"navigationButtonReturn"] highImage:[UIImage imageNamed:@"navigationButtonReturnClick"] target: self action:@selector(backBtnClick)];
     
-    UIView *view = [[UIView alloc] initWithFrame:backBtn.bounds];
-    [view addSubview:backBtn];
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:view];
-    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backView];
 }
 
 //点击返回按钮返回上一个界面

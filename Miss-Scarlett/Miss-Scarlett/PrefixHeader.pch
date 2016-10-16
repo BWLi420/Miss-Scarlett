@@ -9,5 +9,6 @@
 #ifdef __OBJC__
 
 #import "UIBarButtonItem+BWItem.h"
+#import "UIView+BWFrame.h"
 
 #endif
