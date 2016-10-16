@@ -17,9 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"我";
-    self.tabBarItem.image = [UIImage imageNamed:@"tabBar_me_icon"];
-    self.tabBarItem.selectedImage = [UIImage imageWithOriginalName:@"tabBar_new_click_icon"];
 }
 
 #pragma mark - Table view data source

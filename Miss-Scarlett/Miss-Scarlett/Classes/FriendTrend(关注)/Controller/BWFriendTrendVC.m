@@ -17,9 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"关注";
-    self.tabBarItem.image = [UIImage imageNamed:@"tabBar_friendTrends_icon"];
-    self.tabBarItem.selectedImage = [UIImage imageWithOriginalName:@"tabBar_friendTrends_click_icon"];
+    
 }
 
 @end

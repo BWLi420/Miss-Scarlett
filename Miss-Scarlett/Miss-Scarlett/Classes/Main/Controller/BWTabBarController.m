@@ -45,30 +45,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //创建发布按钮，实现按钮的高亮
-    [self addPublishBtn];
-    
     //更改 tabBar 的渲染颜色
     self.tabBar.tintColor = [UIColor blackColor];
 
     //添加子控制器
     [self addChildVC];
+    //设置 tabBar 的内容
+    [self setUp];
     
-}
-
-//创建发布按钮，实现按钮的高亮
-- (void)addPublishBtn {
-    //只执行一次，也可以使用懒加载
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        
-        UIButton *publishBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [publishBtn setImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
-        [publishBtn setImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
-        [publishBtn sizeToFit];
-        publishBtn.center = CGPointMake(self.tabBar.frame.size.width * 0.5, self.tabBar.frame.size.height * 0.5);
-        [self.tabBar addSubview:publishBtn];
-    });
+    //创建发布按钮，实现按钮的高亮
+    [self addPublishBtn];
 }
 
 //添加子控制器
@@ -108,4 +94,50 @@
     [self addChildViewController:meNav];
 }
 
+//设置 tabBar 的内容
+- (void)setUp {
+    
+    //精华
+    UINavigationController *essenceNav = self.childViewControllers[0];
+    essenceNav.tabBarItem.title = @"精华";
+    essenceNav.tabBarItem.image = [UIImage imageNamed:@"tabBar_essence_icon"];
+    essenceNav.tabBarItem.selectedImage = [UIImage imageWithOriginalName:@"tabBar_essence_click_icon"];
+    
+    //新帖
+    UINavigationController *newNav = self.childViewControllers[1];
+    newNav.tabBarItem.title = @"新帖";
+    newNav.tabBarItem.image = [UIImage imageNamed:@"tabBar_new_icon"];
+    newNav.tabBarItem.selectedImage = [UIImage imageWithOriginalName:@"tabBar_new_click_icon"];
+    
+    //发布
+    UINavigationController *publishNav = self.childViewControllers[2];
+    publishNav.tabBarItem.enabled = NO;
+
+    //关注
+    UINavigationController *friendNav = self.childViewControllers[3];
+    friendNav.tabBarItem.title = @"关注";
+    friendNav.tabBarItem.image = [UIImage imageNamed:@"tabBar_friendTrends_icon"];
+    friendNav.tabBarItem.selectedImage = [UIImage imageWithOriginalName:@"tabBar_friendTrends_click_icon"];
+    
+    //我
+    UINavigationController *meNav = self.childViewControllers[4];
+    meNav.tabBarItem.title = @"我";
+    meNav.tabBarItem.image = [UIImage imageNamed:@"tabBar_me_icon"];
+    meNav.tabBarItem.selectedImage = [UIImage imageWithOriginalName:@"tabBar_new_click_icon"];
+}
+
+//创建发布按钮，实现按钮的高亮
+- (void)addPublishBtn {
+    //只执行一次，也可以使用懒加载
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        
+        UIButton *publishBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [publishBtn setImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
+        [publishBtn setImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
+        [publishBtn sizeToFit];
+        publishBtn.center = CGPointMake(self.tabBar.frame.size.width * 0.5, self.tabBar.frame.size.height * 0.5);
+        [self.tabBar addSubview:publishBtn];
+    });
+}
 @end

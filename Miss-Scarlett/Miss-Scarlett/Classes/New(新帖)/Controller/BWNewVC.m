@@ -17,10 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"新帖";
-    self.tabBarItem.image = [UIImage imageNamed:@"tabBar_new_icon"];
-    self.tabBarItem.selectedImage = [UIImage imageWithOriginalName:@"tabBar_new_click_icon"];
 }
-
 
 @end
