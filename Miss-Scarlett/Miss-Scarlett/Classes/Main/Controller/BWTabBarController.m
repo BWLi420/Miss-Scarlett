@@ -7,12 +7,15 @@
 //
 
 #import "BWTabBarController.h"
+#import "BWNavController.h"
 
 #import "BWEssenceVC.h"
 #import "BWNewVC.h"
 #import "BWPublishVC.h"
 #import "BWFriendTrendVC.h"
 #import "BWMeTabVC.h"
+
+#import "UIImage+BWImage.h"
 
 @interface BWTabBarController ()
 
@@ -66,31 +69,26 @@
     
     //精华
     BWEssenceVC *essenceVC = [[BWEssenceVC alloc] init];
-    essenceVC.view.backgroundColor = [UIColor orangeColor];
-    UINavigationController *essenceNav = [[UINavigationController alloc] initWithRootViewController:essenceVC];
+    BWNavController *essenceNav = [[BWNavController alloc] initWithRootViewController:essenceVC];
     [self addChildViewController:essenceNav];
     
     //新帖
     BWNewVC *newVC = [[BWNewVC alloc] init];
-    newVC.view.backgroundColor = [UIColor greenColor];
-    UINavigationController *newNav = [[UINavigationController alloc] initWithRootViewController:newVC];
+    BWNavController *newNav = [[BWNavController alloc] initWithRootViewController:newVC];
     [self addChildViewController:newNav];
     
     //发布
     BWPublishVC *publishVC = [[BWPublishVC alloc] init];
-    publishVC.view.backgroundColor = [UIColor redColor];
     [self addChildViewController:publishVC];
     
     //关注
     BWFriendTrendVC *FriendVC = [[BWFriendTrendVC alloc] init];
-    FriendVC.view.backgroundColor = [UIColor blueColor];
-    UINavigationController *FriendNav = [[UINavigationController alloc] initWithRootViewController:FriendVC];
+    BWNavController *FriendNav = [[BWNavController alloc] initWithRootViewController:FriendVC];
     [self addChildViewController:FriendNav];
     
     //我
     BWMeTabVC *meVC = [[BWMeTabVC alloc] init];
-    meVC.view.backgroundColor = [UIColor grayColor];
-    UINavigationController *meNav = [[UINavigationController alloc] initWithRootViewController:meVC];
+    BWNavController *meNav = [[BWNavController alloc] initWithRootViewController:meVC];
     [self addChildViewController:meNav];
 }
 
@@ -137,7 +135,13 @@
         [publishBtn setImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
         [publishBtn sizeToFit];
         publishBtn.center = CGPointMake(self.tabBar.frame.size.width * 0.5, self.tabBar.frame.size.height * 0.5);
+        [publishBtn addTarget:self action:@selector(publishBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.tabBar addSubview:publishBtn];
     });
+}
+
+- (void)publishBtnClick:(UIButton *)publishBtn {
+    
+    NSLog(@"发布");
 }
 @end
