@@ -45,7 +45,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //创建发布按钮，实现按钮的高亮状态
+    //创建发布按钮，实现按钮的高亮
     [self addPublishBtn];
     
     //更改 tabBar 的渲染颜色
@@ -56,9 +56,9 @@
     
 }
 
-//创建发布按钮，实现按钮的高亮状态
+//创建发布按钮，实现按钮的高亮
 - (void)addPublishBtn {
-    //只执行一次
+    //只执行一次，也可以使用懒加载
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         

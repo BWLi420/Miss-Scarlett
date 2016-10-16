@@ -83,7 +83,7 @@
 + (instancetype)imageWithOriginalName:(NSString *)imageName
 {
     UIImage *selImage = [UIImage imageNamed:imageName];
-    
+    //更改图片为非渲染
     selImage = [selImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     return selImage;
