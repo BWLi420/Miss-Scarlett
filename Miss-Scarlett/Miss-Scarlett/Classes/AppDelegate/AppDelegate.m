@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "BWTabBarController.h"
+#import "BWADViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +21,7 @@
     //1.创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     //2.创建并设置窗口根控制器
-    BWTabBarController *tabBarVC = [[BWTabBarController alloc] init];
+    BWADViewController *tabBarVC = [[BWADViewController alloc] init];
     self.window.rootViewController = tabBarVC;
     //3.显示窗口
     [self.window makeKeyAndVisible];

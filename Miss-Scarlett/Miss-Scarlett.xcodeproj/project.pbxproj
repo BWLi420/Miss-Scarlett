@@ -24,6 +24,15 @@
 		167DF1C71DB3B14A0042640C /* UIView+BWFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 167DF1C61DB3B14A0042640C /* UIView+BWFrame.m */; };
 		167DF1CA1DB3B59C0042640C /* BWNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 167DF1C91DB3B59C0042640C /* BWNavigationBar.m */; };
 		167DF1CD1DB3B6250042640C /* BWNavLeftBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 167DF1CC1DB3B6250042640C /* BWNavLeftBackView.m */; };
+		16D656561DB637BB00E74ECE /* BWADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D656541DB637BB00E74ECE /* BWADViewController.m */; };
+		16D656571DB637BB00E74ECE /* BWADViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16D656551DB637BB00E74ECE /* BWADViewController.xib */; };
+		16D656601DB639EC00E74ECE /* LaunchImage-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D656591DB639EC00E74ECE /* LaunchImage-568h@2x.png */; };
+		16D656611DB639EC00E74ECE /* LaunchImage-700-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D6565A1DB639EC00E74ECE /* LaunchImage-700-568h@2x.png */; };
+		16D656621DB639EC00E74ECE /* LaunchImage-700@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D6565B1DB639EC00E74ECE /* LaunchImage-700@2x.png */; };
+		16D656631DB639EC00E74ECE /* LaunchImage-800-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D6565C1DB639EC00E74ECE /* LaunchImage-800-667h@2x.png */; };
+		16D656641DB639EC00E74ECE /* LaunchImage-800-Portrait-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D6565D1DB639EC00E74ECE /* LaunchImage-800-Portrait-736h@3x.png */; };
+		16D656651DB639EC00E74ECE /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D6565E1DB639EC00E74ECE /* LaunchImage.png */; };
+		16D656661DB639EC00E74ECE /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D6565F1DB639EC00E74ECE /* LaunchImage@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +70,16 @@
 		167DF1C91DB3B59C0042640C /* BWNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWNavigationBar.m; sourceTree = "<group>"; };
 		167DF1CB1DB3B6250042640C /* BWNavLeftBackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWNavLeftBackView.h; sourceTree = "<group>"; };
 		167DF1CC1DB3B6250042640C /* BWNavLeftBackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWNavLeftBackView.m; sourceTree = "<group>"; };
+		16D656531DB637BB00E74ECE /* BWADViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWADViewController.h; sourceTree = "<group>"; };
+		16D656541DB637BB00E74ECE /* BWADViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWADViewController.m; sourceTree = "<group>"; };
+		16D656551DB637BB00E74ECE /* BWADViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWADViewController.xib; sourceTree = "<group>"; };
+		16D656591DB639EC00E74ECE /* LaunchImage-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-568h@2x.png"; sourceTree = "<group>"; };
+		16D6565A1DB639EC00E74ECE /* LaunchImage-700-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700-568h@2x.png"; sourceTree = "<group>"; };
+		16D6565B1DB639EC00E74ECE /* LaunchImage-700@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700@2x.png"; sourceTree = "<group>"; };
+		16D6565C1DB639EC00E74ECE /* LaunchImage-800-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-667h@2x.png"; sourceTree = "<group>"; };
+		16D6565D1DB639EC00E74ECE /* LaunchImage-800-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-Portrait-736h@3x.png"; sourceTree = "<group>"; };
+		16D6565E1DB639EC00E74ECE /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
+		16D6565F1DB639EC00E74ECE /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +125,7 @@
 		1630586A1DB257DC000D914E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				16D656581DB639EC00E74ECE /* 启动图片 */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -114,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				163058821DB25C29000D914E /* AppDelegate */,
+				16D6564F1DB6377D00E74ECE /* AD( 广告) */,
 				1630588D1DB25C29000D914E /* Main */,
 				163058851DB25C29000D914E /* Essence(精华) */,
 				163058951DB25C29000D914E /* New(新帖) */,
@@ -394,6 +415,55 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		16D6564F1DB6377D00E74ECE /* AD( 广告) */ = {
+			isa = PBXGroup;
+			children = (
+				16D656501DB6377D00E74ECE /* Controller */,
+				16D656511DB6377D00E74ECE /* Model */,
+				16D656521DB6377D00E74ECE /* View */,
+			);
+			name = "AD( 广告)";
+			path = "AppDelegate/AD( 广告)";
+			sourceTree = "<group>";
+		};
+		16D656501DB6377D00E74ECE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				16D656531DB637BB00E74ECE /* BWADViewController.h */,
+				16D656541DB637BB00E74ECE /* BWADViewController.m */,
+				16D656551DB637BB00E74ECE /* BWADViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		16D656511DB6377D00E74ECE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		16D656521DB6377D00E74ECE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		16D656581DB639EC00E74ECE /* 启动图片 */ = {
+			isa = PBXGroup;
+			children = (
+				16D656591DB639EC00E74ECE /* LaunchImage-568h@2x.png */,
+				16D6565A1DB639EC00E74ECE /* LaunchImage-700-568h@2x.png */,
+				16D6565B1DB639EC00E74ECE /* LaunchImage-700@2x.png */,
+				16D6565C1DB639EC00E74ECE /* LaunchImage-800-667h@2x.png */,
+				16D6565D1DB639EC00E74ECE /* LaunchImage-800-Portrait-736h@3x.png */,
+				16D6565E1DB639EC00E74ECE /* LaunchImage.png */,
+				16D6565F1DB639EC00E74ECE /* LaunchImage@2x.png */,
+			);
+			path = "启动图片";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -455,7 +525,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1630587A1DB257DD000D914E /* LaunchScreen.storyboard in Resources */,
+				16D656611DB639EC00E74ECE /* LaunchImage-700-568h@2x.png in Resources */,
+				16D656651DB639EC00E74ECE /* LaunchImage.png in Resources */,
 				163058771DB257DD000D914E /* Assets.xcassets in Resources */,
+				16D656621DB639EC00E74ECE /* LaunchImage-700@2x.png in Resources */,
+				16D656641DB639EC00E74ECE /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
+				16D656601DB639EC00E74ECE /* LaunchImage-568h@2x.png in Resources */,
+				16D656631DB639EC00E74ECE /* LaunchImage-800-667h@2x.png in Resources */,
+				16D656571DB637BB00E74ECE /* BWADViewController.xib in Resources */,
+				16D656661DB639EC00E74ECE /* LaunchImage@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +556,7 @@
 				1630589F1DB25C29000D914E /* AppDelegate.m in Sources */,
 				163058A91DB25F55000D914E /* BWNewVC.m in Sources */,
 				167DF1C71DB3B14A0042640C /* UIView+BWFrame.m in Sources */,
+				16D656561DB637BB00E74ECE /* BWADViewController.m in Sources */,
 				163058A01DB25C29000D914E /* main.m in Sources */,
 				167DF1C41DB397980042640C /* BWNavController.m in Sources */,
 				163058A31DB25D8C000D914E /* BWTabBarController.m in Sources */,

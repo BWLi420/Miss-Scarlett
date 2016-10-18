@@ -11,4 +11,7 @@
 #import "UIBarButtonItem+BWItem.h"
 #import "UIView+BWFrame.h"
 
+#define screenW [UIScreen mainScreen].bounds.size.width
+#define screenH [UIScreen mainScreen].bounds.size.height
+
 #endif
