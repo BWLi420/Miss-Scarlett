@@ -10,10 +10,11 @@
 
 #import "UIBarButtonItem+BWItem.h"
 #import "UIView+BWFrame.h"
+#import "AFHTTPSessionManager+BWManager.h"
 
 #define screenW [UIScreen mainScreen].bounds.size.width
 #define screenH [UIScreen mainScreen].bounds.size.height
 
-#define BASEURL @"http://mobads.baidu.com/cpro/ui/mads.php"
+#define BASEURL @"http://api.budejie.com/api/api_open.php"
 
 #endif
