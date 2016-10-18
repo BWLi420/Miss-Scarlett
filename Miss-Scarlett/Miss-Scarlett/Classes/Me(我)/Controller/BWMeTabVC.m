@@ -41,6 +41,7 @@
 //跳转到设置界面
 - (void)pushSetting {
     BWSettingTabVC *settingVC = [[BWSettingTabVC alloc] init];
+    self.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:settingVC animated:YES];
 }
 

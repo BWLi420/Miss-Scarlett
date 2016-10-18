@@ -8,6 +8,7 @@
 
 #import "BWNavController.h"
 #import "BWNavigationBar.h"
+#import "BWNavLeftBackView.h"
 
 @interface BWNavController ()
 
@@ -54,6 +55,37 @@
     BWNavigationBar *navBar = [[BWNavigationBar alloc] init];
     navBar.frame = self.navigationBar.bounds;
     [self setValue:navBar forKey:@"navigationBar"];
+}
+
+//自定义 push 方法，统一设置导航条的返回按钮
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    //方式一：super 在前面
+    /**
+    [super pushViewController:viewController animated:animated];
+    
+    //如果是非根控制器才设置返回按钮
+    if (viewController != self.childViewControllers[0]) {
+        
+        BWNavLeftBackView *backView = [BWNavLeftBackView backViewWithTitle:@"返回" image:[UIImage imageNamed:@"navigationButtonReturn"] highImage:[UIImage imageNamed:@"navigationButtonReturnClick"] target: self action:@selector(backBtnClick)];
+        
+        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backView];
+    }
+     */
+    
+    //方式二：super 在后面，此时可以通过导航控制器的子控制器的个数判断是否为非根控制器
+    if (self.childViewControllers.count > 0) {
+        
+        BWNavLeftBackView *backView = [BWNavLeftBackView backViewWithTitle:@"返回" image:[UIImage imageNamed:@"navigationButtonReturn"] highImage:[UIImage imageNamed:@"navigationButtonReturnClick"] target: self action:@selector(backBtnClick)];
+        
+        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backView];
+    }
+    
+    [super pushViewController:viewController animated:animated];
+}
+
+//点击返回按钮返回上一个界面
+- (void)backBtnClick {
+    [self popViewControllerAnimated:YES];
 }
 
 @end

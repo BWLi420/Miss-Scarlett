@@ -23,7 +23,7 @@
 
 @implementation BWTabBarController
 
-+ (void)load{
++ (void)load {
     //程序启动类加载到内存的时候只调用一次
     
     /* appearance 的简单说明
