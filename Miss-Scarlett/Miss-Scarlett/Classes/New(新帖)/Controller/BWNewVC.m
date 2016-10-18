@@ -7,6 +7,7 @@
 //
 
 #import "BWNewVC.h"
+#import "BWSubTagTabVC.h"
 
 @interface BWNewVC ()
 
@@ -27,6 +28,13 @@
     
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
     //左边视图
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"MainTagSubIcon"] highImage:[UIImage imageNamed:@"MainTagSubIconClick"] target:nil action:nil];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"MainTagSubIcon"] highImage:[UIImage imageNamed:@"MainTagSubIconClick"] target:self action:@selector(leftClick)];
 }
+
+- (void)leftClick {
+    
+    BWSubTagTabVC *subTagVC = [[BWSubTagTabVC alloc] init];
+    [self.navigationController pushViewController:subTagVC animated:YES];
+}
+
 @end

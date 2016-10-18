@@ -35,6 +35,7 @@
 		16D656661DB639EC00E74ECE /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D6565F1DB639EC00E74ECE /* LaunchImage@2x.png */; };
 		16D656691DB6449C00E74ECE /* AFHTTPSessionManager+BWManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D656681DB6449C00E74ECE /* AFHTTPSessionManager+BWManager.m */; };
 		16D6566C1DB647C800E74ECE /* BWADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6566B1DB647C800E74ECE /* BWADItem.m */; };
+		16D6566F1DB6559B00E74ECE /* BWSubTagTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6566E1DB6559B00E74ECE /* BWSubTagTabVC.m */; };
 		88F7D9BE2CB98E7BFCCB521B /* libPods-Miss-Scarlett.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B81E4B3932E35B097A0B8B2 /* libPods-Miss-Scarlett.a */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,8 @@
 		16D656681DB6449C00E74ECE /* AFHTTPSessionManager+BWManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPSessionManager+BWManager.m"; sourceTree = "<group>"; };
 		16D6566A1DB647C800E74ECE /* BWADItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWADItem.h; sourceTree = "<group>"; };
 		16D6566B1DB647C800E74ECE /* BWADItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWADItem.m; sourceTree = "<group>"; };
+		16D6566D1DB6559B00E74ECE /* BWSubTagTabVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWSubTagTabVC.h; sourceTree = "<group>"; };
+		16D6566E1DB6559B00E74ECE /* BWSubTagTabVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSubTagTabVC.m; sourceTree = "<group>"; };
 		6B81E4B3932E35B097A0B8B2 /* libPods-Miss-Scarlett.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Miss-Scarlett.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77EBA6007F5BDA9871577AAF /* Pods-Miss-Scarlett.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Miss-Scarlett.release.xcconfig"; path = "Pods/Target Support Files/Pods-Miss-Scarlett/Pods-Miss-Scarlett.release.xcconfig"; sourceTree = "<group>"; };
 		902AA2CF73A9C1064314319E /* Pods-Miss-Scarlett.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Miss-Scarlett.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Miss-Scarlett/Pods-Miss-Scarlett.debug.xcconfig"; sourceTree = "<group>"; };
@@ -330,6 +333,8 @@
 			children = (
 				163058A71DB25F55000D914E /* BWNewVC.h */,
 				163058A81DB25F55000D914E /* BWNewVC.m */,
+				16D6566D1DB6559B00E74ECE /* BWSubTagTabVC.h */,
+				16D6566E1DB6559B00E74ECE /* BWSubTagTabVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -632,6 +637,7 @@
 				163058AF1DB25FA0000D914E /* BWFriendTrendVC.m in Sources */,
 				163058B21DB25FCF000D914E /* BWMeTabVC.m in Sources */,
 				167DF1BA1DB374DF0042640C /* UIBarButtonItem+BWItem.m in Sources */,
+				16D6566F1DB6559B00E74ECE /* BWSubTagTabVC.m in Sources */,
 				167DF1C11DB393DD0042640C /* BWSettingTabVC.m in Sources */,
 				16D656691DB6449C00E74ECE /* AFHTTPSessionManager+BWManager.m in Sources */,
 				167DF1CD1DB3B6250042640C /* BWNavLeftBackView.m in Sources */,
