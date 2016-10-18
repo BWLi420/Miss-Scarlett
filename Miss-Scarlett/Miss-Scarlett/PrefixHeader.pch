@@ -14,4 +14,6 @@
 #define screenW [UIScreen mainScreen].bounds.size.width
 #define screenH [UIScreen mainScreen].bounds.size.height
 
+#define BASEURL @"http://mobads.baidu.com/cpro/ui/mads.php"
+
 #endif
