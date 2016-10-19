@@ -11,6 +11,7 @@
 #import "BWSubTagCell.h"
 
 #import <MJExtension.h>
+#import <SVProgressHUD.h>
 #import <UIImageView+WebCache.h>
 
 //保证 ID 不能被修改
@@ -19,6 +20,7 @@ static NSString *const ID = @"subTag";
 @interface BWSubTagTabVC ()
 /** 返回数据的数组 */
 @property(nonatomic, strong) NSArray *subTagArray;
+@property (strong, nonatomic) AFHTTPSessionManager *manger;
 @end
 
 @implementation BWSubTagTabVC
@@ -57,16 +59,20 @@ static NSString *const ID = @"subTag";
 //获取订阅列表数据
 - (void)loadData {
     
+    //提示用户稍等片刻
+    [SVProgressHUD showWithStatus:@"正在努力加载..."];
+    
     //创建会话管理者
-    AFHTTPSessionManager *manger = [AFHTTPSessionManager BWMangeer];
+    self.manger = [AFHTTPSessionManager BWMangeer];
     //设置请求参数
     NSMutableDictionary *parametersDict = [NSMutableDictionary dictionary];
     parametersDict[@"a"] = @"tag_recommend";
     parametersDict[@"c"] = @"topic";
     parametersDict[@"action"] = @"sub";
     //发送请求
-    [manger GET:BASEURL parameters:parametersDict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.manger GET:BASEURL parameters:parametersDict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
+        [SVProgressHUD dismiss];
         //获取返回数据的数组
         //字典数组转模型数组
         self.subTagArray = [BWSubTagItem mj_objectArrayWithKeyValuesArray:responseObject];
@@ -75,8 +81,25 @@ static NSString *const ID = @"subTag";
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
+        [SVProgressHUD showErrorWithStatus:@"网络错误"];
+        [SVProgressHUD dismissWithDelay:1.0];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            
+            [self.navigationController popViewControllerAnimated:YES];
+        });
         NSLog(@"%@", error);
     }];
+}
+
+//订阅界面关闭
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    //隐藏指示器
+    [SVProgressHUD dismiss];
+    //取消请求
+    [self.manger.tasks makeObjectsPerformSelector:@selector(cancel)];
 }
 
 #pragma mark - Table view data source
@@ -92,12 +115,12 @@ static NSString *const ID = @"subTag";
         cell = [BWSubTagCell subTagCell];
     }
  
-    /**
-    //根据系统版本取消 cell 的布局边缘
-    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
-        cell.layoutMargins = UIEdgeInsetsZero;
-    }
-     */
+    
+//    //根据系统版本取消 cell 的布局边缘
+//    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+//        cell.layoutMargins = UIEdgeInsetsZero;
+//    }
+    
     
     //获取模型
     cell.subTagItem = self.subTagArray[indexPath.row];
