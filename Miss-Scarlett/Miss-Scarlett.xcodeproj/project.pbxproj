@@ -37,6 +37,8 @@
 		16D6566C1DB647C800E74ECE /* BWADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6566B1DB647C800E74ECE /* BWADItem.m */; };
 		16D6566F1DB6559B00E74ECE /* BWSubTagTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6566E1DB6559B00E74ECE /* BWSubTagTabVC.m */; };
 		16D656721DB65E5500E74ECE /* BWSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D656711DB65E5500E74ECE /* BWSubTagItem.m */; };
+		16E1F0EA1DB7097400EB418E /* BWSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E1F0E81DB7097400EB418E /* BWSubTagCell.m */; };
+		16E1F0EB1DB7097400EB418E /* BWSubTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16E1F0E91DB7097400EB418E /* BWSubTagCell.xib */; };
 		88F7D9BE2CB98E7BFCCB521B /* libPods-Miss-Scarlett.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B81E4B3932E35B097A0B8B2 /* libPods-Miss-Scarlett.a */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +95,9 @@
 		16D6566E1DB6559B00E74ECE /* BWSubTagTabVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSubTagTabVC.m; sourceTree = "<group>"; };
 		16D656701DB65E5500E74ECE /* BWSubTagItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWSubTagItem.h; sourceTree = "<group>"; };
 		16D656711DB65E5500E74ECE /* BWSubTagItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSubTagItem.m; sourceTree = "<group>"; };
+		16E1F0E71DB7097400EB418E /* BWSubTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWSubTagCell.h; sourceTree = "<group>"; };
+		16E1F0E81DB7097400EB418E /* BWSubTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSubTagCell.m; sourceTree = "<group>"; };
+		16E1F0E91DB7097400EB418E /* BWSubTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWSubTagCell.xib; sourceTree = "<group>"; };
 		6B81E4B3932E35B097A0B8B2 /* libPods-Miss-Scarlett.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Miss-Scarlett.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77EBA6007F5BDA9871577AAF /* Pods-Miss-Scarlett.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Miss-Scarlett.release.xcconfig"; path = "Pods/Target Support Files/Pods-Miss-Scarlett/Pods-Miss-Scarlett.release.xcconfig"; sourceTree = "<group>"; };
 		902AA2CF73A9C1064314319E /* Pods-Miss-Scarlett.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Miss-Scarlett.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Miss-Scarlett/Pods-Miss-Scarlett.debug.xcconfig"; sourceTree = "<group>"; };
@@ -354,6 +359,9 @@
 		163058981DB25C29000D914E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				16E1F0E71DB7097400EB418E /* BWSubTagCell.h */,
+				16E1F0E81DB7097400EB418E /* BWSubTagCell.m */,
+				16E1F0E91DB7097400EB418E /* BWSubTagCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -573,6 +581,7 @@
 			files = (
 				1630587A1DB257DD000D914E /* LaunchScreen.storyboard in Resources */,
 				16D656611DB639EC00E74ECE /* LaunchImage-700-568h@2x.png in Resources */,
+				16E1F0EB1DB7097400EB418E /* BWSubTagCell.xib in Resources */,
 				16D656651DB639EC00E74ECE /* LaunchImage.png in Resources */,
 				163058771DB257DD000D914E /* Assets.xcassets in Resources */,
 				16D656621DB639EC00E74ECE /* LaunchImage-700@2x.png in Resources */,
@@ -652,6 +661,7 @@
 				163058A61DB25F2A000D914E /* BWEssenceVC.m in Sources */,
 				163058AC1DB25F6D000D914E /* BWPublishVC.m in Sources */,
 				1630589F1DB25C29000D914E /* AppDelegate.m in Sources */,
+				16E1F0EA1DB7097400EB418E /* BWSubTagCell.m in Sources */,
 				163058A91DB25F55000D914E /* BWNewVC.m in Sources */,
 				167DF1C71DB3B14A0042640C /* UIView+BWFrame.m in Sources */,
 				16D656561DB637BB00E74ECE /* BWADViewController.m in Sources */,

@@ -8,9 +8,13 @@
 
 #import "BWSubTagTabVC.h"
 #import "BWSubTagItem.h"
+#import "BWSubTagCell.h"
 
 #import <MJExtension.h>
 #import <UIImageView+WebCache.h>
+
+//保证 ID 不能被修改
+static NSString *const ID = @"subTag";
 
 @interface BWSubTagTabVC ()
 /** 返回数据的数组 */
@@ -24,6 +28,9 @@
     
     //获取订阅列表数据
     [self loadData];
+    
+//    //注册 xib
+//    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([BWSubTagCell class]) bundle:nil] forCellReuseIdentifier:ID];
 }
 
 //获取订阅列表数据
@@ -58,20 +65,20 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *ID = @"subTag";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+
+    BWSubTagCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+        cell = [BWSubTagCell subTagCell];
     }
     
     //获取模型
-    BWSubTagItem *item = self.subTagArray[indexPath.row];
-    cell.textLabel.text = item.theme_name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"订阅量:%@",item.sub_number];
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:item.image_list] placeholderImage:nil];
+    cell.subTagItem = self.subTagArray[indexPath.row];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 70;
 }
 
 @end
