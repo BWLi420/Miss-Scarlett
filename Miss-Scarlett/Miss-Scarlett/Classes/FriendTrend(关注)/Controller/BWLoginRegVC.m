@@ -8,6 +8,12 @@
 
 #import "BWLoginRegVC.h"
 
+/**
+ 复杂界面：
+    1.划分层次结构
+    2.每一个结构对应一个占位视图
+ */
+
 @interface BWLoginRegVC ()
 
 @end
@@ -19,5 +25,14 @@
     
     
 }
+
+- (IBAction)closeBtnClick:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)regBtnClick:(UIButton *)sender {
+    sender.selected = !sender.selected;
+}
+
 
 @end

@@ -17,12 +17,67 @@
                     <view key="view" contentMode="scaleToFill" id="hbp-ad-1f8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_register_background" translatesAutoresizingMaskIntoConstraints="NO" id="eJK-cu-rEf"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ei9-uO-afi">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsc-CN-u8t">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="uzm-W7-v3m"/>
+                                        </constraints>
+                                        <state key="normal" image="login_close_icon"/>
+                                        <connections>
+                                            <action selector="closeBtnClick:" destination="3PC-0K-X1r" eventType="touchUpInside" id="zZn-qF-4zv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTg-M2-bzX">
+                                        <state key="normal" title="注册账号"/>
+                                        <state key="selected" title="已有账号？"/>
+                                        <connections>
+                                            <action selector="regBtnClick:" destination="3PC-0K-X1r" eventType="touchUpInside" id="Sxn-a1-MAQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="fsc-CN-u8t" firstAttribute="leading" secondItem="ei9-uO-afi" secondAttribute="leading" id="44t-6T-mGm"/>
+                                    <constraint firstItem="fsc-CN-u8t" firstAttribute="top" secondItem="ei9-uO-afi" secondAttribute="top" constant="10" id="5Es-IW-9DS"/>
+                                    <constraint firstAttribute="bottom" secondItem="fsc-CN-u8t" secondAttribute="bottom" constant="10" id="avs-jF-PzU"/>
+                                    <constraint firstAttribute="height" constant="50" id="egn-qt-pJ8"/>
+                                    <constraint firstAttribute="bottom" secondItem="kTg-M2-bzX" secondAttribute="bottom" constant="10" id="ilY-Nh-GbC"/>
+                                    <constraint firstAttribute="trailing" secondItem="kTg-M2-bzX" secondAttribute="trailing" id="wsO-Qt-Sg9"/>
+                                    <constraint firstItem="kTg-M2-bzX" firstAttribute="top" secondItem="ei9-uO-afi" secondAttribute="top" constant="10" id="y8p-fO-PrB"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xk2-QB-LLH">
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="J75-mo-pzN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eJK-cu-rEf" firstAttribute="leading" secondItem="hbp-ad-1f8" secondAttribute="leading" id="ALb-lP-MkQ"/>
+                            <constraint firstItem="ei9-uO-afi" firstAttribute="top" secondItem="Wbk-8Z-f9R" secondAttribute="bottom" id="B6c-6L-u5N"/>
+                            <constraint firstAttribute="trailing" secondItem="eJK-cu-rEf" secondAttribute="trailing" id="Gh2-vC-hVH"/>
+                            <constraint firstItem="xk2-QB-LLH" firstAttribute="leading" secondItem="hbp-ad-1f8" secondAttribute="leading" id="JpN-PU-jQO"/>
+                            <constraint firstItem="eJK-cu-rEf" firstAttribute="top" secondItem="hbp-ad-1f8" secondAttribute="top" id="Vwm-0J-5Wi"/>
+                            <constraint firstItem="ei9-uO-afi" firstAttribute="leading" secondItem="hbp-ad-1f8" secondAttribute="leading" constant="10" id="c8w-HN-3cX"/>
+                            <constraint firstAttribute="trailing" secondItem="ei9-uO-afi" secondAttribute="trailing" constant="10" id="dbC-LG-eGS"/>
+                            <constraint firstAttribute="trailing" secondItem="xk2-QB-LLH" secondAttribute="trailing" id="hyG-5y-CDn"/>
+                            <constraint firstItem="xk2-QB-LLH" firstAttribute="top" secondItem="ei9-uO-afi" secondAttribute="bottom" constant="50" id="iXX-9y-8zn"/>
+                            <constraint firstItem="xiR-AG-q2z" firstAttribute="top" secondItem="eJK-cu-rEf" secondAttribute="bottom" id="saT-qz-Ext"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v8t-wG-gjR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="79" y="-130"/>
+            <point key="canvasLocation" x="-127" y="-327"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="login_close_icon" width="16" height="16"/>
+        <image name="login_register_background" width="320" height="568"/>
+    </resources>
 </document>
