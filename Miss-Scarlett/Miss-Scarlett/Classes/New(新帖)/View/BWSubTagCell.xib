@@ -59,7 +59,7 @@
                 <outlet property="nameLable" destination="X2X-e3-HuW" id="qNH-YH-R2y"/>
                 <outlet property="numLable" destination="gWu-Ij-ccE" id="ew1-gt-IvT"/>
             </connections>
-            <point key="canvasLocation" x="-25" y="-25"/>
+            <point key="canvasLocation" x="-85" y="-66"/>
         </tableViewCell>
     </objects>
     <resources>

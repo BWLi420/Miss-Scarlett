@@ -31,6 +31,27 @@ static NSString *const ID = @"subTag";
     
 //    //注册 xib
 //    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([BWSubTagCell class]) bundle:nil] forCellReuseIdentifier:ID];
+    
+    /** 设置 cell 的分割线全屏显示
+     
+        1. 在 描述 cell 时添加一个高度为 1 的 view
+        2. 利用系统的属性
+            - iOS7 之后 tableView 有一个属性导致分割线往右挪动  separatorInset
+            - iOS8 之后 cell 有一个属性导致分割线往右挪动一点点  layoutMargins
+        3. 重写 cell 的 setFrame （万能）
+            - 取消系统的分割线
+            - 设置 tableView 的背景色为分割线的颜色
+            - 在描述 cell 的 xib 中重写 setFrame,在设置 frame 之前把高度减小分割线的高度
+            - 补回分割线的高度
+     */
+    
+//    //取消系统 cell 分割线的内边距
+//    self.tableView.separatorInset = UIEdgeInsetsZero;
+    
+    //取消系统的 cell 分割线
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    //设置 tableView 的背景色为分割线的颜色
+    self.tableView.backgroundColor = [UIColor lightGrayColor];
 }
 
 //获取订阅列表数据
@@ -70,6 +91,13 @@ static NSString *const ID = @"subTag";
     if (cell == nil) {
         cell = [BWSubTagCell subTagCell];
     }
+ 
+    /**
+    //根据系统版本取消 cell 的布局边缘
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        cell.layoutMargins = UIEdgeInsetsZero;
+    }
+     */
     
     //获取模型
     cell.subTagItem = self.subTagArray[indexPath.row];
@@ -78,7 +106,7 @@ static NSString *const ID = @"subTag";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 70;
+    return 70 + 10;//加的 10 为 cell 分割线的高度
 }
 
 @end
