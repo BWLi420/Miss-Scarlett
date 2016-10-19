@@ -24,6 +24,9 @@
 		167DF1C71DB3B14A0042640C /* UIView+BWFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 167DF1C61DB3B14A0042640C /* UIView+BWFrame.m */; };
 		167DF1CA1DB3B59C0042640C /* BWNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 167DF1C91DB3B59C0042640C /* BWNavigationBar.m */; };
 		167DF1CD1DB3B6250042640C /* BWNavLeftBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 167DF1CC1DB3B6250042640C /* BWNavLeftBackView.m */; };
+		16AEDEB41DB7A38000C3F289 /* BWFriendTrendVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16AEDEB31DB7A38000C3F289 /* BWFriendTrendVC.xib */; };
+		16AEDEB71DB7A8A300C3F289 /* BWLoginRegVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 16AEDEB61DB7A8A300C3F289 /* BWLoginRegVC.m */; };
+		16AEDEB91DB7A8BE00C3F289 /* BWLoginRegVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AEDEB81DB7A8BE00C3F289 /* BWLoginRegVC.storyboard */; };
 		16D656561DB637BB00E74ECE /* BWADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D656541DB637BB00E74ECE /* BWADViewController.m */; };
 		16D656571DB637BB00E74ECE /* BWADViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16D656551DB637BB00E74ECE /* BWADViewController.xib */; };
 		16D656601DB639EC00E74ECE /* LaunchImage-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D656591DB639EC00E74ECE /* LaunchImage-568h@2x.png */; };
@@ -77,6 +80,10 @@
 		167DF1C91DB3B59C0042640C /* BWNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWNavigationBar.m; sourceTree = "<group>"; };
 		167DF1CB1DB3B6250042640C /* BWNavLeftBackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWNavLeftBackView.h; sourceTree = "<group>"; };
 		167DF1CC1DB3B6250042640C /* BWNavLeftBackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWNavLeftBackView.m; sourceTree = "<group>"; };
+		16AEDEB31DB7A38000C3F289 /* BWFriendTrendVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWFriendTrendVC.xib; sourceTree = "<group>"; };
+		16AEDEB51DB7A8A300C3F289 /* BWLoginRegVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWLoginRegVC.h; sourceTree = "<group>"; };
+		16AEDEB61DB7A8A300C3F289 /* BWLoginRegVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWLoginRegVC.m; sourceTree = "<group>"; };
+		16AEDEB81DB7A8BE00C3F289 /* BWLoginRegVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BWLoginRegVC.storyboard; sourceTree = "<group>"; };
 		16D656531DB637BB00E74ECE /* BWADViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWADViewController.h; sourceTree = "<group>"; };
 		16D656541DB637BB00E74ECE /* BWADViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWADViewController.m; sourceTree = "<group>"; };
 		16D656551DB637BB00E74ECE /* BWADViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWADViewController.xib; sourceTree = "<group>"; };
@@ -236,6 +243,10 @@
 			children = (
 				163058AD1DB25FA0000D914E /* BWFriendTrendVC.h */,
 				163058AE1DB25FA0000D914E /* BWFriendTrendVC.m */,
+				16AEDEB31DB7A38000C3F289 /* BWFriendTrendVC.xib */,
+				16AEDEB51DB7A8A300C3F289 /* BWLoginRegVC.h */,
+				16AEDEB61DB7A8A300C3F289 /* BWLoginRegVC.m */,
+				16AEDEB81DB7A8BE00C3F289 /* BWLoginRegVC.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -586,10 +597,12 @@
 				163058771DB257DD000D914E /* Assets.xcassets in Resources */,
 				16D656621DB639EC00E74ECE /* LaunchImage-700@2x.png in Resources */,
 				16D656641DB639EC00E74ECE /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
+				16AEDEB91DB7A8BE00C3F289 /* BWLoginRegVC.storyboard in Resources */,
 				16D656601DB639EC00E74ECE /* LaunchImage-568h@2x.png in Resources */,
 				16D656631DB639EC00E74ECE /* LaunchImage-800-667h@2x.png in Resources */,
 				16D656571DB637BB00E74ECE /* BWADViewController.xib in Resources */,
 				16D656661DB639EC00E74ECE /* LaunchImage@2x.png in Resources */,
+				16AEDEB41DB7A38000C3F289 /* BWFriendTrendVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,6 +675,7 @@
 				163058AC1DB25F6D000D914E /* BWPublishVC.m in Sources */,
 				1630589F1DB25C29000D914E /* AppDelegate.m in Sources */,
 				16E1F0EA1DB7097400EB418E /* BWSubTagCell.m in Sources */,
+				16AEDEB71DB7A8A300C3F289 /* BWLoginRegVC.m in Sources */,
 				163058A91DB25F55000D914E /* BWNewVC.m in Sources */,
 				167DF1C71DB3B14A0042640C /* UIView+BWFrame.m in Sources */,
 				16D656561DB637BB00E74ECE /* BWADViewController.m in Sources */,

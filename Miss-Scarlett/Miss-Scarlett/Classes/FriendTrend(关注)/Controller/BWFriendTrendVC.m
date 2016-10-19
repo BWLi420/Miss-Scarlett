@@ -7,6 +7,7 @@
 //
 
 #import "BWFriendTrendVC.h"
+#import "BWLoginRegVC.h"
 
 @interface BWFriendTrendVC ()
 
@@ -30,4 +31,12 @@
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"friendsRecommentIcon"] highImage:[UIImage imageNamed:@"friendsRecommentIcon-click"] target:nil action:nil];
 }
 
+- (IBAction)regLoginBtnClick:(id)sender {
+    
+    //加载箭头指向的控制器
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"BWLoginRegVC" bundle:nil];
+    BWLoginRegVC *loginRegVC = [storyboard instantiateInitialViewController];
+    
+    [self presentViewController:loginRegVC animated:YES completion:nil];
+}
 @end
