@@ -58,10 +58,10 @@
                 <constraint firstItem="2CY-Jb-veu" firstAttribute="trailing" secondItem="Mgb-OX-Pgq" secondAttribute="trailing" id="1jm-5q-c3g"/>
                 <constraint firstItem="Mgb-OX-Pgq" firstAttribute="top" secondItem="UCX-pL-qMx" secondAttribute="bottom" constant="30" id="EBK-BO-E1H"/>
                 <constraint firstItem="UCX-pL-qMx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="Gev-Kz-OzT"/>
-                <constraint firstItem="UCX-pL-qMx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="60" id="TX2-1S-gJ9"/>
+                <constraint firstItem="UCX-pL-qMx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="TX2-1S-gJ9"/>
                 <constraint firstItem="2CY-Jb-veu" firstAttribute="top" secondItem="Mgb-OX-Pgq" secondAttribute="bottom" constant="20" id="WRi-FK-6xj"/>
                 <constraint firstItem="Mgb-OX-Pgq" firstAttribute="width" secondItem="n73-5o-DZ3" secondAttribute="width" id="af8-Rm-Abm"/>
-                <constraint firstAttribute="trailing" secondItem="UCX-pL-qMx" secondAttribute="trailing" constant="60" id="f6S-tU-KG2"/>
+                <constraint firstAttribute="trailing" secondItem="UCX-pL-qMx" secondAttribute="trailing" constant="40" id="f6S-tU-KG2"/>
                 <constraint firstItem="Mgb-OX-Pgq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hhV-Oh-Yz9"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -111,11 +111,11 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="01D-7k-TdE" firstAttribute="leading" secondItem="AkM-Su-eFm" secondAttribute="leading" constant="60" id="D8T-oN-2Pt"/>
+                <constraint firstItem="01D-7k-TdE" firstAttribute="leading" secondItem="AkM-Su-eFm" secondAttribute="leading" constant="40" id="D8T-oN-2Pt"/>
                 <constraint firstItem="0v2-fe-lWr" firstAttribute="centerX" secondItem="AkM-Su-eFm" secondAttribute="centerX" id="Ncj-kU-rHK"/>
                 <constraint firstItem="01D-7k-TdE" firstAttribute="top" secondItem="AkM-Su-eFm" secondAttribute="top" constant="40" id="SeA-vv-bm4"/>
                 <constraint firstItem="0v2-fe-lWr" firstAttribute="width" secondItem="lIu-Se-WDf" secondAttribute="width" id="fwi-it-IFj"/>
-                <constraint firstAttribute="trailing" secondItem="01D-7k-TdE" secondAttribute="trailing" constant="60" id="t9O-WK-9Qi"/>
+                <constraint firstAttribute="trailing" secondItem="01D-7k-TdE" secondAttribute="trailing" constant="40" id="t9O-WK-9Qi"/>
                 <constraint firstItem="0v2-fe-lWr" firstAttribute="top" secondItem="01D-7k-TdE" secondAttribute="bottom" constant="30" id="vJF-xW-fPJ"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
