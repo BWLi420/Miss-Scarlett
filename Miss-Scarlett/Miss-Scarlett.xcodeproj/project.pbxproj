@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1623442F1DB85C94000EB4C6 /* BWRegLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1623442E1DB85C94000EB4C6 /* BWRegLoginView.m */; };
+		162344311DB85CA5000EB4C6 /* BWRegLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 162344301DB85CA5000EB4C6 /* BWRegLoginView.xib */; };
 		163058771DB257DD000D914E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 163058761DB257DD000D914E /* Assets.xcassets */; };
 		1630587A1DB257DD000D914E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 163058781DB257DD000D914E /* LaunchScreen.storyboard */; };
 		1630589F1DB25C29000D914E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 163058841DB25C29000D914E /* AppDelegate.m */; };
@@ -46,6 +48,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1623442D1DB85C94000EB4C6 /* BWRegLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWRegLoginView.h; sourceTree = "<group>"; };
+		1623442E1DB85C94000EB4C6 /* BWRegLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWRegLoginView.m; sourceTree = "<group>"; };
+		162344301DB85CA5000EB4C6 /* BWRegLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWRegLoginView.xib; sourceTree = "<group>"; };
 		163058671DB257DC000D914E /* Miss-Scarlett.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Miss-Scarlett.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		163058761DB257DD000D914E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		163058791DB257DD000D914E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -261,6 +266,9 @@
 		1630588C1DB25C29000D914E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1623442D1DB85C94000EB4C6 /* BWRegLoginView.h */,
+				1623442E1DB85C94000EB4C6 /* BWRegLoginView.m */,
+				162344301DB85CA5000EB4C6 /* BWRegLoginView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -602,6 +610,7 @@
 				16D656631DB639EC00E74ECE /* LaunchImage-800-667h@2x.png in Resources */,
 				16D656571DB637BB00E74ECE /* BWADViewController.xib in Resources */,
 				16D656661DB639EC00E74ECE /* LaunchImage@2x.png in Resources */,
+				162344311DB85CA5000EB4C6 /* BWRegLoginView.xib in Resources */,
 				16AEDEB41DB7A38000C3F289 /* BWFriendTrendVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -668,6 +677,7 @@
 				167DF1C11DB393DD0042640C /* BWSettingTabVC.m in Sources */,
 				16D656691DB6449C00E74ECE /* AFHTTPSessionManager+BWManager.m in Sources */,
 				167DF1CD1DB3B6250042640C /* BWNavLeftBackView.m in Sources */,
+				1623442F1DB85C94000EB4C6 /* BWRegLoginView.m in Sources */,
 				167DF1CA1DB3B59C0042640C /* BWNavigationBar.m in Sources */,
 				163058B61DB26D16000D914E /* UIImage+BWImage.m in Sources */,
 				16D6566C1DB647C800E74ECE /* BWADItem.m in Sources */,

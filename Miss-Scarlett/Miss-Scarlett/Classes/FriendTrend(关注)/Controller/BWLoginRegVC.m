@@ -7,6 +7,7 @@
 //
 
 #import "BWLoginRegVC.h"
+#import "BWRegLoginView.h"
 
 /**
  复杂界面：
@@ -15,6 +16,7 @@
  */
 
 @interface BWLoginRegVC ()
+@property (weak, nonatomic) IBOutlet UIView *regLoginView;
 
 @end
 
@@ -23,7 +25,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    //创建登录注册的 view
+    BWRegLoginView *regLoginView = [BWRegLoginView regLoginView];
+    regLoginView.frame = self.regLoginView.bounds;
+    [self.regLoginView addSubview:regLoginView];
 }
 
 - (IBAction)closeBtnClick:(UIButton *)sender {

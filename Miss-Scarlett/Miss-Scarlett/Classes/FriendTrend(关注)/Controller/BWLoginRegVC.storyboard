@@ -52,24 +52,36 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xk2-QB-LLH">
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="J75-mo-pzN"/>
+                                    <constraint firstAttribute="height" constant="300" id="w0B-KB-wx5"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6CI-Ny-O3U">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="E8L-FR-mLy"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xiR-AG-q2z" firstAttribute="top" secondItem="6CI-Ny-O3U" secondAttribute="bottom" constant="20" id="1ig-MT-zUe"/>
+                            <constraint firstItem="xk2-QB-LLH" firstAttribute="top" secondItem="ei9-uO-afi" secondAttribute="bottom" constant="50" id="6Kv-RP-ndC"/>
+                            <constraint firstItem="6CI-Ny-O3U" firstAttribute="leading" secondItem="hbp-ad-1f8" secondAttribute="leading" id="93k-KG-3PA"/>
                             <constraint firstItem="eJK-cu-rEf" firstAttribute="leading" secondItem="hbp-ad-1f8" secondAttribute="leading" id="ALb-lP-MkQ"/>
                             <constraint firstItem="ei9-uO-afi" firstAttribute="top" secondItem="Wbk-8Z-f9R" secondAttribute="bottom" id="B6c-6L-u5N"/>
                             <constraint firstAttribute="trailing" secondItem="eJK-cu-rEf" secondAttribute="trailing" id="Gh2-vC-hVH"/>
-                            <constraint firstItem="xk2-QB-LLH" firstAttribute="leading" secondItem="hbp-ad-1f8" secondAttribute="leading" id="JpN-PU-jQO"/>
                             <constraint firstItem="eJK-cu-rEf" firstAttribute="top" secondItem="hbp-ad-1f8" secondAttribute="top" id="Vwm-0J-5Wi"/>
                             <constraint firstItem="ei9-uO-afi" firstAttribute="leading" secondItem="hbp-ad-1f8" secondAttribute="leading" constant="10" id="c8w-HN-3cX"/>
                             <constraint firstAttribute="trailing" secondItem="ei9-uO-afi" secondAttribute="trailing" constant="10" id="dbC-LG-eGS"/>
-                            <constraint firstAttribute="trailing" secondItem="xk2-QB-LLH" secondAttribute="trailing" id="hyG-5y-CDn"/>
-                            <constraint firstItem="xk2-QB-LLH" firstAttribute="top" secondItem="ei9-uO-afi" secondAttribute="bottom" constant="50" id="iXX-9y-8zn"/>
+                            <constraint firstAttribute="trailing" secondItem="xk2-QB-LLH" secondAttribute="trailing" id="fCh-Yn-U1m"/>
+                            <constraint firstItem="xk2-QB-LLH" firstAttribute="leading" secondItem="hbp-ad-1f8" secondAttribute="leading" id="jqW-KR-xpd"/>
                             <constraint firstItem="xiR-AG-q2z" firstAttribute="top" secondItem="eJK-cu-rEf" secondAttribute="bottom" id="saT-qz-Ext"/>
+                            <constraint firstAttribute="trailing" secondItem="6CI-Ny-O3U" secondAttribute="trailing" id="t3D-fq-OEb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="regLoginView" destination="xk2-QB-LLH" id="vSB-TW-0uF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v8t-wG-gjR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
