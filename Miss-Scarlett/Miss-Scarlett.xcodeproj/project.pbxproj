@@ -11,6 +11,7 @@
 		162344311DB85CA5000EB4C6 /* BWRegLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 162344301DB85CA5000EB4C6 /* BWRegLoginView.xib */; };
 		162344341DB873DD000EB4C6 /* BWFastLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 162344331DB873DD000EB4C6 /* BWFastLoginVC.m */; };
 		162344371DB87757000EB4C6 /* BWFastLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 162344361DB87757000EB4C6 /* BWFastLoginButton.m */; };
+		1623443A1DB87CEE000EB4C6 /* BWTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 162344391DB87CEE000EB4C6 /* BWTextField.m */; };
 		163058771DB257DD000D914E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 163058761DB257DD000D914E /* Assets.xcassets */; };
 		1630587A1DB257DD000D914E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 163058781DB257DD000D914E /* LaunchScreen.storyboard */; };
 		1630589F1DB25C29000D914E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 163058841DB25C29000D914E /* AppDelegate.m */; };
@@ -57,6 +58,8 @@
 		162344331DB873DD000EB4C6 /* BWFastLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWFastLoginVC.m; sourceTree = "<group>"; };
 		162344351DB87757000EB4C6 /* BWFastLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWFastLoginButton.h; sourceTree = "<group>"; };
 		162344361DB87757000EB4C6 /* BWFastLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWFastLoginButton.m; sourceTree = "<group>"; };
+		162344381DB87CEE000EB4C6 /* BWTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWTextField.h; sourceTree = "<group>"; };
+		162344391DB87CEE000EB4C6 /* BWTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWTextField.m; sourceTree = "<group>"; };
 		163058671DB257DC000D914E /* Miss-Scarlett.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Miss-Scarlett.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		163058761DB257DD000D914E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		163058791DB257DD000D914E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -279,6 +282,8 @@
 				162344301DB85CA5000EB4C6 /* BWRegLoginView.xib */,
 				162344351DB87757000EB4C6 /* BWFastLoginButton.h */,
 				162344361DB87757000EB4C6 /* BWFastLoginButton.m */,
+				162344381DB87CEE000EB4C6 /* BWTextField.h */,
+				162344391DB87CEE000EB4C6 /* BWTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -694,6 +699,7 @@
 				16D6566C1DB647C800E74ECE /* BWADItem.m in Sources */,
 				163058A61DB25F2A000D914E /* BWEssenceVC.m in Sources */,
 				163058AC1DB25F6D000D914E /* BWPublishVC.m in Sources */,
+				1623443A1DB87CEE000EB4C6 /* BWTextField.m in Sources */,
 				1630589F1DB25C29000D914E /* AppDelegate.m in Sources */,
 				16E1F0EA1DB7097400EB418E /* BWSubTagCell.m in Sources */,
 				16AEDEB71DB7A8A300C3F289 /* BWLoginRegVC.m in Sources */,
