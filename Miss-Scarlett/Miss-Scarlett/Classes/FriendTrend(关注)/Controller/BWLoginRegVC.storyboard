@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -69,23 +70,24 @@
                             <constraint firstItem="6CI-Ny-O3U" firstAttribute="leading" secondItem="hbp-ad-1f8" secondAttribute="leading" id="93k-KG-3PA"/>
                             <constraint firstItem="eJK-cu-rEf" firstAttribute="leading" secondItem="hbp-ad-1f8" secondAttribute="leading" id="ALb-lP-MkQ"/>
                             <constraint firstItem="ei9-uO-afi" firstAttribute="top" secondItem="Wbk-8Z-f9R" secondAttribute="bottom" id="B6c-6L-u5N"/>
+                            <constraint firstItem="xk2-QB-LLH" firstAttribute="width" secondItem="eJK-cu-rEf" secondAttribute="width" multiplier="2" id="CdW-kE-m7E"/>
                             <constraint firstAttribute="trailing" secondItem="eJK-cu-rEf" secondAttribute="trailing" id="Gh2-vC-hVH"/>
                             <constraint firstItem="eJK-cu-rEf" firstAttribute="top" secondItem="hbp-ad-1f8" secondAttribute="top" id="Vwm-0J-5Wi"/>
                             <constraint firstItem="ei9-uO-afi" firstAttribute="leading" secondItem="hbp-ad-1f8" secondAttribute="leading" constant="10" id="c8w-HN-3cX"/>
                             <constraint firstAttribute="trailing" secondItem="ei9-uO-afi" secondAttribute="trailing" constant="10" id="dbC-LG-eGS"/>
-                            <constraint firstAttribute="trailing" secondItem="xk2-QB-LLH" secondAttribute="trailing" id="fCh-Yn-U1m"/>
                             <constraint firstItem="xk2-QB-LLH" firstAttribute="leading" secondItem="hbp-ad-1f8" secondAttribute="leading" id="jqW-KR-xpd"/>
                             <constraint firstItem="xiR-AG-q2z" firstAttribute="top" secondItem="eJK-cu-rEf" secondAttribute="bottom" id="saT-qz-Ext"/>
                             <constraint firstAttribute="trailing" secondItem="6CI-Ny-O3U" secondAttribute="trailing" id="t3D-fq-OEb"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="leadingCons" destination="jqW-KR-xpd" id="G3a-7x-aiX"/>
                         <outlet property="regLoginView" destination="xk2-QB-LLH" id="vSB-TW-0uF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v8t-wG-gjR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-127" y="-327"/>
+            <point key="canvasLocation" x="-956" y="-731"/>
         </scene>
     </scenes>
     <resources>

@@ -10,5 +10,7 @@
 
 @interface BWRegLoginView : UIView
 
-+ (instancetype)regLoginView;
++ (instancetype)loginView;
++ (instancetype)regView;
+
 @end

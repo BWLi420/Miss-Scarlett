@@ -15,8 +15,12 @@
 
 @implementation BWRegLoginView
 
-+ (instancetype)regLoginView {
++ (instancetype)loginView {
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] firstObject];
+}
+
++ (instancetype)regView {
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] lastObject];
 }
 
 //修复登录按钮的北京图片拉伸问题
