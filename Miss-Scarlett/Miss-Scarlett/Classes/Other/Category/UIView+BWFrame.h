@@ -15,4 +15,7 @@
 @property CGFloat bw_width;
 @property CGFloat bw_height;
 
+@property CGFloat bw_centerX;
+@property CGFloat bw_centerY;
+
 @end

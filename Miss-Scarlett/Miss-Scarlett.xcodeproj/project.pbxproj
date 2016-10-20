@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1623442F1DB85C94000EB4C6 /* BWRegLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1623442E1DB85C94000EB4C6 /* BWRegLoginView.m */; };
 		162344311DB85CA5000EB4C6 /* BWRegLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 162344301DB85CA5000EB4C6 /* BWRegLoginView.xib */; };
+		162344341DB873DD000EB4C6 /* BWFastLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 162344331DB873DD000EB4C6 /* BWFastLoginVC.m */; };
+		162344371DB87757000EB4C6 /* BWFastLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 162344361DB87757000EB4C6 /* BWFastLoginButton.m */; };
 		163058771DB257DD000D914E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 163058761DB257DD000D914E /* Assets.xcassets */; };
 		1630587A1DB257DD000D914E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 163058781DB257DD000D914E /* LaunchScreen.storyboard */; };
 		1630589F1DB25C29000D914E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 163058841DB25C29000D914E /* AppDelegate.m */; };
@@ -51,6 +53,10 @@
 		1623442D1DB85C94000EB4C6 /* BWRegLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWRegLoginView.h; sourceTree = "<group>"; };
 		1623442E1DB85C94000EB4C6 /* BWRegLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWRegLoginView.m; sourceTree = "<group>"; };
 		162344301DB85CA5000EB4C6 /* BWRegLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWRegLoginView.xib; sourceTree = "<group>"; };
+		162344321DB873DD000EB4C6 /* BWFastLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWFastLoginVC.h; sourceTree = "<group>"; };
+		162344331DB873DD000EB4C6 /* BWFastLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWFastLoginVC.m; sourceTree = "<group>"; };
+		162344351DB87757000EB4C6 /* BWFastLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWFastLoginButton.h; sourceTree = "<group>"; };
+		162344361DB87757000EB4C6 /* BWFastLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWFastLoginButton.m; sourceTree = "<group>"; };
 		163058671DB257DC000D914E /* Miss-Scarlett.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Miss-Scarlett.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		163058761DB257DD000D914E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		163058791DB257DD000D914E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -252,6 +258,8 @@
 				16AEDEB51DB7A8A300C3F289 /* BWLoginRegVC.h */,
 				16AEDEB61DB7A8A300C3F289 /* BWLoginRegVC.m */,
 				16AEDEB81DB7A8BE00C3F289 /* BWLoginRegVC.storyboard */,
+				162344321DB873DD000EB4C6 /* BWFastLoginVC.h */,
+				162344331DB873DD000EB4C6 /* BWFastLoginVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -269,6 +277,8 @@
 				1623442D1DB85C94000EB4C6 /* BWRegLoginView.h */,
 				1623442E1DB85C94000EB4C6 /* BWRegLoginView.m */,
 				162344301DB85CA5000EB4C6 /* BWRegLoginView.xib */,
+				162344351DB87757000EB4C6 /* BWFastLoginButton.h */,
+				162344361DB87757000EB4C6 /* BWFastLoginButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -673,6 +683,7 @@
 				163058AF1DB25FA0000D914E /* BWFriendTrendVC.m in Sources */,
 				163058B21DB25FCF000D914E /* BWMeTabVC.m in Sources */,
 				167DF1BA1DB374DF0042640C /* UIBarButtonItem+BWItem.m in Sources */,
+				162344341DB873DD000EB4C6 /* BWFastLoginVC.m in Sources */,
 				16D6566F1DB6559B00E74ECE /* BWSubTagTabVC.m in Sources */,
 				167DF1C11DB393DD0042640C /* BWSettingTabVC.m in Sources */,
 				16D656691DB6449C00E74ECE /* AFHTTPSessionManager+BWManager.m in Sources */,
@@ -693,6 +704,7 @@
 				167DF1C41DB397980042640C /* BWNavController.m in Sources */,
 				163058A31DB25D8C000D914E /* BWTabBarController.m in Sources */,
 				16D656721DB65E5500E74ECE /* BWSubTagItem.m in Sources */,
+				162344371DB87757000EB4C6 /* BWFastLoginButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
