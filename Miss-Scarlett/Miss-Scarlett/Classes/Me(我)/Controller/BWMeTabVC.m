@@ -9,10 +9,16 @@
 #import "BWMeTabVC.h"
 #import "BWSettingTabVC.h"
 #import "BWCollectionViewCell.h"
+#import "BWCollectionItem.h"
+
+#import <MJExtension.h>
 
 static NSString *const ID = @"collectionViewCell";
 
 @interface BWMeTabVC () <UICollectionViewDataSource>
+
+@property (weak, nonatomic) UICollectionView *collectionView;
+@property (strong, nonatomic) NSArray *squareList;
 
 @end
 
@@ -26,6 +32,8 @@ static NSString *const ID = @"collectionViewCell";
     [self setNavBar];
     //设置底部视图 UICollectionView 视图
     [self setFootView];
+    //请求服务器数据
+    [self loadData];
 }
 
 //设置导航控制器的内容
@@ -59,16 +67,16 @@ static NSString *const ID = @"collectionViewCell";
 - (void)setFootView {
     
     //创建流水布局
-    UICollectionViewFlowLayout *flowLayout = [self setFlowLayout];
+    UICollectionViewFlowLayout *flowLayout = [self setUpFlowLayout];
     
     //创建 collectionView
-    UICollectionView *collectionView = [self setCollectionView:flowLayout];
+    UICollectionView *collectionView = [self setUpCollectionView:flowLayout];
     
     self.tableView.tableFooterView = collectionView;
 }
 
 //创建流水布局
-- (UICollectionViewFlowLayout *)setFlowLayout {
+- (UICollectionViewFlowLayout *)setUpFlowLayout {
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     //设置 cell 的尺寸
@@ -83,7 +91,7 @@ static NSString *const ID = @"collectionViewCell";
 }
 
 //创建 collectionView
-- (UICollectionView *)setCollectionView:(UICollectionViewFlowLayout *)flowLayout {
+- (UICollectionView *)setUpCollectionView:(UICollectionViewFlowLayout *)flowLayout {
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 0, 400)collectionViewLayout:flowLayout];
     //collectionView 默认背景色为黑色
     collectionView.backgroundColor = [UIColor clearColor];
@@ -92,18 +100,40 @@ static NSString *const ID = @"collectionViewCell";
     //注册 collectionView
     [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([BWCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:ID];
     
+    self.collectionView = collectionView;
     return collectionView;
+}
+
+#pragma mark - 请求服务器数据
+- (void)loadData {
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager BWMangeer];
+    
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"a"] = @"square";
+    parameters[@"c"] = @"topic";
+    
+    [manager GET:BASEURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *_Nullable responseObject) {
+        
+        //字典数组转为模型数组
+        self.squareList = [BWCollectionItem mj_objectArrayWithKeyValuesArray:responseObject[@"square_list"]];
+        //刷新数据
+        [self.collectionView reloadData];
+//        NSLog(@"%@", responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+       
+        NSLog(@"%@", error);
+    }];
 }
 
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 30;
+    return self.squareList.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
+    BWCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
+    cell.item = self.squareList[indexPath.row];
     
     return cell;
 }

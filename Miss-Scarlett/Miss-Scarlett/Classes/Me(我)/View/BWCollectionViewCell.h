@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class BWCollectionItem;
+
 @interface BWCollectionViewCell : UICollectionViewCell
+
+@property (strong, nonatomic) BWCollectionItem *item;
 
 @end

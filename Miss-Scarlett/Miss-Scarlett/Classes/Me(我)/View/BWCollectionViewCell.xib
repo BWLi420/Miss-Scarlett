@@ -25,7 +25,7 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="o37-Kq-iYl"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -37,7 +37,11 @@
                 <constraint firstAttribute="bottom" secondItem="dyI-Hy-Mkz" secondAttribute="bottom" constant="5" id="dZP-Bc-3UA"/>
                 <constraint firstItem="GUZ-1R-a0o" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="zvj-Cd-IRO"/>
             </constraints>
-            <point key="canvasLocation" x="-4" y="4"/>
+            <connections>
+                <outlet property="iconView" destination="GUZ-1R-a0o" id="bc6-3b-Ehb"/>
+                <outlet property="nameLabel" destination="dyI-Hy-Mkz" id="Wb3-eL-LDd"/>
+            </connections>
+            <point key="canvasLocation" x="-200" y="-18"/>
         </collectionViewCell>
     </objects>
 </document>

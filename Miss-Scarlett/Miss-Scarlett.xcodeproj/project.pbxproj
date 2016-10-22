@@ -49,6 +49,7 @@
 		16DCD8511DBB239600B879B3 /* BWMeTabVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DCD8501DBB239500B879B3 /* BWMeTabVC.storyboard */; };
 		16DCD8551DBB2B0B00B879B3 /* BWCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DCD8531DBB2B0B00B879B3 /* BWCollectionViewCell.m */; };
 		16DCD8561DBB2B0B00B879B3 /* BWCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16DCD8541DBB2B0B00B879B3 /* BWCollectionViewCell.xib */; };
+		16DCD8591DBB3BEC00B879B3 /* BWCollectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DCD8581DBB3BEC00B879B3 /* BWCollectionItem.m */; };
 		16E1F0EA1DB7097400EB418E /* BWSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E1F0E81DB7097400EB418E /* BWSubTagCell.m */; };
 		16E1F0EB1DB7097400EB418E /* BWSubTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16E1F0E91DB7097400EB418E /* BWSubTagCell.xib */; };
 		88F7D9BE2CB98E7BFCCB521B /* libPods-Miss-Scarlett.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B81E4B3932E35B097A0B8B2 /* libPods-Miss-Scarlett.a */; };
@@ -126,6 +127,8 @@
 		16DCD8521DBB2B0B00B879B3 /* BWCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCollectionViewCell.h; sourceTree = "<group>"; };
 		16DCD8531DBB2B0B00B879B3 /* BWCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCollectionViewCell.m; sourceTree = "<group>"; };
 		16DCD8541DBB2B0B00B879B3 /* BWCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWCollectionViewCell.xib; sourceTree = "<group>"; };
+		16DCD8571DBB3BEC00B879B3 /* BWCollectionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCollectionItem.h; sourceTree = "<group>"; };
+		16DCD8581DBB3BEC00B879B3 /* BWCollectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCollectionItem.m; sourceTree = "<group>"; };
 		16E1F0E71DB7097400EB418E /* BWSubTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWSubTagCell.h; sourceTree = "<group>"; };
 		16E1F0E81DB7097400EB418E /* BWSubTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSubTagCell.m; sourceTree = "<group>"; };
 		16E1F0E91DB7097400EB418E /* BWSubTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWSubTagCell.xib; sourceTree = "<group>"; };
@@ -368,6 +371,8 @@
 		163058931DB25C29000D914E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				16DCD8571DBB3BEC00B879B3 /* BWCollectionItem.h */,
+				16DCD8581DBB3BEC00B879B3 /* BWCollectionItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -715,6 +720,7 @@
 				163058B21DB25FCF000D914E /* BWMeTabVC.m in Sources */,
 				167DF1BA1DB374DF0042640C /* UIBarButtonItem+BWItem.m in Sources */,
 				16DCD84F1DBB220100B879B3 /* UITextField+BWPlacehodler.m in Sources */,
+				16DCD8591DBB3BEC00B879B3 /* BWCollectionItem.m in Sources */,
 				162344341DB873DD000EB4C6 /* BWFastLoginVC.m in Sources */,
 				16D6566F1DB6559B00E74ECE /* BWSubTagTabVC.m in Sources */,
 				167DF1C11DB393DD0042640C /* BWSettingTabVC.m in Sources */,
