@@ -58,6 +58,18 @@ static NSString *const ID = @"collectionViewCell";
  */
 - (void)setFootView {
     
+    //创建流水布局
+    UICollectionViewFlowLayout *flowLayout = [self setFlowLayout];
+    
+    //创建 collectionView
+    UICollectionView *collectionView = [self setCollectionView:flowLayout];
+    
+    self.tableView.tableFooterView = collectionView;
+}
+
+//创建流水布局
+- (UICollectionViewFlowLayout *)setFlowLayout {
+    
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     //设置 cell 的尺寸
     NSInteger cols = 4;
@@ -67,15 +79,20 @@ static NSString *const ID = @"collectionViewCell";
     flowLayout.minimumLineSpacing = margin;
     flowLayout.minimumInteritemSpacing = margin;
     
+    return flowLayout;
+}
+
+//创建 collectionView
+- (UICollectionView *)setCollectionView:(UICollectionViewFlowLayout *)flowLayout {
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 0, 400)collectionViewLayout:flowLayout];
     //collectionView 默认背景色为黑色
     collectionView.backgroundColor = [UIColor clearColor];
     collectionView.dataSource = self;
     
-    self.tableView.tableFooterView = collectionView;
-    
     //注册 collectionView
     [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([BWCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:ID];
+    
+    return collectionView;
 }
 
 #pragma mark - UICollectionViewDataSource
