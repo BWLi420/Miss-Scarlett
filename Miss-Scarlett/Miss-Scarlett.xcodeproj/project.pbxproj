@@ -46,6 +46,9 @@
 		16D6566F1DB6559B00E74ECE /* BWSubTagTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6566E1DB6559B00E74ECE /* BWSubTagTabVC.m */; };
 		16D656721DB65E5500E74ECE /* BWSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D656711DB65E5500E74ECE /* BWSubTagItem.m */; };
 		16DCD84F1DBB220100B879B3 /* UITextField+BWPlacehodler.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DCD84E1DBB220100B879B3 /* UITextField+BWPlacehodler.m */; };
+		16DCD8511DBB239600B879B3 /* BWMeTabVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DCD8501DBB239500B879B3 /* BWMeTabVC.storyboard */; };
+		16DCD8551DBB2B0B00B879B3 /* BWCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DCD8531DBB2B0B00B879B3 /* BWCollectionViewCell.m */; };
+		16DCD8561DBB2B0B00B879B3 /* BWCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16DCD8541DBB2B0B00B879B3 /* BWCollectionViewCell.xib */; };
 		16E1F0EA1DB7097400EB418E /* BWSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E1F0E81DB7097400EB418E /* BWSubTagCell.m */; };
 		16E1F0EB1DB7097400EB418E /* BWSubTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16E1F0E91DB7097400EB418E /* BWSubTagCell.xib */; };
 		88F7D9BE2CB98E7BFCCB521B /* libPods-Miss-Scarlett.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B81E4B3932E35B097A0B8B2 /* libPods-Miss-Scarlett.a */; };
@@ -119,6 +122,10 @@
 		16D656711DB65E5500E74ECE /* BWSubTagItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSubTagItem.m; sourceTree = "<group>"; };
 		16DCD84D1DBB220100B879B3 /* UITextField+BWPlacehodler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+BWPlacehodler.h"; sourceTree = "<group>"; };
 		16DCD84E1DBB220100B879B3 /* UITextField+BWPlacehodler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+BWPlacehodler.m"; sourceTree = "<group>"; };
+		16DCD8501DBB239500B879B3 /* BWMeTabVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BWMeTabVC.storyboard; sourceTree = "<group>"; };
+		16DCD8521DBB2B0B00B879B3 /* BWCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCollectionViewCell.h; sourceTree = "<group>"; };
+		16DCD8531DBB2B0B00B879B3 /* BWCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCollectionViewCell.m; sourceTree = "<group>"; };
+		16DCD8541DBB2B0B00B879B3 /* BWCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWCollectionViewCell.xib; sourceTree = "<group>"; };
 		16E1F0E71DB7097400EB418E /* BWSubTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWSubTagCell.h; sourceTree = "<group>"; };
 		16E1F0E81DB7097400EB418E /* BWSubTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSubTagCell.m; sourceTree = "<group>"; };
 		16E1F0E91DB7097400EB418E /* BWSubTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWSubTagCell.xib; sourceTree = "<group>"; };
@@ -353,6 +360,7 @@
 			children = (
 				163058B01DB25FCF000D914E /* BWMeTabVC.h */,
 				163058B11DB25FCF000D914E /* BWMeTabVC.m */,
+				16DCD8501DBB239500B879B3 /* BWMeTabVC.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -367,6 +375,9 @@
 		163058941DB25C29000D914E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				16DCD8521DBB2B0B00B879B3 /* BWCollectionViewCell.h */,
+				16DCD8531DBB2B0B00B879B3 /* BWCollectionViewCell.m */,
+				16DCD8541DBB2B0B00B879B3 /* BWCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -629,11 +640,13 @@
 				1630587A1DB257DD000D914E /* LaunchScreen.storyboard in Resources */,
 				16D656611DB639EC00E74ECE /* LaunchImage-700-568h@2x.png in Resources */,
 				16E1F0EB1DB7097400EB418E /* BWSubTagCell.xib in Resources */,
+				16DCD8511DBB239600B879B3 /* BWMeTabVC.storyboard in Resources */,
 				16D656651DB639EC00E74ECE /* LaunchImage.png in Resources */,
 				163058771DB257DD000D914E /* Assets.xcassets in Resources */,
 				16D656621DB639EC00E74ECE /* LaunchImage-700@2x.png in Resources */,
 				16D656641DB639EC00E74ECE /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				16AEDEB91DB7A8BE00C3F289 /* BWLoginRegVC.storyboard in Resources */,
+				16DCD8561DBB2B0B00B879B3 /* BWCollectionViewCell.xib in Resources */,
 				16D656601DB639EC00E74ECE /* LaunchImage-568h@2x.png in Resources */,
 				16D656631DB639EC00E74ECE /* LaunchImage-800-667h@2x.png in Resources */,
 				16D656571DB637BB00E74ECE /* BWADViewController.xib in Resources */,
@@ -723,6 +736,7 @@
 				163058A01DB25C29000D914E /* main.m in Sources */,
 				167DF1C41DB397980042640C /* BWNavController.m in Sources */,
 				163058A31DB25D8C000D914E /* BWTabBarController.m in Sources */,
+				16DCD8551DBB2B0B00B879B3 /* BWCollectionViewCell.m in Sources */,
 				16D656721DB65E5500E74ECE /* BWSubTagItem.m in Sources */,
 				162344371DB87757000EB4C6 /* BWFastLoginButton.m in Sources */,
 			);

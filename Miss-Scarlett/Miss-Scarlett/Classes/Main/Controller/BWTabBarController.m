@@ -87,8 +87,9 @@
     [self addChildViewController:FriendNav];
     
     //我
-    BWMeTabVC *meVC = [[BWMeTabVC alloc] init];
-    BWNavController *meNav = [[BWNavController alloc] initWithRootViewController:meVC];
+    UIStoryboard *meStory = [UIStoryboard storyboardWithName:NSStringFromClass([BWMeTabVC class]) bundle:nil];
+    BWMeTabVC *meTabVC = [meStory instantiateInitialViewController];
+    BWNavController *meNav = [[BWNavController alloc] initWithRootViewController:meTabVC];
     [self addChildViewController:meNav];
 }
 
