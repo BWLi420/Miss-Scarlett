@@ -10,6 +10,42 @@
 
 @implementation BWTextField
 
+/** 
+ 1.可以将以下方式进行抽取一个分类，定义一个属性 placehodlerColor
+ 2.重写 setter / getter 方法
+ 3.以后直接通过自定义的属性修改占位文字的颜色即可
+ 详见：分类中的实现
+ */
+
+#pragma mark - 方式一
+//- 当文本框开始编辑的时候，成为第一响应者，一定会调用 becomeFirstResponder
+- (BOOL)becomeFirstResponder {
+    UILabel *placehodlerLabel = [self valueForKeyPath:@"placeholderLabel"];
+    placehodlerLabel.textColor = [UIColor whiteColor];
+    
+    return [super becomeFirstResponder];
+}
+
+//- 当文本框结束编辑的时候，取消第一响应者，一定会调用  resignFirstResponder
+- (BOOL)resignFirstResponder {
+    UILabel *placehodlerLabel = [self valueForKeyPath:@"placeholderLabel"];
+    placehodlerLabel.textColor = [UIColor lightGrayColor];
+    
+    return [super resignFirstResponder];
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    self.tintColor = [UIColor whiteColor];
+    
+    //设置初始占位文字的颜色
+    UILabel *placehodlerLabel = [self valueForKeyPath:@"placeholderLabel"];
+    placehodlerLabel.textColor = [UIColor lightGrayColor];
+}
+
+#pragma mark - 方式二
+/**
 - (void)awakeFromNib {
     [super awakeFromNib];
     
@@ -38,6 +74,7 @@
                                   NSForegroundColorAttributeName:[UIColor lightGrayColor]
                                      }];
 }
+ */
 
 //更改颜色拆分步骤
 /**

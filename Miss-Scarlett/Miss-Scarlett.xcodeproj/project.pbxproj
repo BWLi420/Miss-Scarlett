@@ -45,6 +45,7 @@
 		16D6566C1DB647C800E74ECE /* BWADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6566B1DB647C800E74ECE /* BWADItem.m */; };
 		16D6566F1DB6559B00E74ECE /* BWSubTagTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D6566E1DB6559B00E74ECE /* BWSubTagTabVC.m */; };
 		16D656721DB65E5500E74ECE /* BWSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D656711DB65E5500E74ECE /* BWSubTagItem.m */; };
+		16DCD84F1DBB220100B879B3 /* UITextField+BWPlacehodler.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DCD84E1DBB220100B879B3 /* UITextField+BWPlacehodler.m */; };
 		16E1F0EA1DB7097400EB418E /* BWSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E1F0E81DB7097400EB418E /* BWSubTagCell.m */; };
 		16E1F0EB1DB7097400EB418E /* BWSubTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16E1F0E91DB7097400EB418E /* BWSubTagCell.xib */; };
 		88F7D9BE2CB98E7BFCCB521B /* libPods-Miss-Scarlett.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B81E4B3932E35B097A0B8B2 /* libPods-Miss-Scarlett.a */; };
@@ -116,6 +117,8 @@
 		16D6566E1DB6559B00E74ECE /* BWSubTagTabVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSubTagTabVC.m; sourceTree = "<group>"; };
 		16D656701DB65E5500E74ECE /* BWSubTagItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWSubTagItem.h; sourceTree = "<group>"; };
 		16D656711DB65E5500E74ECE /* BWSubTagItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSubTagItem.m; sourceTree = "<group>"; };
+		16DCD84D1DBB220100B879B3 /* UITextField+BWPlacehodler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+BWPlacehodler.h"; sourceTree = "<group>"; };
+		16DCD84E1DBB220100B879B3 /* UITextField+BWPlacehodler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+BWPlacehodler.m"; sourceTree = "<group>"; };
 		16E1F0E71DB7097400EB418E /* BWSubTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWSubTagCell.h; sourceTree = "<group>"; };
 		16E1F0E81DB7097400EB418E /* BWSubTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSubTagCell.m; sourceTree = "<group>"; };
 		16E1F0E91DB7097400EB418E /* BWSubTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWSubTagCell.xib; sourceTree = "<group>"; };
@@ -142,6 +145,13 @@
 				6B81E4B3932E35B097A0B8B2 /* libPods-Miss-Scarlett.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1622E04F1DBA4B8D00957E51 /* ChildViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ChildViewController;
 			sourceTree = "<group>";
 		};
 		1630585E1DB257DC000D914E = {
@@ -222,6 +232,7 @@
 		163058861DB25C29000D914E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1622E04F1DBA4B8D00957E51 /* ChildViewController */,
 				163058A41DB25F2A000D914E /* BWEssenceVC.h */,
 				163058A51DB25F2A000D914E /* BWEssenceVC.m */,
 			);
@@ -453,6 +464,8 @@
 				167DF1C61DB3B14A0042640C /* UIView+BWFrame.m */,
 				16D656671DB6449C00E74ECE /* AFHTTPSessionManager+BWManager.h */,
 				16D656681DB6449C00E74ECE /* AFHTTPSessionManager+BWManager.m */,
+				16DCD84D1DBB220100B879B3 /* UITextField+BWPlacehodler.h */,
+				16DCD84E1DBB220100B879B3 /* UITextField+BWPlacehodler.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -688,6 +701,7 @@
 				163058AF1DB25FA0000D914E /* BWFriendTrendVC.m in Sources */,
 				163058B21DB25FCF000D914E /* BWMeTabVC.m in Sources */,
 				167DF1BA1DB374DF0042640C /* UIBarButtonItem+BWItem.m in Sources */,
+				16DCD84F1DBB220100B879B3 /* UITextField+BWPlacehodler.m in Sources */,
 				162344341DB873DD000EB4C6 /* BWFastLoginVC.m in Sources */,
 				16D6566F1DB6559B00E74ECE /* BWSubTagTabVC.m in Sources */,
 				167DF1C11DB393DD0042640C /* BWSettingTabVC.m in Sources */,
