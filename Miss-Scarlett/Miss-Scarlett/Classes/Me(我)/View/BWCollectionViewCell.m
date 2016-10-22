@@ -23,7 +23,7 @@
 - (void)setItem:(BWCollectionItem *)item {
     _item = item;
     
-    [self.iconView sd_setImageWithURL:[NSURL URLWithString:item.icon] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.iconView sd_setImageWithURL:[NSURL URLWithString:item.icon]];
     self.nameLabel.text = item.name;
 }
 

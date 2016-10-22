@@ -50,6 +50,8 @@
 		16DCD8551DBB2B0B00B879B3 /* BWCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DCD8531DBB2B0B00B879B3 /* BWCollectionViewCell.m */; };
 		16DCD8561DBB2B0B00B879B3 /* BWCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16DCD8541DBB2B0B00B879B3 /* BWCollectionViewCell.xib */; };
 		16DCD8591DBB3BEC00B879B3 /* BWCollectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DCD8581DBB3BEC00B879B3 /* BWCollectionItem.m */; };
+		16DCD8801DBB8BFF00B879B3 /* BWWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DCD87E1DBB8BFF00B879B3 /* BWWKWebViewController.m */; };
+		16DCD8811DBB8BFF00B879B3 /* BWWKWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16DCD87F1DBB8BFF00B879B3 /* BWWKWebViewController.xib */; };
 		16E1F0EA1DB7097400EB418E /* BWSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E1F0E81DB7097400EB418E /* BWSubTagCell.m */; };
 		16E1F0EB1DB7097400EB418E /* BWSubTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16E1F0E91DB7097400EB418E /* BWSubTagCell.xib */; };
 		88F7D9BE2CB98E7BFCCB521B /* libPods-Miss-Scarlett.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B81E4B3932E35B097A0B8B2 /* libPods-Miss-Scarlett.a */; };
@@ -129,6 +131,9 @@
 		16DCD8541DBB2B0B00B879B3 /* BWCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWCollectionViewCell.xib; sourceTree = "<group>"; };
 		16DCD8571DBB3BEC00B879B3 /* BWCollectionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCollectionItem.h; sourceTree = "<group>"; };
 		16DCD8581DBB3BEC00B879B3 /* BWCollectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCollectionItem.m; sourceTree = "<group>"; };
+		16DCD87D1DBB8BFF00B879B3 /* BWWKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWWKWebViewController.h; sourceTree = "<group>"; };
+		16DCD87E1DBB8BFF00B879B3 /* BWWKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWWKWebViewController.m; sourceTree = "<group>"; };
+		16DCD87F1DBB8BFF00B879B3 /* BWWKWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWWKWebViewController.xib; sourceTree = "<group>"; };
 		16E1F0E71DB7097400EB418E /* BWSubTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWSubTagCell.h; sourceTree = "<group>"; };
 		16E1F0E81DB7097400EB418E /* BWSubTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSubTagCell.m; sourceTree = "<group>"; };
 		16E1F0E91DB7097400EB418E /* BWSubTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWSubTagCell.xib; sourceTree = "<group>"; };
@@ -364,6 +369,9 @@
 				163058B01DB25FCF000D914E /* BWMeTabVC.h */,
 				163058B11DB25FCF000D914E /* BWMeTabVC.m */,
 				16DCD8501DBB239500B879B3 /* BWMeTabVC.storyboard */,
+				16DCD87D1DBB8BFF00B879B3 /* BWWKWebViewController.h */,
+				16DCD87E1DBB8BFF00B879B3 /* BWWKWebViewController.m */,
+				16DCD87F1DBB8BFF00B879B3 /* BWWKWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -649,6 +657,7 @@
 				16D656651DB639EC00E74ECE /* LaunchImage.png in Resources */,
 				163058771DB257DD000D914E /* Assets.xcassets in Resources */,
 				16D656621DB639EC00E74ECE /* LaunchImage-700@2x.png in Resources */,
+				16DCD8811DBB8BFF00B879B3 /* BWWKWebViewController.xib in Resources */,
 				16D656641DB639EC00E74ECE /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				16AEDEB91DB7A8BE00C3F289 /* BWLoginRegVC.storyboard in Resources */,
 				16DCD8561DBB2B0B00B879B3 /* BWCollectionViewCell.xib in Resources */,
@@ -720,6 +729,7 @@
 				163058B21DB25FCF000D914E /* BWMeTabVC.m in Sources */,
 				167DF1BA1DB374DF0042640C /* UIBarButtonItem+BWItem.m in Sources */,
 				16DCD84F1DBB220100B879B3 /* UITextField+BWPlacehodler.m in Sources */,
+				16DCD8801DBB8BFF00B879B3 /* BWWKWebViewController.m in Sources */,
 				16DCD8591DBB3BEC00B879B3 /* BWCollectionItem.m in Sources */,
 				162344341DB873DD000EB4C6 /* BWFastLoginVC.m in Sources */,
 				16D6566F1DB6559B00E74ECE /* BWSubTagTabVC.m in Sources */,
