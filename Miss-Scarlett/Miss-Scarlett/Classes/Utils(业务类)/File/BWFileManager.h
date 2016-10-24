@@ -15,10 +15,8 @@
  指定一个文件夹路径，获取该文件夹的尺寸
 
  @param directoryPath 指定的文件夹路径
-
- @return 该文件夹的尺寸
  */
-+ (NSInteger)getDirectorySize:(NSString *)directoryPath;
++ (void)getDirectorySize:(NSString *)directoryPath completion:(void(^)())completion;
 
 
 /**
@@ -33,9 +31,7 @@
   指定一个文件夹路径，获取含当前文件夹尺寸的字符串
 
   @param directoryPath 指定的文件夹路径
-
-  @return 字符串
   */
-+ (NSString *)directorySizeString:(NSString *)directoryPath;
++ (void)directorySizeString:(NSString *)directoryPath completion:(void(^)(NSString *))completion;
 
 @end

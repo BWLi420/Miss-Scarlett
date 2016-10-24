@@ -34,15 +34,15 @@
     //计算缓存的大小
     //SDWebImage 自动做缓存 ： 1.内存缓存 2.磁盘缓存
 //    NSInteger fileSize = [[SDImageCache sharedImageCache] getSize];
-//    
-//    NSLog(@"%@", [BWFileManager getDirectorySize:CACHEPATH]);
 }
 
 //更改清除缓存的 cell 可以编辑
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath == [NSIndexPath indexPathForRow:0 inSection:1]) {
-        self.cacheLabel.text = [BWFileManager directorySizeString:CACHEPATH];
+        [BWFileManager directorySizeString:CACHEPATH completion:^(NSString *str) {
+            self.cacheLabel.text = str;
+        }];
         return YES;
     }
     return NO;
