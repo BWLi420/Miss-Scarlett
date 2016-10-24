@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160A33F31DBDBB03001EF255 /* BWFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 160A33F21DBDBB03001EF255 /* BWFileManager.m */; };
 		1623442F1DB85C94000EB4C6 /* BWRegLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1623442E1DB85C94000EB4C6 /* BWRegLoginView.m */; };
 		162344311DB85CA5000EB4C6 /* BWRegLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 162344301DB85CA5000EB4C6 /* BWRegLoginView.xib */; };
 		162344341DB873DD000EB4C6 /* BWFastLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 162344331DB873DD000EB4C6 /* BWFastLoginVC.m */; };
@@ -59,6 +60,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		160A33F11DBDBB03001EF255 /* BWFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWFileManager.h; sourceTree = "<group>"; };
+		160A33F21DBDBB03001EF255 /* BWFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWFileManager.m; sourceTree = "<group>"; };
 		1623442D1DB85C94000EB4C6 /* BWRegLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWRegLoginView.h; sourceTree = "<group>"; };
 		1623442E1DB85C94000EB4C6 /* BWRegLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWRegLoginView.m; sourceTree = "<group>"; };
 		162344301DB85CA5000EB4C6 /* BWRegLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWRegLoginView.xib; sourceTree = "<group>"; };
@@ -164,6 +167,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		160A33EF1DBDB7E5001EF255 /* Utils(业务类) */ = {
+			isa = PBXGroup;
+			children = (
+				160A33F01DBDB83E001EF255 /* File */,
+			);
+			path = "Utils(业务类)";
+			sourceTree = "<group>";
+		};
+		160A33F01DBDB83E001EF255 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				160A33F11DBDBB03001EF255 /* BWFileManager.h */,
+				160A33F21DBDBB03001EF255 /* BWFileManager.m */,
+			);
+			path = File;
+			sourceTree = "<group>";
+		};
 		1622E04F1DBA4B8D00957E51 /* ChildViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +242,7 @@
 				163058891DB25C29000D914E /* FriendTrend(关注) */,
 				163058911DB25C29000D914E /* Me(我) */,
 				167DF1BB1DB393B80042640C /* Setting(设置) */,
+				160A33EF1DBDB7E5001EF255 /* Utils(业务类) */,
 				163058991DB25C29000D914E /* Other */,
 			);
 			path = Classes;
@@ -743,6 +764,7 @@
 				1623442F1DB85C94000EB4C6 /* BWRegLoginView.m in Sources */,
 				167DF1CA1DB3B59C0042640C /* BWNavigationBar.m in Sources */,
 				163058B61DB26D16000D914E /* UIImage+BWImage.m in Sources */,
+				160A33F31DBDBB03001EF255 /* BWFileManager.m in Sources */,
 				16D6566C1DB647C800E74ECE /* BWADItem.m in Sources */,
 				163058A61DB25F2A000D914E /* BWEssenceVC.m in Sources */,
 				163058AC1DB25F6D000D914E /* BWPublishVC.m in Sources */,
