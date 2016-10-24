@@ -64,7 +64,9 @@ static NSString *const ID = @"collectionViewCell";
 
 //跳转到设置界面
 - (void)pushSetting {
-    BWSettingTabVC *settingVC = [[BWSettingTabVC alloc] init];
+    
+    UIStoryboard *settingstory = [UIStoryboard storyboardWithName:NSStringFromClass([BWSettingTabVC class]) bundle:nil];
+    BWSettingTabVC *settingVC = [settingstory instantiateInitialViewController];
     [self.navigationController pushViewController:settingVC animated:YES];
 }
 

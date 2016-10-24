@@ -52,6 +52,7 @@
 		16DCD8591DBB3BEC00B879B3 /* BWCollectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DCD8581DBB3BEC00B879B3 /* BWCollectionItem.m */; };
 		16DCD8801DBB8BFF00B879B3 /* BWWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DCD87E1DBB8BFF00B879B3 /* BWWKWebViewController.m */; };
 		16DCD8811DBB8BFF00B879B3 /* BWWKWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16DCD87F1DBB8BFF00B879B3 /* BWWKWebViewController.xib */; };
+		16DCD8831DBB9BA100B879B3 /* BWSettingTabVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DCD8821DBB9BA100B879B3 /* BWSettingTabVC.storyboard */; };
 		16E1F0EA1DB7097400EB418E /* BWSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E1F0E81DB7097400EB418E /* BWSubTagCell.m */; };
 		16E1F0EB1DB7097400EB418E /* BWSubTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16E1F0E91DB7097400EB418E /* BWSubTagCell.xib */; };
 		88F7D9BE2CB98E7BFCCB521B /* libPods-Miss-Scarlett.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B81E4B3932E35B097A0B8B2 /* libPods-Miss-Scarlett.a */; };
@@ -134,6 +135,7 @@
 		16DCD87D1DBB8BFF00B879B3 /* BWWKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWWKWebViewController.h; sourceTree = "<group>"; };
 		16DCD87E1DBB8BFF00B879B3 /* BWWKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWWKWebViewController.m; sourceTree = "<group>"; };
 		16DCD87F1DBB8BFF00B879B3 /* BWWKWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWWKWebViewController.xib; sourceTree = "<group>"; };
+		16DCD8821DBB9BA100B879B3 /* BWSettingTabVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BWSettingTabVC.storyboard; sourceTree = "<group>"; };
 		16E1F0E71DB7097400EB418E /* BWSubTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWSubTagCell.h; sourceTree = "<group>"; };
 		16E1F0E81DB7097400EB418E /* BWSubTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSubTagCell.m; sourceTree = "<group>"; };
 		16E1F0E91DB7097400EB418E /* BWSubTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWSubTagCell.xib; sourceTree = "<group>"; };
@@ -509,6 +511,7 @@
 			children = (
 				167DF1BF1DB393DD0042640C /* BWSettingTabVC.h */,
 				167DF1C01DB393DD0042640C /* BWSettingTabVC.m */,
+				16DCD8821DBB9BA100B879B3 /* BWSettingTabVC.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -653,6 +656,7 @@
 				1630587A1DB257DD000D914E /* LaunchScreen.storyboard in Resources */,
 				16D656611DB639EC00E74ECE /* LaunchImage-700-568h@2x.png in Resources */,
 				16E1F0EB1DB7097400EB418E /* BWSubTagCell.xib in Resources */,
+				16DCD8831DBB9BA100B879B3 /* BWSettingTabVC.storyboard in Resources */,
 				16DCD8511DBB239600B879B3 /* BWMeTabVC.storyboard in Resources */,
 				16D656651DB639EC00E74ECE /* LaunchImage.png in Resources */,
 				163058771DB257DD000D914E /* Assets.xcassets in Resources */,

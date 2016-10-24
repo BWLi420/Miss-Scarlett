@@ -62,34 +62,38 @@ static NSString *const ID = @"subTag";
     //提示用户稍等片刻
     [SVProgressHUD showWithStatus:@"正在努力加载..."];
     
-    //创建会话管理者
-    self.manger = [AFHTTPSessionManager BWMangeer];
-    //设置请求参数
-    NSMutableDictionary *parametersDict = [NSMutableDictionary dictionary];
-    parametersDict[@"a"] = @"tag_recommend";
-    parametersDict[@"c"] = @"topic";
-    parametersDict[@"action"] = @"sub";
-    //发送请求
-    [self.manger GET:BASEURL parameters:parametersDict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
-        [SVProgressHUD dismiss];
-        //获取返回数据的数组
-        //字典数组转模型数组
-        self.subTagArray = [BWSubTagItem mj_objectArrayWithKeyValuesArray:responseObject];
-        //刷新数据
-        [self.tableView reloadData];
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        [SVProgressHUD showErrorWithStatus:@"网络错误"];
-        [SVProgressHUD dismissWithDelay:1.0];
-        
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        //创建会话管理者
+        self.manger = [AFHTTPSessionManager BWMangeer];
+        //设置请求参数
+        NSMutableDictionary *parametersDict = [NSMutableDictionary dictionary];
+        parametersDict[@"a"] = @"tag_recommend";
+        parametersDict[@"c"] = @"topic";
+        parametersDict[@"action"] = @"sub";
+        //发送请求
+        [self.manger GET:BASEURL parameters:parametersDict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             
-            [self.navigationController popViewControllerAnimated:YES];
-        });
-        NSLog(@"%@", error);
-    }];
+            [SVProgressHUD dismiss];
+            //获取返回数据的数组
+            //字典数组转模型数组
+            self.subTagArray = [BWSubTagItem mj_objectArrayWithKeyValuesArray:responseObject];
+            //刷新数据
+            [self.tableView reloadData];
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            
+            [SVProgressHUD showErrorWithStatus:@"网络错误"];
+            [SVProgressHUD dismissWithDelay:1.0];
+            
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                
+                [self.navigationController popViewControllerAnimated:YES];
+            });
+            NSLog(@"%@", error);
+        }];
+    });
+    
 }
 
 //订阅界面关闭
