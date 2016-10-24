@@ -13,6 +13,7 @@
 		160A33FC1DBDFE0B001EF255 /* BWVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 160A33FB1DBDFE0B001EF255 /* BWVoiceViewController.m */; };
 		160A33FF1DBDFE1B001EF255 /* BWPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 160A33FE1DBDFE1B001EF255 /* BWPictureViewController.m */; };
 		160A34021DBDFE3D001EF255 /* BWTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 160A34011DBDFE3D001EF255 /* BWTextViewController.m */; };
+		160A34061DBE302F001EF255 /* BWBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 160A34051DBE302F001EF255 /* BWBaseTableViewController.m */; };
 		1623442F1DB85C94000EB4C6 /* BWRegLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1623442E1DB85C94000EB4C6 /* BWRegLoginView.m */; };
 		162344311DB85CA5000EB4C6 /* BWRegLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 162344301DB85CA5000EB4C6 /* BWRegLoginView.xib */; };
 		162344341DB873DD000EB4C6 /* BWFastLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 162344331DB873DD000EB4C6 /* BWFastLoginVC.m */; };
@@ -77,6 +78,8 @@
 		160A33FE1DBDFE1B001EF255 /* BWPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWPictureViewController.m; sourceTree = "<group>"; };
 		160A34001DBDFE3D001EF255 /* BWTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWTextViewController.h; sourceTree = "<group>"; };
 		160A34011DBDFE3D001EF255 /* BWTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWTextViewController.m; sourceTree = "<group>"; };
+		160A34041DBE302F001EF255 /* BWBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWBaseTableViewController.h; sourceTree = "<group>"; };
+		160A34051DBE302F001EF255 /* BWBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWBaseTableViewController.m; sourceTree = "<group>"; };
 		1623442D1DB85C94000EB4C6 /* BWRegLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWRegLoginView.h; sourceTree = "<group>"; };
 		1623442E1DB85C94000EB4C6 /* BWRegLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWRegLoginView.m; sourceTree = "<group>"; };
 		162344301DB85CA5000EB4C6 /* BWRegLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWRegLoginView.xib; sourceTree = "<group>"; };
@@ -199,6 +202,15 @@
 			path = File;
 			sourceTree = "<group>";
 		};
+		160A34031DBE2FF6001EF255 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				160A34041DBE302F001EF255 /* BWBaseTableViewController.h */,
+				160A34051DBE302F001EF255 /* BWBaseTableViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		1622E04F1DBA4B8D00957E51 /* ChildViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +272,7 @@
 			children = (
 				163058821DB25C29000D914E /* AppDelegate */,
 				16D6564F1DB6377D00E74ECE /* AD( 广告) */,
+				160A34031DBE2FF6001EF255 /* Base */,
 				1630588D1DB25C29000D914E /* Main */,
 				163058851DB25C29000D914E /* Essence(精华) */,
 				163058951DB25C29000D914E /* New(新帖) */,
@@ -806,6 +819,7 @@
 				16D656561DB637BB00E74ECE /* BWADViewController.m in Sources */,
 				163058A01DB25C29000D914E /* main.m in Sources */,
 				167DF1C41DB397980042640C /* BWNavController.m in Sources */,
+				160A34061DBE302F001EF255 /* BWBaseTableViewController.m in Sources */,
 				163058A31DB25D8C000D914E /* BWTabBarController.m in Sources */,
 				16DCD8551DBB2B0B00B879B3 /* BWCollectionViewCell.m in Sources */,
 				16D656721DB65E5500E74ECE /* BWSubTagItem.m in Sources */,
