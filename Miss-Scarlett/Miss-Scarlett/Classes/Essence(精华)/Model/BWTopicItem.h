@@ -16,4 +16,7 @@
 @property (nonatomic, strong) NSString *text;
 @property (nonatomic, strong) NSString *create_time;
 
+@property (nonatomic, assign) CGRect topViewFrame;
+@property (nonatomic, assign) CGFloat cellH;
+
 @end

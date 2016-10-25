@@ -54,6 +54,19 @@ static NSString *const ID = @"all";
         
         //字典数组转模型数组
         self.topics = [BWTopicItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        
+        //计算顶部 topView 的高度
+        for (BWTopicItem *item in self.topics) {
+            CGFloat margin = 10;
+            CGFloat textY = 60;
+            CGFloat textW = screenW - 2 * margin;
+            CGFloat textH = [item.text sizeWithFont:[UIFont systemFontOfSize:17] constrainedToSize:CGSizeMake(textW, MAXFLOAT)].height;
+            CGFloat topViewH = textH + textY;
+            
+            item.topViewFrame = CGRectMake(0, 0, screenW, topViewH);
+            item.cellH = CGRectGetMaxY(item.topViewFrame) + margin;
+        }
+        
         //刷新数据
         [self.tableView reloadData];
 
@@ -73,6 +86,11 @@ static NSString *const ID = @"all";
     cell.item = self.topics[indexPath.row];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return [self.topics[indexPath.row] cellH];
 }
 
 @end

@@ -32,7 +32,9 @@
 - (void)setItem:(BWTopicItem *)item {
     
     _item = item;
-    _topView.item = item;
+    
+    self.topView.item = item;
+    self.topView.frame = item.topViewFrame;
 }
 
 @end
