@@ -8,7 +8,7 @@
 
 #import "BWTopicCell.h"
 #import "BWTopTopicView.h"
-#import "BWTopicItem.h"
+#import "BWTopicViewModel.h"
 
 @interface BWTopicCell ()
 @property (strong, nonatomic) BWTopTopicView *topView;
@@ -29,12 +29,13 @@
     return self;
 }
 
-- (void)setItem:(BWTopicItem *)item {
+- (void)setTopicVM:(BWTopicViewModel *)topicVM {
     
-    _item = item;
+    _topicVM = topicVM;
     
-    self.topView.item = item;
-    self.topView.frame = item.topViewFrame;
+    //顶部 topView
+    self.topView.item = topicVM.item;
+    self.topView.frame = topicVM.topViewFrame;
 }
 
 @end

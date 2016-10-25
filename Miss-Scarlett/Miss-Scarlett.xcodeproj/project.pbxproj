@@ -40,6 +40,7 @@
 		16ABD2B71DBF72EC00A4B31D /* BWTopTopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2B61DBF72EC00A4B31D /* BWTopTopicView.m */; };
 		16ABD2B91DBF73C000A4B31D /* BWTopTopicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16ABD2B81DBF73C000A4B31D /* BWTopTopicView.xib */; };
 		16ABD2BC1DBF787700A4B31D /* BWTopicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2BB1DBF787700A4B31D /* BWTopicItem.m */; };
+		16ABD2C01DBF83E700A4B31D /* BWTopicViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2BF1DBF83E700A4B31D /* BWTopicViewModel.m */; };
 		16AEDEB41DB7A38000C3F289 /* BWFriendTrendVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16AEDEB31DB7A38000C3F289 /* BWFriendTrendVC.xib */; };
 		16AEDEB71DB7A8A300C3F289 /* BWLoginRegVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 16AEDEB61DB7A8A300C3F289 /* BWLoginRegVC.m */; };
 		16AEDEB91DB7A8BE00C3F289 /* BWLoginRegVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AEDEB81DB7A8BE00C3F289 /* BWLoginRegVC.storyboard */; };
@@ -134,6 +135,8 @@
 		16ABD2B81DBF73C000A4B31D /* BWTopTopicView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWTopTopicView.xib; sourceTree = "<group>"; };
 		16ABD2BA1DBF787700A4B31D /* BWTopicItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWTopicItem.h; sourceTree = "<group>"; };
 		16ABD2BB1DBF787700A4B31D /* BWTopicItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWTopicItem.m; sourceTree = "<group>"; };
+		16ABD2BE1DBF83E700A4B31D /* BWTopicViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWTopicViewModel.h; sourceTree = "<group>"; };
+		16ABD2BF1DBF83E700A4B31D /* BWTopicViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWTopicViewModel.m; sourceTree = "<group>"; };
 		16AEDEB31DB7A38000C3F289 /* BWFriendTrendVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWFriendTrendVC.xib; sourceTree = "<group>"; };
 		16AEDEB51DB7A8A300C3F289 /* BWLoginRegVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWLoginRegVC.h; sourceTree = "<group>"; };
 		16AEDEB61DB7A8A300C3F289 /* BWLoginRegVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWLoginRegVC.m; sourceTree = "<group>"; };
@@ -309,6 +312,7 @@
 		163058851DB25C29000D914E /* Essence(精华) */ = {
 			isa = PBXGroup;
 			children = (
+				16ABD2BD1DBF83D300A4B31D /* ViewModel */,
 				163058861DB25C29000D914E /* Controller */,
 				163058871DB25C29000D914E /* Model */,
 				163058881DB25C29000D914E /* View */,
@@ -615,6 +619,15 @@
 			path = ChildCellView;
 			sourceTree = "<group>";
 		};
+		16ABD2BD1DBF83D300A4B31D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				16ABD2BE1DBF83E700A4B31D /* BWTopicViewModel.h */,
+				16ABD2BF1DBF83E700A4B31D /* BWTopicViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		16D6564F1DB6377D00E74ECE /* AD( 广告) */ = {
 			isa = PBXGroup;
 			children = (
@@ -828,6 +841,7 @@
 				162344341DB873DD000EB4C6 /* BWFastLoginVC.m in Sources */,
 				16D6566F1DB6559B00E74ECE /* BWSubTagTabVC.m in Sources */,
 				167DF1C11DB393DD0042640C /* BWSettingTabVC.m in Sources */,
+				16ABD2C01DBF83E700A4B31D /* BWTopicViewModel.m in Sources */,
 				16D656691DB6449C00E74ECE /* AFHTTPSessionManager+BWManager.m in Sources */,
 				167DF1CD1DB3B6250042640C /* BWNavLeftBackView.m in Sources */,
 				160A33FF1DBDFE1B001EF255 /* BWPictureViewController.m in Sources */,

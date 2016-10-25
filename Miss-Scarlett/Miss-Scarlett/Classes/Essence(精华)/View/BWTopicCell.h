@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@class BWTopicItem;
+@class BWTopicViewModel;
 
 @interface BWTopicCell : UITableViewCell
-@property (strong, nonatomic) BWTopicItem *item;
+@property (strong, nonatomic) BWTopicViewModel *topicVM;
 @end

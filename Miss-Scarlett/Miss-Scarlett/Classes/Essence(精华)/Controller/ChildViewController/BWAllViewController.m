@@ -9,6 +9,7 @@
 #import "BWAllViewController.h"
 #import "BWTopicCell.h"
 #import "BWTopicItem.h"
+#import "BWTopicViewModel.h"
 
 #import <MJExtension.h>
 
@@ -27,10 +28,17 @@
 static NSString *const ID = @"all";
 
 @interface BWAllViewController ()
-@property (nonatomic, strong) NSArray *topics;
+@property (nonatomic, strong) NSMutableArray *topicsVM;
 @end
 
 @implementation BWAllViewController
+
+- (NSMutableArray *)topicsVM {
+    if (_topicsVM == nil) {
+        _topicsVM = [NSMutableArray array];
+    }
+    return _topicsVM;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -53,18 +61,14 @@ static NSString *const ID = @"all";
     [manager GET:BASEURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *_Nullable responseObject) {
         
         //字典数组转模型数组
-        self.topics = [BWTopicItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        NSArray *topics = [BWTopicItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
-        //计算顶部 topView 的高度
-        for (BWTopicItem *item in self.topics) {
-            CGFloat margin = 10;
-            CGFloat textY = 60;
-            CGFloat textW = screenW - 2 * margin;
-            CGFloat textH = [item.text sizeWithFont:[UIFont systemFontOfSize:17] constrainedToSize:CGSizeMake(textW, MAXFLOAT)].height;
-            CGFloat topViewH = textH + textY;
-            
-            item.topViewFrame = CGRectMake(0, 0, screenW, topViewH);
-            item.cellH = CGRectGetMaxY(item.topViewFrame) + margin;
+        //计算顶部 TopView 的尺寸
+        for (BWTopicItem *item in topics) {
+            BWTopicViewModel *topicVM = [[BWTopicViewModel alloc] init];
+            //计算 cell 高度和子控件的尺寸
+            topicVM.item = item;
+            [self.topicsVM addObject:topicVM];
         }
         
         //刷新数据
@@ -77,20 +81,20 @@ static NSString *const ID = @"all";
 
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.topics.count;
+    return self.topicsVM.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     BWTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    cell.item = self.topics[indexPath.row];
+    cell.topicVM = self.topicsVM[indexPath.row];
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return [self.topics[indexPath.row] cellH];
+    return [self.topicsVM[indexPath.row] cellH];
 }
 
 @end
