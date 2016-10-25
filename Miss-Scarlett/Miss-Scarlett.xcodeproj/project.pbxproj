@@ -36,6 +36,10 @@
 		167DF1C71DB3B14A0042640C /* UIView+BWFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 167DF1C61DB3B14A0042640C /* UIView+BWFrame.m */; };
 		167DF1CA1DB3B59C0042640C /* BWNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 167DF1C91DB3B59C0042640C /* BWNavigationBar.m */; };
 		167DF1CD1DB3B6250042640C /* BWNavLeftBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 167DF1CC1DB3B6250042640C /* BWNavLeftBackView.m */; };
+		16ABD2B31DBF6EE100A4B31D /* BWTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2B21DBF6EE100A4B31D /* BWTopicCell.m */; };
+		16ABD2B71DBF72EC00A4B31D /* BWTopTopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2B61DBF72EC00A4B31D /* BWTopTopicView.m */; };
+		16ABD2B91DBF73C000A4B31D /* BWTopTopicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16ABD2B81DBF73C000A4B31D /* BWTopTopicView.xib */; };
+		16ABD2BC1DBF787700A4B31D /* BWTopicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 16ABD2BB1DBF787700A4B31D /* BWTopicItem.m */; };
 		16AEDEB41DB7A38000C3F289 /* BWFriendTrendVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16AEDEB31DB7A38000C3F289 /* BWFriendTrendVC.xib */; };
 		16AEDEB71DB7A8A300C3F289 /* BWLoginRegVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 16AEDEB61DB7A8A300C3F289 /* BWLoginRegVC.m */; };
 		16AEDEB91DB7A8BE00C3F289 /* BWLoginRegVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AEDEB81DB7A8BE00C3F289 /* BWLoginRegVC.storyboard */; };
@@ -123,6 +127,13 @@
 		167DF1C91DB3B59C0042640C /* BWNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWNavigationBar.m; sourceTree = "<group>"; };
 		167DF1CB1DB3B6250042640C /* BWNavLeftBackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWNavLeftBackView.h; sourceTree = "<group>"; };
 		167DF1CC1DB3B6250042640C /* BWNavLeftBackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWNavLeftBackView.m; sourceTree = "<group>"; };
+		16ABD2B11DBF6EE100A4B31D /* BWTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWTopicCell.h; sourceTree = "<group>"; };
+		16ABD2B21DBF6EE100A4B31D /* BWTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWTopicCell.m; sourceTree = "<group>"; };
+		16ABD2B51DBF72EC00A4B31D /* BWTopTopicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWTopTopicView.h; sourceTree = "<group>"; };
+		16ABD2B61DBF72EC00A4B31D /* BWTopTopicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWTopTopicView.m; sourceTree = "<group>"; };
+		16ABD2B81DBF73C000A4B31D /* BWTopTopicView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWTopTopicView.xib; sourceTree = "<group>"; };
+		16ABD2BA1DBF787700A4B31D /* BWTopicItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWTopicItem.h; sourceTree = "<group>"; };
+		16ABD2BB1DBF787700A4B31D /* BWTopicItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWTopicItem.m; sourceTree = "<group>"; };
 		16AEDEB31DB7A38000C3F289 /* BWFriendTrendVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWFriendTrendVC.xib; sourceTree = "<group>"; };
 		16AEDEB51DB7A8A300C3F289 /* BWLoginRegVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWLoginRegVC.h; sourceTree = "<group>"; };
 		16AEDEB61DB7A8A300C3F289 /* BWLoginRegVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWLoginRegVC.m; sourceTree = "<group>"; };
@@ -318,6 +329,8 @@
 		163058871DB25C29000D914E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				16ABD2BA1DBF787700A4B31D /* BWTopicItem.h */,
+				16ABD2BB1DBF787700A4B31D /* BWTopicItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -325,6 +338,9 @@
 		163058881DB25C29000D914E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				16ABD2B41DBF72C400A4B31D /* ChildCellView */,
+				16ABD2B11DBF6EE100A4B31D /* BWTopicCell.h */,
+				16ABD2B21DBF6EE100A4B31D /* BWTopicCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -589,6 +605,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		16ABD2B41DBF72C400A4B31D /* ChildCellView */ = {
+			isa = PBXGroup;
+			children = (
+				16ABD2B51DBF72EC00A4B31D /* BWTopTopicView.h */,
+				16ABD2B61DBF72EC00A4B31D /* BWTopTopicView.m */,
+				16ABD2B81DBF73C000A4B31D /* BWTopTopicView.xib */,
+			);
+			path = ChildCellView;
+			sourceTree = "<group>";
+		};
 		16D6564F1DB6377D00E74ECE /* AD( 广告) */ = {
 			isa = PBXGroup;
 			children = (
@@ -718,6 +744,7 @@
 				16DCD8831DBB9BA100B879B3 /* BWSettingTabVC.storyboard in Resources */,
 				16DCD8511DBB239600B879B3 /* BWMeTabVC.storyboard in Resources */,
 				16D656651DB639EC00E74ECE /* LaunchImage.png in Resources */,
+				16ABD2B91DBF73C000A4B31D /* BWTopTopicView.xib in Resources */,
 				163058771DB257DD000D914E /* Assets.xcassets in Resources */,
 				16D656621DB639EC00E74ECE /* LaunchImage-700@2x.png in Resources */,
 				16DCD8811DBB8BFF00B879B3 /* BWWKWebViewController.xib in Resources */,
@@ -788,7 +815,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16ABD2B31DBF6EE100A4B31D /* BWTopicCell.m in Sources */,
 				163058AF1DB25FA0000D914E /* BWFriendTrendVC.m in Sources */,
+				16ABD2B71DBF72EC00A4B31D /* BWTopTopicView.m in Sources */,
 				160A33F61DBDFDE6001EF255 /* BWAllViewController.m in Sources */,
 				163058B21DB25FCF000D914E /* BWMeTabVC.m in Sources */,
 				167DF1BA1DB374DF0042640C /* UIBarButtonItem+BWItem.m in Sources */,
@@ -817,6 +846,7 @@
 				163058A91DB25F55000D914E /* BWNewVC.m in Sources */,
 				167DF1C71DB3B14A0042640C /* UIView+BWFrame.m in Sources */,
 				16D656561DB637BB00E74ECE /* BWADViewController.m in Sources */,
+				16ABD2BC1DBF787700A4B31D /* BWTopicItem.m in Sources */,
 				163058A01DB25C29000D914E /* main.m in Sources */,
 				167DF1C41DB397980042640C /* BWNavController.m in Sources */,
 				160A34061DBE302F001EF255 /* BWBaseTableViewController.m in Sources */,
