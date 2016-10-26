@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BWPictureView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="T3Q-bA-mHf">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="225" id="O5k-eZ-H5p"/>
+                        <constraint firstAttribute="height" constant="45" id="TOn-Y2-CMK"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZvC-8B-X4g">
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="122-MZ-M6I"/>
+                        <constraint firstAttribute="width" constant="100" id="Su4-Un-ekw"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q3g-Zg-aCN"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="KNM-rf-ray">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="31" id="3qP-Uc-d3a"/>
+                        <constraint firstAttribute="height" constant="31" id="QT9-AT-4hu"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fE4-QM-qHu">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="wT1-9w-cPr"/>
+                    </constraints>
+                    <state key="normal" title="点击查看大图" image="see-big-picture" backgroundImage="see-big-picture-background"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="T3Q-bA-mHf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2CU-iz-eNg"/>
+                <constraint firstAttribute="bottom" secondItem="q3g-Zg-aCN" secondAttribute="bottom" id="BHb-5t-wan"/>
+                <constraint firstItem="fE4-QM-qHu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="DFC-YP-UJn"/>
+                <constraint firstItem="T3Q-bA-mHf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="LEt-DG-gjN"/>
+                <constraint firstItem="q3g-Zg-aCN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="MWD-iF-qek"/>
+                <constraint firstAttribute="trailing" secondItem="fE4-QM-qHu" secondAttribute="trailing" id="OHi-Ei-I5h"/>
+                <constraint firstItem="KNM-rf-ray" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="SXQ-Aa-Cql"/>
+                <constraint firstAttribute="bottom" secondItem="fE4-QM-qHu" secondAttribute="bottom" id="TLT-9g-XJe"/>
+                <constraint firstAttribute="trailing" secondItem="q3g-Zg-aCN" secondAttribute="trailing" id="Whg-AD-ALf"/>
+                <constraint firstItem="ZvC-8B-X4g" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Z1n-Uf-M1z"/>
+                <constraint firstItem="ZvC-8B-X4g" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="l9W-Su-cjY"/>
+                <constraint firstItem="q3g-Zg-aCN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ptV-gh-Fj5"/>
+                <constraint firstItem="KNM-rf-ray" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="uQX-Gw-10H"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="gifView" destination="KNM-rf-ray" id="dBq-mL-NsQ"/>
+                <outlet property="pictureView" destination="q3g-Zg-aCN" id="6Po-WA-nCN"/>
+                <outlet property="progressView" destination="ZvC-8B-X4g" id="L15-DR-WYg"/>
+                <outlet property="seeBigButton" destination="fE4-QM-qHu" id="YAq-e2-Mjc"/>
+            </connections>
+            <point key="canvasLocation" x="-294" y="-164"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="common-gif" width="31" height="31"/>
+        <image name="imageBackground" width="75" height="15"/>
+        <image name="see-big-picture" width="19" height="19"/>
+        <image name="see-big-picture-background" width="285" height="43"/>
+    </resources>
+</document>

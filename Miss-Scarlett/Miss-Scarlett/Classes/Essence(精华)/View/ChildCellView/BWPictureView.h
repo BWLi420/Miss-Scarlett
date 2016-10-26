@@ -1,5 +1,5 @@
 //
-//  BWTopTopicView.h
+//  BWPictureView.h
 //  Miss-Scarlett
 //
 //  Created by mortal on 16/10/25.
@@ -8,6 +8,6 @@
 
 #import "BWBaseTopicView.h"
 
-@interface BWTopTopicView : BWBaseTopicView
+@interface BWPictureView : BWBaseTopicView
 
 @end

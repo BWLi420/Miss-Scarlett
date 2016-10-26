@@ -7,11 +7,14 @@
 //
 
 #import "BWTopicCell.h"
-#import "BWTopTopicView.h"
 #import "BWTopicViewModel.h"
+
+#import "BWTopTopicView.h"
+#import "BWPictureView.h"
 
 @interface BWTopicCell ()
 @property (strong, nonatomic) BWTopTopicView *topView;
+@property (strong, nonatomic) BWPictureView *pictureView;
 @end
 
 @implementation BWTopicCell
@@ -25,6 +28,11 @@
         [self.contentView addSubview:topView];
         self.topView = topView;
         
+        //设置中间 图片
+        BWPictureView *pictureView = [BWPictureView viewForXib];
+        [self.contentView addSubview:pictureView];
+        self.pictureView = pictureView;
+        
     }
     return self;
 }
@@ -36,6 +44,10 @@
     //顶部 topView
     self.topView.item = topicVM.item;
     self.topView.frame = topicVM.topViewFrame;
+    
+    //中间 图片
+    self.pictureView.item = topicVM.item;
+    self.pictureView.frame = topicVM.middleViewFrame;
 }
 
 @end

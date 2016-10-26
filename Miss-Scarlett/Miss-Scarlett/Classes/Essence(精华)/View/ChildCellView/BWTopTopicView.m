@@ -20,12 +20,8 @@
 
 @implementation BWTopTopicView
 
-+ (instancetype)viewForXib {
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] lastObject];
-}
-
 - (void)setItem:(BWTopicItem *)item {
-    _item = item;
+    [super setItem:item];
     
     [self.iconView sd_setImageWithURL:[NSURL URLWithString:item.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     self.name_Label.text = item.screen_name;

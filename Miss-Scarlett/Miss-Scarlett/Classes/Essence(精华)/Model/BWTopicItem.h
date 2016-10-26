@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum : NSInteger {
+    BWTopicItemTypeAll = 1,
+    BWTopicItemTypePicture = 10,
+    BWTopicItemTypeVideo = 41,
+    BWTopicItemTypeVocie = 31,
+    BWTopicItemTypeText = 29
+} BWopicItemType;
+
 @interface BWTopicItem : NSObject
 
 /** TopView */
@@ -15,5 +23,13 @@
 @property (nonatomic, strong) NSString *screen_name;
 @property (nonatomic, strong) NSString *text;
 @property (nonatomic, strong) NSString *create_time;
+
+/** middle 图片 */
+@property (nonatomic, strong) NSString *image0;
+@property (nonatomic, assign) BOOL is_gif;
+@property (nonatomic, assign) CGFloat width;
+@property (nonatomic, assign) CGFloat height;
+@property (nonatomic, assign) BOOL is_bigPicture;
+@property (nonatomic, assign) BWopicItemType type;
 
 @end
