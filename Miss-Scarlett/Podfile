@@ -2,7 +2,8 @@ target 'Miss-Scarlett' do
   
 pod 'AFNetworking', '~> 3.1.0'
 pod 'MJExtension', '~> 3.0.13'
-pod 'SDWebImage', '~> 4.0.0-beta2'
+pod 'SDWebImage', '~> 3.7.4’
 pod 'SVProgressHUD', '~> 2.0.3'
+pod 'DACircularProgress', '~> 2.3.1'
 
 end

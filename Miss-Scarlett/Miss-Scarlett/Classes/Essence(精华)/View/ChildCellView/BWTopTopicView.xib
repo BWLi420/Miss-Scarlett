@@ -64,7 +64,7 @@
                 <outlet property="text_Label" destination="gBV-MK-RW9" id="ukF-rH-eOu"/>
                 <outlet property="time_Label" destination="CJr-0E-I2n" id="3YB-IT-3j9"/>
             </connections>
-            <point key="canvasLocation" x="-207" y="-2"/>
+            <point key="canvasLocation" x="-10" y="-19"/>
         </view>
     </objects>
     <resources>

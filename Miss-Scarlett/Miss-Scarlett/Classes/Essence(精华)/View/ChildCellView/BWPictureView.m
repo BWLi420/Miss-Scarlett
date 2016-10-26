@@ -10,31 +10,45 @@
 #import "BWTopicItem.h"
 
 #import <UIImageView+WebCache.h>
-#import <SVProgressHUD.h>
+#import <DALabeledCircularProgressView.h>
 
 @interface BWPictureView ()
 @property (weak, nonatomic) IBOutlet UIImageView *gifView;
 @property (weak, nonatomic) IBOutlet UIImageView *pictureView;
 @property (weak, nonatomic) IBOutlet UIButton *seeBigButton;
-@property (weak, nonatomic) IBOutlet UIView *progressView;
+@property (weak, nonatomic) IBOutlet DALabeledCircularProgressView *progressView;
 @end
 
 @implementation BWPictureView
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    self.progressView.progressTintColor = [UIColor whiteColor];
+    self.progressView.trackTintColor = [UIColor lightGrayColor];
+    self.progressView.roundedCorners = 10;
+    self.progressView.progressLabel.textColor = [UIColor whiteColor];
+}
+
 - (void)setItem:(BWTopicItem *)item {
     [super setItem:item];
     
-    [self.pictureView sd_setImageWithURL:[NSURL URLWithString:item.image0] placeholderImage:nil options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+    self.progressView.progress = 0;
+    self.progressView.progressLabel.text = @"0%";
+    
+    [self.pictureView sd_setImageWithURL:[NSURL URLWithString:item.image0] placeholderImage:nil options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         
         if (expectedSize == -1) return ;
         CGFloat progress = 1.0 * receivedSize / expectedSize;
+        NSString *progressStr = [NSString stringWithFormat:@"%.0f%%", progress * 100];
         
-        [SVProgressHUD showProgress:progress];
-        if (progress == 1.0) {
-            [SVProgressHUD dismiss];
-        }
-        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            self.progressView.progressLabel.text = progressStr;
+            self.progressView.progress = progress;
+        });
     } completed:nil];
+
     self.gifView.hidden = !item.is_gif;
     
     //大图处理

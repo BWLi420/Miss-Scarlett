@@ -31,6 +31,8 @@
         if (middleH > 300) {
             middleH = 300;
             item.is_bigPicture = YES;
+        }else {
+            middleH = 300;
         }
         self.middleViewFrame = CGRectMake(margin, self.cellH, textW, middleH);
         self.cellH = CGRectGetMaxY(self.middleViewFrame) + margin;

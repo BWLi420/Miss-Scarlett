@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "BWADViewController.h"
 
+#import <SDImageCache.h>
+
 @interface AppDelegate ()
 
 @end
@@ -32,6 +34,7 @@
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
     
     //内存警告时，清理图片缓存，SDWebImage、NSCache
+    [[SDImageCache sharedImageCache] clearMemory];
 }
 
 
