@@ -14,12 +14,14 @@
 #import "BWPictureView.h"
 #import "BWVideoView.h"
 #import "BWVoiceView.h"
+#import "BWTextView.h"
 
 @interface BWTopicCell ()
 @property (strong, nonatomic) BWTopTopicView *topView;
 @property (strong, nonatomic) BWPictureView *pictureView;
 @property (strong, nonatomic) BWVideoView *videoView;
 @property (strong, nonatomic) BWVoiceView *voiceView;
+@property (strong, nonatomic) BWTextView *textView;
 @end
 
 @implementation BWTopicCell
@@ -47,6 +49,11 @@
         BWVoiceView *voiceView = [BWVoiceView viewForXib];
         [self.contentView addSubview:voiceView];
         self.voiceView = voiceView;
+        
+        //设置中间热门评论
+        BWTextView *textView = [BWTextView viewForXib];
+        [self.contentView addSubview:textView];
+        self.textView = textView;
     }
     return self;
 }
@@ -89,8 +96,14 @@
         self.voiceView.hidden = NO;
         self.pictureView.hidden = YES;
         self.videoView.hidden = YES;
-    }
     
+    }else {
+      
+        //段子
+        self.pictureView.hidden = YES;
+        self.videoView.hidden = YES;
+        self.voiceView.hidden = YES;
+    }
 }
 
 @end

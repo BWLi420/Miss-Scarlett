@@ -48,6 +48,8 @@
 		16AD1FC61DC0CE0E003833F5 /* BWVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16AD1FC51DC0CE0E003833F5 /* BWVideoView.xib */; };
 		16AD1FCD1DC0E2B9003833F5 /* BWVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16AD1FCC1DC0E2B9003833F5 /* BWVoiceView.m */; };
 		16AD1FCF1DC0E2DC003833F5 /* BWVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16AD1FCE1DC0E2DC003833F5 /* BWVoiceView.xib */; };
+		16AD1FD21DC0E8B4003833F5 /* BWTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16AD1FD11DC0E8B4003833F5 /* BWTextView.m */; };
+		16AD1FD41DC0E8C2003833F5 /* BWTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16AD1FD31DC0E8C2003833F5 /* BWTextView.xib */; };
 		16AEDEB41DB7A38000C3F289 /* BWFriendTrendVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16AEDEB31DB7A38000C3F289 /* BWFriendTrendVC.xib */; };
 		16AEDEB71DB7A8A300C3F289 /* BWLoginRegVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 16AEDEB61DB7A8A300C3F289 /* BWLoginRegVC.m */; };
 		16AEDEB91DB7A8BE00C3F289 /* BWLoginRegVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AEDEB81DB7A8BE00C3F289 /* BWLoginRegVC.storyboard */; };
@@ -155,6 +157,9 @@
 		16AD1FCB1DC0E2B9003833F5 /* BWVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWVoiceView.h; sourceTree = "<group>"; };
 		16AD1FCC1DC0E2B9003833F5 /* BWVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWVoiceView.m; sourceTree = "<group>"; };
 		16AD1FCE1DC0E2DC003833F5 /* BWVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWVoiceView.xib; sourceTree = "<group>"; };
+		16AD1FD01DC0E8B4003833F5 /* BWTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWTextView.h; sourceTree = "<group>"; };
+		16AD1FD11DC0E8B4003833F5 /* BWTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWTextView.m; sourceTree = "<group>"; };
+		16AD1FD31DC0E8C2003833F5 /* BWTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWTextView.xib; sourceTree = "<group>"; };
 		16AEDEB31DB7A38000C3F289 /* BWFriendTrendVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWFriendTrendVC.xib; sourceTree = "<group>"; };
 		16AEDEB51DB7A8A300C3F289 /* BWLoginRegVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWLoginRegVC.h; sourceTree = "<group>"; };
 		16AEDEB61DB7A8A300C3F289 /* BWLoginRegVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWLoginRegVC.m; sourceTree = "<group>"; };
@@ -643,6 +648,9 @@
 				16AD1FCB1DC0E2B9003833F5 /* BWVoiceView.h */,
 				16AD1FCC1DC0E2B9003833F5 /* BWVoiceView.m */,
 				16AD1FCE1DC0E2DC003833F5 /* BWVoiceView.xib */,
+				16AD1FD01DC0E8B4003833F5 /* BWTextView.h */,
+				16AD1FD11DC0E8B4003833F5 /* BWTextView.m */,
+				16AD1FD31DC0E8C2003833F5 /* BWTextView.xib */,
 			);
 			path = ChildCellView;
 			sourceTree = "<group>";
@@ -805,6 +813,7 @@
 				16DCD8561DBB2B0B00B879B3 /* BWCollectionViewCell.xib in Resources */,
 				16D656601DB639EC00E74ECE /* LaunchImage-568h@2x.png in Resources */,
 				16D656631DB639EC00E74ECE /* LaunchImage-800-667h@2x.png in Resources */,
+				16AD1FD41DC0E8C2003833F5 /* BWTextView.xib in Resources */,
 				16D656571DB637BB00E74ECE /* BWADViewController.xib in Resources */,
 				16D656661DB639EC00E74ECE /* LaunchImage@2x.png in Resources */,
 				16AD1FC61DC0CE0E003833F5 /* BWVideoView.xib in Resources */,
@@ -902,6 +911,7 @@
 				163058A91DB25F55000D914E /* BWNewVC.m in Sources */,
 				167DF1C71DB3B14A0042640C /* UIView+BWFrame.m in Sources */,
 				16D656561DB637BB00E74ECE /* BWADViewController.m in Sources */,
+				16AD1FD21DC0E8B4003833F5 /* BWTextView.m in Sources */,
 				16ABD2BC1DBF787700A4B31D /* BWTopicItem.m in Sources */,
 				163058A01DB25C29000D914E /* main.m in Sources */,
 				16ABD2C71DBF89D500A4B31D /* BWPictureView.m in Sources */,
