@@ -43,7 +43,6 @@ static NSString *const ID = @"all";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor redColor];
     //只要通过注册创建 cell，就会调用 initWithStyle
     [self.tableView registerClass:[BWTopicCell class] forCellReuseIdentifier:ID];
     //请求数据
@@ -57,6 +56,7 @@ static NSString *const ID = @"all";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
+    parameters[@"type"] = @(BWTopicItemTypeAll);
     
     [manager GET:BASEURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *_Nullable responseObject) {
         
@@ -73,7 +73,7 @@ static NSString *const ID = @"all";
         
         //刷新数据
         [self.tableView reloadData];
-
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
     }];

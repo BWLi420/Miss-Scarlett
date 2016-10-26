@@ -14,7 +14,7 @@ typedef enum : NSInteger {
     BWTopicItemTypeVideo = 41,
     BWTopicItemTypeVocie = 31,
     BWTopicItemTypeText = 29
-} BWopicItemType;
+} BWTopicItemType;
 
 @interface BWTopicItem : NSObject
 
@@ -30,6 +30,15 @@ typedef enum : NSInteger {
 @property (nonatomic, assign) CGFloat width;
 @property (nonatomic, assign) CGFloat height;
 @property (nonatomic, assign) BOOL is_bigPicture;
-@property (nonatomic, assign) BWopicItemType type;
+@property (nonatomic, assign) BWTopicItemType type;
+
+/** middle 视频 */
+@property (nonatomic, strong) NSString *videouri;
+@property (nonatomic, assign) NSInteger videotime;
+@property (nonatomic, strong) NSString *playcount;
+
+/** middle 声音 */
+@property (nonatomic, strong) NSString *voiceuri;
+@property (nonatomic, assign) NSInteger voicetime;
 
 @end

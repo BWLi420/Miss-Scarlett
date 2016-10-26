@@ -12,8 +12,10 @@
 @interface BWTopicViewModel : NSObject
 
 @property (strong, nonatomic) BWTopicItem *item;
+
 @property (nonatomic, assign) CGRect topViewFrame;
 @property (nonatomic, assign) CGRect middleViewFrame;
+
 @property (nonatomic, assign) CGFloat cellH;
 
 @end
