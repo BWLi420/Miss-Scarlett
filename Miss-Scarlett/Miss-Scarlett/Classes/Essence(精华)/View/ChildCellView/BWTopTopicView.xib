@@ -28,12 +28,13 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cellmorebtnnormal" highlightedImage="cellmorebtnclick" translatesAutoresizingMaskIntoConstraints="NO" id="BSi-JY-9pr">
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="hXz-rX-fSb"/>
-                        <constraint firstAttribute="width" constant="40" id="ow9-fq-UJl"/>
-                    </constraints>
-                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKd-ol-IlV">
+                    <state key="normal" image="cellmorebtnnormal"/>
+                    <state key="highlighted" image="cellmorebtnclick"/>
+                    <connections>
+                        <action selector="moreBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="D8U-NV-FUN"/>
+                    </connections>
+                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBV-MK-RW9">
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
@@ -43,18 +44,18 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="CJr-0E-I2n" firstAttribute="bottom" secondItem="ch7-So-KiM" secondAttribute="bottom" id="0rm-o8-hsN"/>
+                <constraint firstItem="SKd-ol-IlV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="4tE-i5-a2g"/>
                 <constraint firstAttribute="trailing" secondItem="gBV-MK-RW9" secondAttribute="trailing" constant="10" id="5zf-yL-ZfX"/>
                 <constraint firstItem="gBV-MK-RW9" firstAttribute="top" secondItem="CJr-0E-I2n" secondAttribute="bottom" constant="10" id="DKZ-n8-8oF"/>
                 <constraint firstItem="ch7-So-KiM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="DLW-vN-89J"/>
                 <constraint firstItem="CJr-0E-I2n" firstAttribute="leading" secondItem="b0h-uG-85i" secondAttribute="leading" id="OEy-DN-bzm"/>
-                <constraint firstAttribute="trailing" secondItem="BSi-JY-9pr" secondAttribute="trailing" constant="10" id="Ogv-2H-g8J"/>
                 <constraint firstItem="CJr-0E-I2n" firstAttribute="top" secondItem="b0h-uG-85i" secondAttribute="bottom" id="OuA-gs-ziD"/>
                 <constraint firstItem="gBV-MK-RW9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="din-Mp-ZFf"/>
                 <constraint firstItem="ch7-So-KiM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="e3L-ax-qPj"/>
                 <constraint firstItem="CJr-0E-I2n" firstAttribute="height" secondItem="b0h-uG-85i" secondAttribute="height" id="fLi-xV-qv6"/>
                 <constraint firstItem="b0h-uG-85i" firstAttribute="top" secondItem="ch7-So-KiM" secondAttribute="top" id="qlu-Ug-nBp"/>
-                <constraint firstItem="BSi-JY-9pr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="sfV-CD-Yl3"/>
                 <constraint firstItem="b0h-uG-85i" firstAttribute="leading" secondItem="ch7-So-KiM" secondAttribute="trailing" constant="10" id="tiB-fZ-dZX"/>
+                <constraint firstAttribute="trailing" secondItem="SKd-ol-IlV" secondAttribute="trailing" constant="10" id="z7r-Nl-XmR"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

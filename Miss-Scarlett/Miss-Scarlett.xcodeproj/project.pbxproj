@@ -25,6 +25,7 @@
 		162A8A581DC199140051F053 /* BWCmtView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 162A8A561DC199140051F053 /* BWCmtView.xib */; };
 		162A8A5B1DC1A6C00051F053 /* BWBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 162A8A5A1DC1A6C00051F053 /* BWBottomView.m */; };
 		162A8A5D1DC1A7880051F053 /* BWBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 162A8A5C1DC1A7880051F053 /* BWBottomView.xib */; };
+		162A8A601DC1F4F40051F053 /* NSDate+BWDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 162A8A5F1DC1F4F40051F053 /* NSDate+BWDate.m */; };
 		163058771DB257DD000D914E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 163058761DB257DD000D914E /* Assets.xcassets */; };
 		1630587A1DB257DD000D914E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 163058781DB257DD000D914E /* LaunchScreen.storyboard */; };
 		1630589F1DB25C29000D914E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 163058841DB25C29000D914E /* AppDelegate.m */; };
@@ -117,6 +118,8 @@
 		162A8A591DC1A6C00051F053 /* BWBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWBottomView.h; sourceTree = "<group>"; };
 		162A8A5A1DC1A6C00051F053 /* BWBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWBottomView.m; sourceTree = "<group>"; };
 		162A8A5C1DC1A7880051F053 /* BWBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWBottomView.xib; sourceTree = "<group>"; };
+		162A8A5E1DC1F4F40051F053 /* NSDate+BWDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+BWDate.h"; sourceTree = "<group>"; };
+		162A8A5F1DC1F4F40051F053 /* NSDate+BWDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+BWDate.m"; sourceTree = "<group>"; };
 		163058671DB257DC000D914E /* Miss-Scarlett.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Miss-Scarlett.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		163058761DB257DD000D914E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		163058791DB257DD000D914E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -609,6 +612,8 @@
 				16D656681DB6449C00E74ECE /* AFHTTPSessionManager+BWManager.m */,
 				16DCD84D1DBB220100B879B3 /* UITextField+BWPlacehodler.h */,
 				16DCD84E1DBB220100B879B3 /* UITextField+BWPlacehodler.m */,
+				162A8A5E1DC1F4F40051F053 /* NSDate+BWDate.h */,
+				162A8A5F1DC1F4F40051F053 /* NSDate+BWDate.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -909,6 +914,7 @@
 				162344341DB873DD000EB4C6 /* BWFastLoginVC.m in Sources */,
 				16D6566F1DB6559B00E74ECE /* BWSubTagTabVC.m in Sources */,
 				167DF1C11DB393DD0042640C /* BWSettingTabVC.m in Sources */,
+				162A8A601DC1F4F40051F053 /* NSDate+BWDate.m in Sources */,
 				16ABD2C01DBF83E700A4B31D /* BWTopicViewModel.m in Sources */,
 				162A8A531DC190830051F053 /* BWUserItem.m in Sources */,
 				16D656691DB6449C00E74ECE /* AFHTTPSessionManager+BWManager.m in Sources */,
