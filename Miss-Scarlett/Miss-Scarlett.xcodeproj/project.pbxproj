@@ -24,6 +24,7 @@
 		162A8A571DC199140051F053 /* BWCmtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 162A8A551DC199140051F053 /* BWCmtView.m */; };
 		162A8A581DC199140051F053 /* BWCmtView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 162A8A561DC199140051F053 /* BWCmtView.xib */; };
 		162A8A5B1DC1A6C00051F053 /* BWBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 162A8A5A1DC1A6C00051F053 /* BWBottomView.m */; };
+		162A8A5D1DC1A7880051F053 /* BWBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 162A8A5C1DC1A7880051F053 /* BWBottomView.xib */; };
 		163058771DB257DD000D914E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 163058761DB257DD000D914E /* Assets.xcassets */; };
 		1630587A1DB257DD000D914E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 163058781DB257DD000D914E /* LaunchScreen.storyboard */; };
 		1630589F1DB25C29000D914E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 163058841DB25C29000D914E /* AppDelegate.m */; };
@@ -115,6 +116,7 @@
 		162A8A561DC199140051F053 /* BWCmtView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWCmtView.xib; sourceTree = "<group>"; };
 		162A8A591DC1A6C00051F053 /* BWBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWBottomView.h; sourceTree = "<group>"; };
 		162A8A5A1DC1A6C00051F053 /* BWBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWBottomView.m; sourceTree = "<group>"; };
+		162A8A5C1DC1A7880051F053 /* BWBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWBottomView.xib; sourceTree = "<group>"; };
 		163058671DB257DC000D914E /* Miss-Scarlett.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Miss-Scarlett.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		163058761DB257DD000D914E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		163058791DB257DD000D914E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -666,6 +668,7 @@
 				162A8A561DC199140051F053 /* BWCmtView.xib */,
 				162A8A591DC1A6C00051F053 /* BWBottomView.h */,
 				162A8A5A1DC1A6C00051F053 /* BWBottomView.m */,
+				162A8A5C1DC1A7880051F053 /* BWBottomView.xib */,
 			);
 			path = ChildCellView;
 			sourceTree = "<group>";
@@ -829,6 +832,7 @@
 				16D656601DB639EC00E74ECE /* LaunchImage-568h@2x.png in Resources */,
 				16D656631DB639EC00E74ECE /* LaunchImage-800-667h@2x.png in Resources */,
 				16D656571DB637BB00E74ECE /* BWADViewController.xib in Resources */,
+				162A8A5D1DC1A7880051F053 /* BWBottomView.xib in Resources */,
 				16D656661DB639EC00E74ECE /* LaunchImage@2x.png in Resources */,
 				162A8A581DC199140051F053 /* BWCmtView.xib in Resources */,
 				16AD1FC61DC0CE0E003833F5 /* BWVideoView.xib in Resources */,

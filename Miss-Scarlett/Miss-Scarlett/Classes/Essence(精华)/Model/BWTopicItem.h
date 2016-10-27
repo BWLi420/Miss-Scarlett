@@ -20,7 +20,7 @@ typedef enum : NSInteger {
 
 @interface BWTopicItem : NSObject
 
-/** TopView */
+/** Top View */
 @property (nonatomic, strong) NSString *profile_image;
 @property (nonatomic, strong) NSString *screen_name;
 @property (nonatomic, strong) NSString *text;
@@ -46,5 +46,11 @@ typedef enum : NSInteger {
 /** 最热评论 */
 @property (strong, nonatomic) NSArray *top_cmt;
 @property (strong, nonatomic) BWCmtItem *cmtItem;
+
+/** bottom View */
+@property (nonatomic, assign) CGFloat cai;
+@property (nonatomic, assign) CGFloat ding;
+@property (nonatomic, assign) CGFloat comment;
+@property (nonatomic, assign) CGFloat repost;
 
 @end

@@ -50,5 +50,9 @@
         self.cmtViewFrame = CGRectMake(0, self.cellH, screenW, cmtH);
         self.cellH = CGRectGetMaxY(self.cmtViewFrame) + margin;
     }
+    
+    //底部 view 的高度
+    self.bottomViewFrame = CGRectMake(0, self.cellH, screenW, 40);
+    self.cellH = CGRectGetMaxY(self.bottomViewFrame);
 }
 @end

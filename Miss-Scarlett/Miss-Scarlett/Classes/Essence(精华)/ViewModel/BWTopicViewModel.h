@@ -16,6 +16,7 @@
 @property (nonatomic, assign) CGRect topViewFrame;
 @property (nonatomic, assign) CGRect middleViewFrame;
 @property (nonatomic, assign) CGRect cmtViewFrame;
+@property (nonatomic, assign) CGRect bottomViewFrame;
 
 @property (nonatomic, assign) CGFloat cellH;
 

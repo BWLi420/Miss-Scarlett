@@ -15,6 +15,7 @@
 #import "BWVideoView.h"
 #import "BWVoiceView.h"
 #import "BWCmtView.h"
+#import "BWBottomView.h"
 
 @interface BWTopicCell ()
 @property (weak, nonatomic) BWTopTopicView *topView;
@@ -22,6 +23,7 @@
 @property (weak, nonatomic) BWVideoView *videoView;
 @property (weak, nonatomic) BWVoiceView *voiceView;
 @property (weak, nonatomic) BWCmtView *cmtView;
+@property (nonatomic, weak) BWBottomView *bottomView;
 @end
 
 @implementation BWTopicCell
@@ -54,6 +56,11 @@
         BWCmtView *cmtView = [BWCmtView viewForXib];
         [self.contentView addSubview:cmtView];
         self.cmtView = cmtView;
+        
+        //设置底部 view
+        BWBottomView *bottomView = [BWBottomView viewForXib];
+        [self.contentView addSubview:bottomView];
+        self.bottomView = bottomView;
     }
     return self;
 }
@@ -115,6 +122,10 @@
     }else {
         self.cmtView.hidden = YES;
     }
+    
+    //底部 bottomView
+    self.bottomView.item = topicVM.item;
+    self.bottomView.frame = topicVM.bottomViewFrame;
 }
 
 @end
