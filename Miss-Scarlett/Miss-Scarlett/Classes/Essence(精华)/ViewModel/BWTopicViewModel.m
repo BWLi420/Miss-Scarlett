@@ -19,7 +19,7 @@
     CGFloat margin = 10;
     CGFloat textY = 60;
     CGFloat textW = screenW - 2 * margin;
-    CGFloat textH = [item.text sizeWithFont:[UIFont systemFontOfSize:17] constrainedToSize:CGSizeMake(textW, MAXFLOAT)].height;
+    CGFloat textH = [item.text sizeWithFont:[UIFont systemFontOfSize:16] constrainedToSize:CGSizeMake(textW, MAXFLOAT)].height;
     CGFloat topViewH = textH + textY;
     
     self.topViewFrame = CGRectMake(0, 0, screenW, topViewH);
