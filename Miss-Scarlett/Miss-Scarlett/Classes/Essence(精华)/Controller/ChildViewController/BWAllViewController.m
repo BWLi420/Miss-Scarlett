@@ -60,7 +60,7 @@ static NSString *const ID = @"all";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @(BWTopicItemTypeVocie);
+    parameters[@"type"] = @(BWTopicItemTypePicture);
     
     [manager GET:BASEURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *_Nullable responseObject) {
         

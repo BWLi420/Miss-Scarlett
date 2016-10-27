@@ -8,6 +8,7 @@
 
 #import "BWPictureView.h"
 #import "BWTopicItem.h"
+#import "BWSeeBigViewController.h"
 
 #import <UIImageView+WebCache.h>
 #import <DALabeledCircularProgressView.h>
@@ -20,6 +21,13 @@
 @end
 
 @implementation BWPictureView
+
+//点击查看大图
+- (IBAction)seeBigButtonClick:(UIButton *)sender {
+    BWSeeBigViewController *bigVC = [[BWSeeBigViewController alloc] init];
+    bigVC.item = self.item;
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:bigVC animated:YES completion:nil];
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];

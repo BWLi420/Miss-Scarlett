@@ -26,6 +26,8 @@
 		162A8A5B1DC1A6C00051F053 /* BWBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 162A8A5A1DC1A6C00051F053 /* BWBottomView.m */; };
 		162A8A5D1DC1A7880051F053 /* BWBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 162A8A5C1DC1A7880051F053 /* BWBottomView.xib */; };
 		162A8A601DC1F4F40051F053 /* NSDate+BWDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 162A8A5F1DC1F4F40051F053 /* NSDate+BWDate.m */; };
+		162A8A641DC1FE200051F053 /* BWSeeBigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 162A8A621DC1FE200051F053 /* BWSeeBigViewController.m */; };
+		162A8A651DC1FE200051F053 /* BWSeeBigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 162A8A631DC1FE200051F053 /* BWSeeBigViewController.xib */; };
 		163058771DB257DD000D914E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 163058761DB257DD000D914E /* Assets.xcassets */; };
 		1630587A1DB257DD000D914E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 163058781DB257DD000D914E /* LaunchScreen.storyboard */; };
 		1630589F1DB25C29000D914E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 163058841DB25C29000D914E /* AppDelegate.m */; };
@@ -120,6 +122,9 @@
 		162A8A5C1DC1A7880051F053 /* BWBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWBottomView.xib; sourceTree = "<group>"; };
 		162A8A5E1DC1F4F40051F053 /* NSDate+BWDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+BWDate.h"; sourceTree = "<group>"; };
 		162A8A5F1DC1F4F40051F053 /* NSDate+BWDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+BWDate.m"; sourceTree = "<group>"; };
+		162A8A611DC1FE200051F053 /* BWSeeBigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWSeeBigViewController.h; sourceTree = "<group>"; };
+		162A8A621DC1FE200051F053 /* BWSeeBigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSeeBigViewController.m; sourceTree = "<group>"; };
+		162A8A631DC1FE200051F053 /* BWSeeBigViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWSeeBigViewController.xib; sourceTree = "<group>"; };
 		163058671DB257DC000D914E /* Miss-Scarlett.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Miss-Scarlett.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		163058761DB257DD000D914E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		163058791DB257DD000D914E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -363,6 +368,9 @@
 				1622E04F1DBA4B8D00957E51 /* ChildViewController */,
 				163058A41DB25F2A000D914E /* BWEssenceVC.h */,
 				163058A51DB25F2A000D914E /* BWEssenceVC.m */,
+				162A8A611DC1FE200051F053 /* BWSeeBigViewController.h */,
+				162A8A621DC1FE200051F053 /* BWSeeBigViewController.m */,
+				162A8A631DC1FE200051F053 /* BWSeeBigViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -828,6 +836,7 @@
 				16D656651DB639EC00E74ECE /* LaunchImage.png in Resources */,
 				16ABD2B91DBF73C000A4B31D /* BWTopTopicView.xib in Resources */,
 				163058771DB257DD000D914E /* Assets.xcassets in Resources */,
+				162A8A651DC1FE200051F053 /* BWSeeBigViewController.xib in Resources */,
 				16D656621DB639EC00E74ECE /* LaunchImage-700@2x.png in Resources */,
 				16AD1FCF1DC0E2DC003833F5 /* BWVoiceView.xib in Resources */,
 				16DCD8811DBB8BFF00B879B3 /* BWWKWebViewController.xib in Resources */,
@@ -935,6 +944,7 @@
 				16E1F0EA1DB7097400EB418E /* BWSubTagCell.m in Sources */,
 				16AEDEB71DB7A8A300C3F289 /* BWLoginRegVC.m in Sources */,
 				163058A91DB25F55000D914E /* BWNewVC.m in Sources */,
+				162A8A641DC1FE200051F053 /* BWSeeBigViewController.m in Sources */,
 				167DF1C71DB3B14A0042640C /* UIView+BWFrame.m in Sources */,
 				16D656561DB637BB00E74ECE /* BWADViewController.m in Sources */,
 				16ABD2BC1DBF787700A4B31D /* BWTopicItem.m in Sources */,
