@@ -14,14 +14,14 @@
 #import "BWPictureView.h"
 #import "BWVideoView.h"
 #import "BWVoiceView.h"
-#import "BWTextView.h"
+#import "BWCmtView.h"
 
 @interface BWTopicCell ()
-@property (strong, nonatomic) BWTopTopicView *topView;
-@property (strong, nonatomic) BWPictureView *pictureView;
-@property (strong, nonatomic) BWVideoView *videoView;
-@property (strong, nonatomic) BWVoiceView *voiceView;
-@property (strong, nonatomic) BWTextView *textView;
+@property (weak, nonatomic) BWTopTopicView *topView;
+@property (weak, nonatomic) BWPictureView *pictureView;
+@property (weak, nonatomic) BWVideoView *videoView;
+@property (weak, nonatomic) BWVoiceView *voiceView;
+@property (weak, nonatomic) BWCmtView *cmtView;
 @end
 
 @implementation BWTopicCell
@@ -51,9 +51,9 @@
         self.voiceView = voiceView;
         
         //设置中间热门评论
-        BWTextView *textView = [BWTextView viewForXib];
-        [self.contentView addSubview:textView];
-        self.textView = textView;
+        BWCmtView *cmtView = [BWCmtView viewForXib];
+        [self.contentView addSubview:cmtView];
+        self.cmtView = cmtView;
     }
     return self;
 }
@@ -103,6 +103,17 @@
         self.pictureView.hidden = YES;
         self.videoView.hidden = YES;
         self.voiceView.hidden = YES;
+    }
+    
+    //热门评论
+    if (topicVM.item.cmtItem) {
+        
+        self.cmtView.item = topicVM.item;
+        self.cmtView.frame = topicVM.cmtViewFrame;
+        
+        self.cmtView.hidden = NO;
+    }else {
+        self.cmtView.hidden = YES;
     }
 }
 

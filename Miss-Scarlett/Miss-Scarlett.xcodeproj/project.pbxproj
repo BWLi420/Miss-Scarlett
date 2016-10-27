@@ -19,6 +19,11 @@
 		162344341DB873DD000EB4C6 /* BWFastLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 162344331DB873DD000EB4C6 /* BWFastLoginVC.m */; };
 		162344371DB87757000EB4C6 /* BWFastLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 162344361DB87757000EB4C6 /* BWFastLoginButton.m */; };
 		1623443A1DB87CEE000EB4C6 /* BWTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 162344391DB87CEE000EB4C6 /* BWTextField.m */; };
+		162A8A501DC18FEE0051F053 /* BWCmtItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 162A8A4F1DC18FEE0051F053 /* BWCmtItem.m */; };
+		162A8A531DC190830051F053 /* BWUserItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 162A8A521DC190830051F053 /* BWUserItem.m */; };
+		162A8A571DC199140051F053 /* BWCmtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 162A8A551DC199140051F053 /* BWCmtView.m */; };
+		162A8A581DC199140051F053 /* BWCmtView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 162A8A561DC199140051F053 /* BWCmtView.xib */; };
+		162A8A5B1DC1A6C00051F053 /* BWBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 162A8A5A1DC1A6C00051F053 /* BWBottomView.m */; };
 		163058771DB257DD000D914E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 163058761DB257DD000D914E /* Assets.xcassets */; };
 		1630587A1DB257DD000D914E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 163058781DB257DD000D914E /* LaunchScreen.storyboard */; };
 		1630589F1DB25C29000D914E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 163058841DB25C29000D914E /* AppDelegate.m */; };
@@ -48,8 +53,6 @@
 		16AD1FC61DC0CE0E003833F5 /* BWVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16AD1FC51DC0CE0E003833F5 /* BWVideoView.xib */; };
 		16AD1FCD1DC0E2B9003833F5 /* BWVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16AD1FCC1DC0E2B9003833F5 /* BWVoiceView.m */; };
 		16AD1FCF1DC0E2DC003833F5 /* BWVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16AD1FCE1DC0E2DC003833F5 /* BWVoiceView.xib */; };
-		16AD1FD21DC0E8B4003833F5 /* BWTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16AD1FD11DC0E8B4003833F5 /* BWTextView.m */; };
-		16AD1FD41DC0E8C2003833F5 /* BWTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16AD1FD31DC0E8C2003833F5 /* BWTextView.xib */; };
 		16AEDEB41DB7A38000C3F289 /* BWFriendTrendVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16AEDEB31DB7A38000C3F289 /* BWFriendTrendVC.xib */; };
 		16AEDEB71DB7A8A300C3F289 /* BWLoginRegVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 16AEDEB61DB7A8A300C3F289 /* BWLoginRegVC.m */; };
 		16AEDEB91DB7A8BE00C3F289 /* BWLoginRegVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AEDEB81DB7A8BE00C3F289 /* BWLoginRegVC.storyboard */; };
@@ -103,6 +106,15 @@
 		162344361DB87757000EB4C6 /* BWFastLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWFastLoginButton.m; sourceTree = "<group>"; };
 		162344381DB87CEE000EB4C6 /* BWTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWTextField.h; sourceTree = "<group>"; };
 		162344391DB87CEE000EB4C6 /* BWTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWTextField.m; sourceTree = "<group>"; };
+		162A8A4E1DC18FEE0051F053 /* BWCmtItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCmtItem.h; sourceTree = "<group>"; };
+		162A8A4F1DC18FEE0051F053 /* BWCmtItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCmtItem.m; sourceTree = "<group>"; };
+		162A8A511DC190830051F053 /* BWUserItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWUserItem.h; sourceTree = "<group>"; };
+		162A8A521DC190830051F053 /* BWUserItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWUserItem.m; sourceTree = "<group>"; };
+		162A8A541DC199140051F053 /* BWCmtView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCmtView.h; sourceTree = "<group>"; };
+		162A8A551DC199140051F053 /* BWCmtView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCmtView.m; sourceTree = "<group>"; };
+		162A8A561DC199140051F053 /* BWCmtView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWCmtView.xib; sourceTree = "<group>"; };
+		162A8A591DC1A6C00051F053 /* BWBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWBottomView.h; sourceTree = "<group>"; };
+		162A8A5A1DC1A6C00051F053 /* BWBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWBottomView.m; sourceTree = "<group>"; };
 		163058671DB257DC000D914E /* Miss-Scarlett.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Miss-Scarlett.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		163058761DB257DD000D914E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		163058791DB257DD000D914E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -157,9 +169,6 @@
 		16AD1FCB1DC0E2B9003833F5 /* BWVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWVoiceView.h; sourceTree = "<group>"; };
 		16AD1FCC1DC0E2B9003833F5 /* BWVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWVoiceView.m; sourceTree = "<group>"; };
 		16AD1FCE1DC0E2DC003833F5 /* BWVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWVoiceView.xib; sourceTree = "<group>"; };
-		16AD1FD01DC0E8B4003833F5 /* BWTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWTextView.h; sourceTree = "<group>"; };
-		16AD1FD11DC0E8B4003833F5 /* BWTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWTextView.m; sourceTree = "<group>"; };
-		16AD1FD31DC0E8C2003833F5 /* BWTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWTextView.xib; sourceTree = "<group>"; };
 		16AEDEB31DB7A38000C3F289 /* BWFriendTrendVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWFriendTrendVC.xib; sourceTree = "<group>"; };
 		16AEDEB51DB7A8A300C3F289 /* BWLoginRegVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWLoginRegVC.h; sourceTree = "<group>"; };
 		16AEDEB61DB7A8A300C3F289 /* BWLoginRegVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWLoginRegVC.m; sourceTree = "<group>"; };
@@ -358,6 +367,10 @@
 			children = (
 				16ABD2BA1DBF787700A4B31D /* BWTopicItem.h */,
 				16ABD2BB1DBF787700A4B31D /* BWTopicItem.m */,
+				162A8A4E1DC18FEE0051F053 /* BWCmtItem.h */,
+				162A8A4F1DC18FEE0051F053 /* BWCmtItem.m */,
+				162A8A511DC190830051F053 /* BWUserItem.h */,
+				162A8A521DC190830051F053 /* BWUserItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -648,9 +661,11 @@
 				16AD1FCB1DC0E2B9003833F5 /* BWVoiceView.h */,
 				16AD1FCC1DC0E2B9003833F5 /* BWVoiceView.m */,
 				16AD1FCE1DC0E2DC003833F5 /* BWVoiceView.xib */,
-				16AD1FD01DC0E8B4003833F5 /* BWTextView.h */,
-				16AD1FD11DC0E8B4003833F5 /* BWTextView.m */,
-				16AD1FD31DC0E8C2003833F5 /* BWTextView.xib */,
+				162A8A541DC199140051F053 /* BWCmtView.h */,
+				162A8A551DC199140051F053 /* BWCmtView.m */,
+				162A8A561DC199140051F053 /* BWCmtView.xib */,
+				162A8A591DC1A6C00051F053 /* BWBottomView.h */,
+				162A8A5A1DC1A6C00051F053 /* BWBottomView.m */,
 			);
 			path = ChildCellView;
 			sourceTree = "<group>";
@@ -813,9 +828,9 @@
 				16DCD8561DBB2B0B00B879B3 /* BWCollectionViewCell.xib in Resources */,
 				16D656601DB639EC00E74ECE /* LaunchImage-568h@2x.png in Resources */,
 				16D656631DB639EC00E74ECE /* LaunchImage-800-667h@2x.png in Resources */,
-				16AD1FD41DC0E8C2003833F5 /* BWTextView.xib in Resources */,
 				16D656571DB637BB00E74ECE /* BWADViewController.xib in Resources */,
 				16D656661DB639EC00E74ECE /* LaunchImage@2x.png in Resources */,
+				162A8A581DC199140051F053 /* BWCmtView.xib in Resources */,
 				16AD1FC61DC0CE0E003833F5 /* BWVideoView.xib in Resources */,
 				162344311DB85CA5000EB4C6 /* BWRegLoginView.xib in Resources */,
 				16AEDEB41DB7A38000C3F289 /* BWFriendTrendVC.xib in Resources */,
@@ -891,6 +906,7 @@
 				16D6566F1DB6559B00E74ECE /* BWSubTagTabVC.m in Sources */,
 				167DF1C11DB393DD0042640C /* BWSettingTabVC.m in Sources */,
 				16ABD2C01DBF83E700A4B31D /* BWTopicViewModel.m in Sources */,
+				162A8A531DC190830051F053 /* BWUserItem.m in Sources */,
 				16D656691DB6449C00E74ECE /* AFHTTPSessionManager+BWManager.m in Sources */,
 				16AD1FCD1DC0E2B9003833F5 /* BWVoiceView.m in Sources */,
 				16AD1FC41DC0CDFD003833F5 /* BWVideoView.m in Sources */,
@@ -911,9 +927,9 @@
 				163058A91DB25F55000D914E /* BWNewVC.m in Sources */,
 				167DF1C71DB3B14A0042640C /* UIView+BWFrame.m in Sources */,
 				16D656561DB637BB00E74ECE /* BWADViewController.m in Sources */,
-				16AD1FD21DC0E8B4003833F5 /* BWTextView.m in Sources */,
 				16ABD2BC1DBF787700A4B31D /* BWTopicItem.m in Sources */,
 				163058A01DB25C29000D914E /* main.m in Sources */,
+				162A8A5B1DC1A6C00051F053 /* BWBottomView.m in Sources */,
 				16ABD2C71DBF89D500A4B31D /* BWPictureView.m in Sources */,
 				167DF1C41DB397980042640C /* BWNavController.m in Sources */,
 				160A34061DBE302F001EF255 /* BWBaseTableViewController.m in Sources */,
@@ -923,6 +939,8 @@
 				16D656721DB65E5500E74ECE /* BWSubTagItem.m in Sources */,
 				162344371DB87757000EB4C6 /* BWFastLoginButton.m in Sources */,
 				160A33F91DBDFDFF001EF255 /* BWVideoViewController.m in Sources */,
+				162A8A571DC199140051F053 /* BWCmtView.m in Sources */,
+				162A8A501DC18FEE0051F053 /* BWCmtItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

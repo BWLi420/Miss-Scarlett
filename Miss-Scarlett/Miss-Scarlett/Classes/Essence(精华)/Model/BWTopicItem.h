@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class BWCmtItem;
+
 typedef enum : NSInteger {
     BWTopicItemTypeAll = 1,
     BWTopicItemTypePicture = 10,
@@ -40,5 +42,9 @@ typedef enum : NSInteger {
 /** middle 声音 */
 @property (nonatomic, strong) NSString *voiceuri;
 @property (nonatomic, assign) NSInteger voicetime;
+
+/** 最热评论 */
+@property (strong, nonatomic) NSArray *top_cmt;
+@property (strong, nonatomic) BWCmtItem *cmtItem;
 
 @end

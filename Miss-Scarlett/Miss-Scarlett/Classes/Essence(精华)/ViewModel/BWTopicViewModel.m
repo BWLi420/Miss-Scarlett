@@ -8,6 +8,7 @@
 
 #import "BWTopicViewModel.h"
 #import "BWTopicItem.h"
+#import "BWCmtItem.h"
 
 @implementation BWTopicViewModel
 
@@ -36,6 +37,18 @@
         }
         self.middleViewFrame = CGRectMake(margin, self.cellH, textW, middleH);
         self.cellH = CGRectGetMaxY(self.middleViewFrame) + margin;
+    }
+    
+    //计算最热评论的高度
+    if (item.cmtItem) {
+        
+        CGFloat cmtH = 50;
+        if (item.cmtItem.content.length) {
+            CGFloat contentH = [item.cmtItem.totalContent sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:CGSizeMake(textW, MAXFLOAT)].height;
+            cmtH = 28 + contentH;
+        }
+        self.cmtViewFrame = CGRectMake(0, self.cellH, screenW, cmtH);
+        self.cellH = CGRectGetMaxY(self.cmtViewFrame) + margin;
     }
 }
 @end
