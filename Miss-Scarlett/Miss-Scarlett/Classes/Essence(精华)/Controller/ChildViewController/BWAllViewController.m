@@ -42,11 +42,15 @@ static NSString *const ID = @"all";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.backgroundColor = [UIColor lightGrayColor];
     
     //只要通过注册创建 cell，就会调用 initWithStyle
     [self.tableView registerClass:[BWTopicCell class] forCellReuseIdentifier:ID];
     //请求数据
     [self loadData];
+    
+    //取消 cell 之间的分割线
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 //请求数据
@@ -94,7 +98,7 @@ static NSString *const ID = @"all";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return [self.topicsVM[indexPath.row] cellH];
+    return [self.topicsVM[indexPath.row] cellH] + 50;
 }
 
 @end

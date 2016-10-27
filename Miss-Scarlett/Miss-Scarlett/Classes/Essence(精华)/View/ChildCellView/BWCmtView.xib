@@ -9,7 +9,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BWCmtView">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最热评论：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMV-EV-BHT">
@@ -72,7 +72,7 @@
                 <outlet property="voiceButton" destination="JmF-O9-TBK" id="63n-Zj-Vz6"/>
                 <outlet property="voiceView" destination="3MI-K6-fc1" id="Ax5-p4-91Y"/>
             </connections>
-            <point key="canvasLocation" x="11" y="7"/>
+            <point key="canvasLocation" x="26" y="-143"/>
         </view>
     </objects>
     <resources>

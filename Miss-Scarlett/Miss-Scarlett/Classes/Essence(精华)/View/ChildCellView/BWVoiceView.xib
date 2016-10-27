@@ -9,7 +9,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="Pyd-Wo-9TW" customClass="BWVoiceView">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="289"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YBi-O2-3LQ"/>
@@ -52,7 +52,7 @@
                 <outlet property="playCountLabel" destination="4vS-Zf-xzc" id="LnF-j0-MCa"/>
                 <outlet property="timeLabel" destination="MJL-yf-h07" id="Tyr-aP-yDO"/>
             </connections>
-            <point key="canvasLocation" x="-252" y="-29"/>
+            <point key="canvasLocation" x="16" y="30"/>
         </view>
     </objects>
     <resources>

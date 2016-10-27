@@ -28,6 +28,13 @@
 
 @implementation BWTopicCell
 
+- (void)setFrame:(CGRect)frame {
+    frame.origin.y += 10;
+    frame.size.height -= 50;
+    
+    [super setFrame:frame];
+}
+
 //使用 cell 时必然要通过 initWithStyle
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     

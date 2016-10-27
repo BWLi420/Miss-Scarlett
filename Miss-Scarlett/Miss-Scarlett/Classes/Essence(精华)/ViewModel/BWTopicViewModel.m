@@ -28,12 +28,10 @@
     //计算中间 view 高度
     if (item.type != BWTopicItemTypeText) {
         
-        CGFloat middleH = textW / item.width * item.height;
-        if (middleH > 300) {
+        CGFloat middleH = 1.0 * textW / item.width * item.height;
+        if (middleH > screenH) {
             middleH = 300;
             item.is_bigPicture = YES;
-        }else {
-            middleH = 300;
         }
         self.middleViewFrame = CGRectMake(margin, self.cellH, textW, middleH);
         self.cellH = CGRectGetMaxY(self.middleViewFrame) + margin;
@@ -47,12 +45,12 @@
             CGFloat contentH = [item.cmtItem.totalContent sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:CGSizeMake(textW, MAXFLOAT)].height;
             cmtH = 28 + contentH;
         }
-        self.cmtViewFrame = CGRectMake(0, self.cellH, screenW, cmtH);
-        self.cellH = CGRectGetMaxY(self.cmtViewFrame) + margin;
+        self.cmtViewFrame = CGRectMake(0, self.cellH - margin, screenW, cmtH);
+        self.cellH = CGRectGetMaxY(self.cmtViewFrame);
     }
     
     //底部 view 的高度
-    self.bottomViewFrame = CGRectMake(0, self.cellH, screenW, 40);
+    self.bottomViewFrame = CGRectMake(0, self.cellH, screenW, 35);
     self.cellH = CGRectGetMaxY(self.bottomViewFrame);
 }
 @end
