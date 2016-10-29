@@ -44,18 +44,57 @@
     self.progressView.progress = 0;
     self.progressView.progressLabel.text = @"0%";
     
-    [self.pictureView sd_setImageWithURL:[NSURL URLWithString:item.image0] placeholderImage:nil options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+    //先从沙盒中获取之前的裁剪图片
+    NSString *pictureName = [NSString stringWithFormat:@"%@.png", item.screen_name];
+    NSString *filePath = [CACHEPATH stringByAppendingPathComponent:pictureName];
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    UIImage *image = [UIImage imageWithData:data];
+    
+    if (image) {
+        item.savedImage = image;
+        self.pictureView.image = image;
         
-        if (expectedSize == -1) return ;
-        CGFloat progress = 1.0 * receivedSize / expectedSize;
-        NSString *progressStr = [NSString stringWithFormat:@"%.0f%%", progress * 100];
+    }else {
         
-        dispatch_async(dispatch_get_main_queue(), ^{
+        [self.pictureView sd_setImageWithURL:[NSURL URLWithString:item.image0] placeholderImage:nil options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) {
             
-            self.progressView.progressLabel.text = progressStr;
-            self.progressView.progress = progress;
-        });
-    } completed:nil];
+            if (expectedSize == -1) return ;
+            CGFloat progress = 1.0 * receivedSize / expectedSize;
+            NSString *progressStr = [NSString stringWithFormat:@"%.0f%%", progress * 100];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                self.progressView.progressLabel.text = progressStr;
+                self.progressView.progress = progress;
+            });
+        } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+            
+            //加载完图片调用
+            if (image.size.height > 10000) {
+                CGFloat imageH = screenW / image.size.width * image.size.height;
+                
+                //重新绘制大图
+                //1.开启图形上下文
+                UIGraphicsBeginImageContext(CGSizeMake(screenW, imageH));
+                //2.画图
+                [image drawInRect:CGRectMake(0, 0, screenW, imageH)];
+                //3.取图
+                image = UIGraphicsGetImageFromCurrentImageContext();
+                //4.关闭上下文
+                UIGraphicsEndImageContext();
+                //5.显示
+                self.pictureView.image = image;
+                
+                //保存到模型中
+                item.savedImage = image;
+                //保存到沙盒中
+                NSString *pictureName = [NSString stringWithFormat:@"%@.png", item.screen_name];
+                NSString *filePath = [CACHEPATH stringByAppendingPathComponent:pictureName];
+                NSData *data = UIImagePNGRepresentation(image);
+                [data writeToFile:filePath atomically:YES];
+            }
+        }];
+    }
 
     self.gifView.hidden = !item.is_gif;
     

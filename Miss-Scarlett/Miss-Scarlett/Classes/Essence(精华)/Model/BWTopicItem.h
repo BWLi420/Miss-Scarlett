@@ -34,6 +34,8 @@ typedef enum : NSInteger {
 @property (nonatomic, assign) BOOL is_bigPicture;
 @property (nonatomic, assign) BWTopicItemType type;
 
+@property (strong, nonatomic) UIImage *savedImage;
+
 /** middle 视频 */
 @property (nonatomic, strong) NSString *videouri;
 @property (nonatomic, assign) NSInteger videotime;

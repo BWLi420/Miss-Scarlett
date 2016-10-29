@@ -12,8 +12,6 @@
 #import <SDImageCache.h>
 #import <SVProgressHUD.h>
 
-#define CACHEPATH [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
-
 @interface BWSettingTabVC ()
 
 @property (weak, nonatomic) IBOutlet UILabel *cacheLabel;
