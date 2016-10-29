@@ -8,11 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		160A33F31DBDBB03001EF255 /* BWFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 160A33F21DBDBB03001EF255 /* BWFileManager.m */; };
-		160A33F61DBDFDE6001EF255 /* BWAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 160A33F51DBDFDE6001EF255 /* BWAllViewController.m */; };
-		160A33F91DBDFDFF001EF255 /* BWVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 160A33F81DBDFDFF001EF255 /* BWVideoController.m */; };
-		160A33FC1DBDFE0B001EF255 /* BWVoiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 160A33FB1DBDFE0B001EF255 /* BWVoiceController.m */; };
-		160A33FF1DBDFE1B001EF255 /* BWPictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 160A33FE1DBDFE1B001EF255 /* BWPictureController.m */; };
-		160A34021DBDFE3D001EF255 /* BWTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 160A34011DBDFE3D001EF255 /* BWTextViewController.m */; };
 		160A34061DBE302F001EF255 /* BWBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 160A34051DBE302F001EF255 /* BWBaseTableViewController.m */; };
 		1623442F1DB85C94000EB4C6 /* BWRegLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1623442E1DB85C94000EB4C6 /* BWRegLoginView.m */; };
 		162344311DB85CA5000EB4C6 /* BWRegLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 162344301DB85CA5000EB4C6 /* BWRegLoginView.xib */; };
@@ -91,16 +86,6 @@
 /* Begin PBXFileReference section */
 		160A33F11DBDBB03001EF255 /* BWFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWFileManager.h; sourceTree = "<group>"; };
 		160A33F21DBDBB03001EF255 /* BWFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWFileManager.m; sourceTree = "<group>"; };
-		160A33F41DBDFDE6001EF255 /* BWAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAllViewController.h; sourceTree = "<group>"; };
-		160A33F51DBDFDE6001EF255 /* BWAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAllViewController.m; sourceTree = "<group>"; };
-		160A33F71DBDFDFF001EF255 /* BWVideoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWVideoController.h; sourceTree = "<group>"; };
-		160A33F81DBDFDFF001EF255 /* BWVideoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWVideoController.m; sourceTree = "<group>"; };
-		160A33FA1DBDFE0B001EF255 /* BWVoiceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWVoiceController.h; sourceTree = "<group>"; };
-		160A33FB1DBDFE0B001EF255 /* BWVoiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWVoiceController.m; sourceTree = "<group>"; };
-		160A33FD1DBDFE1B001EF255 /* BWPictureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWPictureController.h; sourceTree = "<group>"; };
-		160A33FE1DBDFE1B001EF255 /* BWPictureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWPictureController.m; sourceTree = "<group>"; };
-		160A34001DBDFE3D001EF255 /* BWTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWTextViewController.h; sourceTree = "<group>"; };
-		160A34011DBDFE3D001EF255 /* BWTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWTextViewController.m; sourceTree = "<group>"; };
 		160A34041DBE302F001EF255 /* BWBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWBaseTableViewController.h; sourceTree = "<group>"; };
 		160A34051DBE302F001EF255 /* BWBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWBaseTableViewController.m; sourceTree = "<group>"; };
 		1623442D1DB85C94000EB4C6 /* BWRegLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWRegLoginView.h; sourceTree = "<group>"; };
@@ -274,23 +259,6 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		1622E04F1DBA4B8D00957E51 /* ChildViewController */ = {
-			isa = PBXGroup;
-			children = (
-				160A33F41DBDFDE6001EF255 /* BWAllViewController.h */,
-				160A33F51DBDFDE6001EF255 /* BWAllViewController.m */,
-				160A33F71DBDFDFF001EF255 /* BWVideoController.h */,
-				160A33F81DBDFDFF001EF255 /* BWVideoController.m */,
-				160A33FA1DBDFE0B001EF255 /* BWVoiceController.h */,
-				160A33FB1DBDFE0B001EF255 /* BWVoiceController.m */,
-				160A33FD1DBDFE1B001EF255 /* BWPictureController.h */,
-				160A33FE1DBDFE1B001EF255 /* BWPictureController.m */,
-				160A34001DBDFE3D001EF255 /* BWTextViewController.h */,
-				160A34011DBDFE3D001EF255 /* BWTextViewController.m */,
-			);
-			path = ChildViewController;
-			sourceTree = "<group>";
-		};
 		1630585E1DB257DC000D914E = {
 			isa = PBXGroup;
 			children = (
@@ -372,7 +340,6 @@
 		163058861DB25C29000D914E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1622E04F1DBA4B8D00957E51 /* ChildViewController */,
 				166BE5E21DC4D79400C5E8F3 /* BWBaseEssenceViewController.h */,
 				166BE5E31DC4D79400C5E8F3 /* BWBaseEssenceViewController.m */,
 				163058A41DB25F2A000D914E /* BWEssenceVC.h */,
@@ -931,12 +898,10 @@
 				16ABD2B31DBF6EE100A4B31D /* BWTopicCell.m in Sources */,
 				163058AF1DB25FA0000D914E /* BWFriendTrendVC.m in Sources */,
 				16ABD2B71DBF72EC00A4B31D /* BWTopTopicView.m in Sources */,
-				160A33F61DBDFDE6001EF255 /* BWAllViewController.m in Sources */,
 				163058B21DB25FCF000D914E /* BWMeTabVC.m in Sources */,
 				167DF1BA1DB374DF0042640C /* UIBarButtonItem+BWItem.m in Sources */,
 				16DCD84F1DBB220100B879B3 /* UITextField+BWPlacehodler.m in Sources */,
 				16DCD8801DBB8BFF00B879B3 /* BWWKWebViewController.m in Sources */,
-				160A34021DBDFE3D001EF255 /* BWTextViewController.m in Sources */,
 				16DCD8591DBB3BEC00B879B3 /* BWCollectionItem.m in Sources */,
 				162344341DB873DD000EB4C6 /* BWFastLoginVC.m in Sources */,
 				16D6566F1DB6559B00E74ECE /* BWSubTagTabVC.m in Sources */,
@@ -948,10 +913,8 @@
 				16AD1FCD1DC0E2B9003833F5 /* BWVoiceView.m in Sources */,
 				16AD1FC41DC0CDFD003833F5 /* BWVideoView.m in Sources */,
 				167DF1CD1DB3B6250042640C /* BWNavLeftBackView.m in Sources */,
-				160A33FF1DBDFE1B001EF255 /* BWPictureController.m in Sources */,
 				1623442F1DB85C94000EB4C6 /* BWRegLoginView.m in Sources */,
 				167DF1CA1DB3B59C0042640C /* BWNavigationBar.m in Sources */,
-				160A33FC1DBDFE0B001EF255 /* BWVoiceController.m in Sources */,
 				163058B61DB26D16000D914E /* UIImage+BWImage.m in Sources */,
 				160A33F31DBDBB03001EF255 /* BWFileManager.m in Sources */,
 				16D6566C1DB647C800E74ECE /* BWADItem.m in Sources */,
@@ -978,7 +941,6 @@
 				16ABD2C41DBF890400A4B31D /* BWBaseTopicView.m in Sources */,
 				16D656721DB65E5500E74ECE /* BWSubTagItem.m in Sources */,
 				162344371DB87757000EB4C6 /* BWFastLoginButton.m in Sources */,
-				160A33F91DBDFDFF001EF255 /* BWVideoController.m in Sources */,
 				162A8A571DC199140051F053 /* BWCmtView.m in Sources */,
 				162A8A501DC18FEE0051F053 /* BWCmtItem.m in Sources */,
 			);
