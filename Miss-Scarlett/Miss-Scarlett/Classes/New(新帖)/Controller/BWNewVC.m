@@ -10,9 +10,9 @@
 #import "BWSubTagTabVC.h"
 
 #import "BWAllViewController.h"
-#import "BWVideoViewController.h"
-#import "BWVoiceViewController.h"
-#import "BWPictureViewController.h"
+#import "BWVideoController.h"
+#import "BWVoiceController.h"
+#import "BWPictureController.h"
 #import "BWTextViewController.h"
 
 @interface BWNewVC ()
@@ -54,17 +54,17 @@
     [self addChildViewController:allVC];
     
     //视频
-    BWVideoViewController *videoVC = [[BWVideoViewController alloc] init];
+    BWVideoController *videoVC = [[BWVideoController alloc] init];
     videoVC.title = @"视频";
     [self addChildViewController:videoVC];
     
     //声音
-    BWVoiceViewController *voiceVC = [[BWVoiceViewController alloc] init];
+    BWVoiceController *voiceVC = [[BWVoiceController alloc] init];
     voiceVC.title = @"声音";
     [self addChildViewController:voiceVC];
     
     //图片
-    BWPictureViewController *pictureVC = [[BWPictureViewController alloc] init];
+    BWPictureController *pictureVC = [[BWPictureController alloc] init];
     pictureVC.title = @"图片";
     [self addChildViewController:pictureVC];
     

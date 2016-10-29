@@ -14,7 +14,7 @@ typedef enum : NSInteger {
     BWTopicItemTypeAll = 1,
     BWTopicItemTypePicture = 10,
     BWTopicItemTypeVideo = 41,
-    BWTopicItemTypeVocie = 31,
+    BWTopicItemTypeVoice = 31,
     BWTopicItemTypeText = 29
 } BWTopicItemType;
 

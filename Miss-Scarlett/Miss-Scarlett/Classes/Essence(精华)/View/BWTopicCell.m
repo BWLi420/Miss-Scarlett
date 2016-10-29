@@ -101,7 +101,7 @@
         self.pictureView.hidden = YES;
         self.voiceView.hidden = YES;
         
-    }else if (topicVM.item.type == BWTopicItemTypeVocie) {
+    }else if (topicVM.item.type == BWTopicItemTypeVoice) {
         
         //中间 声音
         self.voiceView.item = topicVM.item;

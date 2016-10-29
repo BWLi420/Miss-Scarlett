@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BWBaseEssenceViewController.h"
 
-@interface BWTextViewController : UITableViewController
+@interface BWTextViewController : BWBaseEssenceViewController
 
 @end

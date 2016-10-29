@@ -1,16 +1,17 @@
 //
-//  BWAllViewController.m
+//  BWPictureViewController.m
 //  Miss-Scarlett
 //
 //  Created by mortal on 16/10/24.
 //  Copyright © 2016年 mortal. All rights reserved.
 //
 
-#import "BWAllViewController.h"
+#import "BWPictureController.h"
 
-@implementation BWAllViewController
+@implementation BWPictureController
 
 - (NSNumber *)type {
-    return @(BWTopicItemTypeAll);
+    return @(BWTopicItemTypePicture);
 }
+
 @end

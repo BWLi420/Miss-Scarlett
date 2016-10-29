@@ -1,5 +1,5 @@
 //
-//  BWVoiceViewController.h
+//  BWPictureViewController.h
 //  Miss-Scarlett
 //
 //  Created by mortal on 16/10/24.
@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BWBaseEssenceViewController.h"
 
-@interface BWVoiceViewController : UITableViewController
+@interface BWPictureController : BWBaseEssenceViewController
 
 @end

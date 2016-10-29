@@ -162,8 +162,8 @@ static NSString *const ID = @"collectionCell";
     [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     //切换子控制器的 view
     UITableViewController *tabVC = self.childViewControllers[indexPath.row];
-    tabVC.view.frame = [UIScreen mainScreen].bounds;
     tabVC.tableView.contentInset = UIEdgeInsetsMake(64 + self.topScrollView.bw_height, 0, 49, 0);
+    tabVC.view.frame = [UIScreen mainScreen].bounds;
     [cell.contentView addSubview:tabVC.view];
     
     return cell;

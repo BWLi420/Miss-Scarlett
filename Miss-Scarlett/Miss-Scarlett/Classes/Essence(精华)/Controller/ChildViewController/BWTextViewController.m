@@ -8,15 +8,10 @@
 
 #import "BWTextViewController.h"
 
-@interface BWTextViewController ()
-
-@end
-
 @implementation BWTextViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
+- (NSNumber *)type {
+    return @(BWTopicItemTypeText);
 }
 
 @end
