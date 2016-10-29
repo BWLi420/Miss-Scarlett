@@ -9,6 +9,7 @@
 #import "BWBaseEssenceViewController.h"
 #import "BWTopicCell.h"
 #import "BWTopicViewModel.h"
+#import "BWNewVC.h"
 
 #import <MJExtension.h>
 #import <MJRefresh.h>
@@ -85,7 +86,12 @@ static NSString *const ID = @"cell";
     [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    parameters[@"a"] = @"list";
+    
+    NSString *a = @"list";
+    if ([self.parentViewController isKindOfClass:[BWNewVC class]]) {
+        a = @"newlist";
+    }
+    parameters[@"a"] = a;
     parameters[@"c"] = @"data";
     parameters[@"type"] = self.type;
     
@@ -122,7 +128,12 @@ static NSString *const ID = @"cell";
     [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    parameters[@"a"] = @"list";
+    
+    NSString *a = @"list";
+    if ([self.parentViewController isKindOfClass:[BWNewVC class]]) {
+        a = @"newlist";
+    }
+    parameters[@"a"] = a;
     parameters[@"c"] = @"data";
     parameters[@"maxtime"] = _maxtime;
     parameters[@"type"] = self.type;

@@ -8,12 +8,7 @@
 
 #import "BWNewVC.h"
 #import "BWSubTagTabVC.h"
-
-#import "BWAllViewController.h"
-#import "BWVideoController.h"
-#import "BWVoiceController.h"
-#import "BWPictureController.h"
-#import "BWTextViewController.h"
+#import "BWBaseEssenceViewController.h"
 
 @interface BWNewVC ()
 
@@ -49,29 +44,35 @@
 //添加所有子控制器
 - (void)addAllChildVC {
     //全部
-    BWAllViewController *allVC = [[BWAllViewController alloc] init];
+    BWBaseEssenceViewController *allVC = [[BWBaseEssenceViewController alloc] init];
+    allVC.type = @(BWTopicItemTypeAll);
     allVC.title = @"全部";
     [self addChildViewController:allVC];
     
     //视频
-    BWVideoController *videoVC = [[BWVideoController alloc] init];
+    BWBaseEssenceViewController *videoVC = [[BWBaseEssenceViewController alloc] init];
+    videoVC.type = @(BWTopicItemTypeVideo);
     videoVC.title = @"视频";
     [self addChildViewController:videoVC];
     
     //声音
-    BWVoiceController *voiceVC = [[BWVoiceController alloc] init];
+    BWBaseEssenceViewController *voiceVC = [[BWBaseEssenceViewController alloc] init];
+    voiceVC.type = @(BWTopicItemTypeVoice);
     voiceVC.title = @"声音";
     [self addChildViewController:voiceVC];
     
     //图片
-    BWPictureController *pictureVC = [[BWPictureController alloc] init];
+    BWBaseEssenceViewController *pictureVC = [[BWBaseEssenceViewController alloc] init];
+    pictureVC.type = @(BWTopicItemTypePicture);
     pictureVC.title = @"图片";
     [self addChildViewController:pictureVC];
     
     //段子
-    BWTextViewController *textVC = [[BWTextViewController alloc] init];
+    BWBaseEssenceViewController *textVC = [[BWBaseEssenceViewController alloc] init];
+    textVC.type = @(BWTopicItemTypeText);
     textVC.title = @"段子";
     [self addChildViewController:textVC];
 }
+
 
 @end
