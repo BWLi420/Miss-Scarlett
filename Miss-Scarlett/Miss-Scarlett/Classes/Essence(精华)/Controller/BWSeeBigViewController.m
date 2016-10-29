@@ -9,6 +9,7 @@
 #import "BWSeeBigViewController.h"
 #import "BWTopicItem.h"
 #import <Photos/Photos.h>
+#import "BWPhotoManager.h"
 
 #import <UIImageView+WebCache.h>
 #import <SVProgressHUD.h>
@@ -76,11 +77,26 @@
         [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
             //授权完成保存
             if (status == PHAuthorizationStatusAuthorized) {
-                [self savePhoto];
+                [BWPhotoManager savePhoto:self.imageView.image albumTitle:title completionHandler:^(BOOL success, NSError *error) {
+                    
+                    if (success) {
+                        [SVProgressHUD showSuccessWithStatus:@"保存成功"];
+                    }else {
+                        [SVProgressHUD showErrorWithStatus:@"保存失败"];
+                    }
+                }];
             }
         }];
     }else if (status == PHAuthorizationStatusAuthorized) {
-        [self savePhoto];
+        
+        [BWPhotoManager savePhoto:self.imageView.image albumTitle:title completionHandler:^(BOOL success, NSError *error) {
+            
+            if (success) {
+                [SVProgressHUD showSuccessWithStatus:@"保存成功"];
+            }else {
+                [SVProgressHUD showErrorWithStatus:@"保存失败"];
+            }
+        }];
     }else {
         //无授权，提示用户打开授权
         [SVProgressHUD showSuccessWithStatus:@"进入设置界面->当前应用->允许访问相册"];
@@ -95,61 +111,5 @@
 //        [SVProgressHUD showSuccessWithStatus:@"保存成功"];
 //    }
 //}
-
-#pragma mark - 获取之前相册
-- (PHAssetCollection *)fetchAssetColletion:(NSString *)albumTitle {
-    /** 
-     PHAssetCollectionTypeAlbum      = 1,
-     PHAssetCollectionTypeSmartAlbum = 2,
-     PHAssetCollectionTypeMoment     = 3,
-     */
-    PHFetchResult *fetchResult = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
-    for (PHAssetCollection *assetCollection in fetchResult) {
-        if ([assetCollection.localizedTitle isEqualToString:title]) {
-            return assetCollection;
-        }
-    }
-    return nil;
-}
-
-#pragma mark - 保存图片到自定义相册
-- (void)savePhoto {
-    //自定义相册，必须导入 <Photos/Photos.h> 框架
-    
-//    PHPhotoLibrary：相簿（所有相册集合）
-//    PHAsset:图片
-//    PHAssetCollection:相册，所有相片集合
-//    PHAssetChangeRequest:创建，修改，删除图片
-//    PHAssetCollectionChangeRequest:创建，修改，删除相册
-    
-    [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
-        //判断之前是否有相同的相册，获取
-        PHAssetCollection *oldCollection = [self fetchAssetColletion:title];
-        
-        PHAssetCollectionChangeRequest *assetCollection = nil;
-        if (oldCollection) {
-            
-            assetCollection = [PHAssetCollectionChangeRequest changeRequestForAssetCollection:oldCollection];
-        }else {
-            
-            //创建自定义相册
-            assetCollection = [PHAssetCollectionChangeRequest creationRequestForAssetCollectionWithTitle:title];
-        }
-        
-        //保存图片到系统相册
-        PHAssetChangeRequest *assetChange = [PHAssetChangeRequest creationRequestForAssetFromImage:self.imageView.image];
-        //将保存的图片添加到自定义相册
-        PHObjectPlaceholder *placeholder = [assetChange placeholderForCreatedAsset];
-        [assetCollection addAssets:@[placeholder]];//添加的是 NSFastEnumeration 类型，相当于数组
-        
-    } completionHandler:^(BOOL success, NSError * _Nullable error) {
-        //完成后调用
-        if (error) {
-            [SVProgressHUD showErrorWithStatus:@"保存失败"];
-        }else {
-            [SVProgressHUD showSuccessWithStatus:@"保存成功"];
-        }
-    }];
-}
 
 @end

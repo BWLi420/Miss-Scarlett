@@ -39,6 +39,7 @@
 		163058AF1DB25FA0000D914E /* BWFriendTrendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 163058AE1DB25FA0000D914E /* BWFriendTrendVC.m */; };
 		163058B21DB25FCF000D914E /* BWMeTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 163058B11DB25FCF000D914E /* BWMeTabVC.m */; };
 		163058B61DB26D16000D914E /* UIImage+BWImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 163058B51DB26D16000D914E /* UIImage+BWImage.m */; };
+		166BE5DE1DC4B7BF00C5E8F3 /* BWPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 166BE5DD1DC4B7BF00C5E8F3 /* BWPhotoManager.m */; };
 		167DF1BA1DB374DF0042640C /* UIBarButtonItem+BWItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 167DF1B91DB374DF0042640C /* UIBarButtonItem+BWItem.m */; };
 		167DF1C11DB393DD0042640C /* BWSettingTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 167DF1C01DB393DD0042640C /* BWSettingTabVC.m */; };
 		167DF1C41DB397980042640C /* BWNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 167DF1C31DB397980042640C /* BWNavController.m */; };
@@ -147,6 +148,8 @@
 		163058B41DB26D16000D914E /* UIImage+BWImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BWImage.h"; sourceTree = "<group>"; };
 		163058B51DB26D16000D914E /* UIImage+BWImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BWImage.m"; sourceTree = "<group>"; };
 		163058B71DB26DAC000D914E /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		166BE5DC1DC4B7BF00C5E8F3 /* BWPhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWPhotoManager.h; sourceTree = "<group>"; };
+		166BE5DD1DC4B7BF00C5E8F3 /* BWPhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWPhotoManager.m; sourceTree = "<group>"; };
 		167DF1B81DB374DF0042640C /* UIBarButtonItem+BWItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BWItem.h"; sourceTree = "<group>"; };
 		167DF1B91DB374DF0042640C /* UIBarButtonItem+BWItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BWItem.m"; sourceTree = "<group>"; };
 		167DF1BF1DB393DD0042640C /* BWSettingTabVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWSettingTabVC.h; sourceTree = "<group>"; };
@@ -245,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				160A33F01DBDB83E001EF255 /* File */,
+				166BE5DB1DC4B6FA00C5E8F3 /* Photo */,
 			);
 			path = "Utils(业务类)";
 			sourceTree = "<group>";
@@ -626,6 +630,15 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		166BE5DB1DC4B6FA00C5E8F3 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				166BE5DC1DC4B7BF00C5E8F3 /* BWPhotoManager.h */,
+				166BE5DD1DC4B7BF00C5E8F3 /* BWPhotoManager.m */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
 		167DF1BB1DB393B80042640C /* Setting(设置) */ = {
 			isa = PBXGroup;
 			children = (
@@ -955,6 +968,7 @@
 				160A34061DBE302F001EF255 /* BWBaseTableViewController.m in Sources */,
 				163058A31DB25D8C000D914E /* BWTabBarController.m in Sources */,
 				16DCD8551DBB2B0B00B879B3 /* BWCollectionViewCell.m in Sources */,
+				166BE5DE1DC4B7BF00C5E8F3 /* BWPhotoManager.m in Sources */,
 				16ABD2C41DBF890400A4B31D /* BWBaseTopicView.m in Sources */,
 				16D656721DB65E5500E74ECE /* BWSubTagItem.m in Sources */,
 				162344371DB87757000EB4C6 /* BWFastLoginButton.m in Sources */,

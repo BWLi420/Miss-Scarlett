@@ -5,5 +5,6 @@ pod 'MJExtension', '~> 3.0.13'
 pod 'SDWebImage', '~> 3.7.4’
 pod 'SVProgressHUD', '~> 2.0.3'
 pod 'DACircularProgress', '~> 2.3.1'
+pod 'MJRefresh', '~> 3.1.12'
 
 end
