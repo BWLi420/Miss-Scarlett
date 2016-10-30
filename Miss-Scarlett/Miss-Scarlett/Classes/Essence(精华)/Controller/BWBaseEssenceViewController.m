@@ -69,6 +69,13 @@ static NSString *const ID = @"cell";
     
     //取消 cell 之间的分割线
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    //发布通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reload) name:@"repeatClickTab" object:nil];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 //添加上下拉刷新
@@ -88,6 +95,7 @@ static NSString *const ID = @"cell";
 
 #pragma mark - 请求数据
 - (void)loadData {
+    //取消之前的请求
     [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];

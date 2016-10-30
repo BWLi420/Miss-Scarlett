@@ -17,8 +17,8 @@
 
 #import "UIImage+BWImage.h"
 
-@interface BWTabBarController ()
-
+@interface BWTabBarController () <UITabBarControllerDelegate>
+@property (weak, nonatomic) UIViewController *selVC;
 @end
 
 @implementation BWTabBarController
@@ -58,6 +58,9 @@
     
     //创建发布按钮，实现按钮的高亮
     [self addPublishBtn];
+    
+    self.delegate = self;
+    self.selVC = self.childViewControllers[0];
 }
 
 //添加子控制器
@@ -144,5 +147,16 @@
 - (void)publishBtnClick:(UIButton *)publishBtn {
     
     NSLog(@"发布");
+}
+
+#pragma mark - UITabBarControllerDelegate
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    
+    //重复点击
+    if (self.selVC == viewController) {
+        //通知，刷新当前控制器
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"repeatClickTab" object:nil];
+    }
+    self.selVC = viewController;
 }
 @end
