@@ -67,6 +67,7 @@ static NSString *const ID = @"collectionCell";
     
     //创建 collectionView，指定流水布局
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
+    collectionView.scrollsToTop = NO;
     collectionView.dataSource = self;
     collectionView.delegate = self;
     
@@ -88,6 +89,7 @@ static NSString *const ID = @"collectionCell";
 - (void)setUpTopTitle {
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, screenW, 30)];
     scrollView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.7];
+    scrollView.scrollsToTop = NO;
     [self.view addSubview:scrollView];
     self.topScrollView = scrollView;
 }

@@ -84,6 +84,7 @@ static NSString *const ID = @"collectionViewCell";
     
     //创建 collectionView
     UICollectionView *collectionView = [self setUpCollectionView:flowLayout];
+    collectionView.scrollsToTop = NO;
     
     self.tableView.tableFooterView = collectionView;
 }

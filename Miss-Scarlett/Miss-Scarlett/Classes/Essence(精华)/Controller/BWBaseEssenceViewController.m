@@ -69,6 +69,7 @@ static NSString *const ID = @"cell";
     
     //取消 cell 之间的分割线
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(99, 0, 49, 0);
     
     //发布通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reload) name:@"repeatClickTab" object:nil];
@@ -192,7 +193,7 @@ static NSString *const ID = @"cell";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return [self.topicsVM[indexPath.row] cellH] + 50;
+    return [self.topicsVM[indexPath.row] cellH] + 10;
 }
 
 @end

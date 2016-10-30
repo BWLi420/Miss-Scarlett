@@ -29,7 +29,7 @@
     if (item.type != BWTopicItemTypeText) {
         
         CGFloat middleH = 1.0 * textW / item.width * item.height;
-        if (middleH > screenH) {
+        if (middleH > 300) {
             middleH = 300;
             item.is_bigPicture = YES;
         }

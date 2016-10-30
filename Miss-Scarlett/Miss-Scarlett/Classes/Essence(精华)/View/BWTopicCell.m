@@ -30,7 +30,7 @@
 
 - (void)setFrame:(CGRect)frame {
     frame.origin.y += 10;
-    frame.size.height -= 50;
+    frame.size.height -= 10;
     
     [super setFrame:frame];
 }
