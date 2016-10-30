@@ -25,6 +25,9 @@
 		162A8A651DC1FE200051F053 /* BWSeeBigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 162A8A631DC1FE200051F053 /* BWSeeBigViewController.xib */; };
 		162E74CB1DC61ABE0062F21D /* BWRecommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 162E74C91DC61ABE0062F21D /* BWRecommandViewController.m */; };
 		162E74CC1DC61ABE0062F21D /* BWRecommandViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 162E74CA1DC61ABE0062F21D /* BWRecommandViewController.xib */; };
+		162E74CF1DC628B60062F21D /* BWCategoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 162E74CE1DC628B60062F21D /* BWCategoryItem.m */; };
+		162E74D31DC628F90062F21D /* BWCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 162E74D11DC628F90062F21D /* BWCategoryCell.m */; };
+		162E74D41DC628F90062F21D /* BWCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 162E74D21DC628F90062F21D /* BWCategoryCell.xib */; };
 		163058771DB257DD000D914E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 163058761DB257DD000D914E /* Assets.xcassets */; };
 		1630587A1DB257DD000D914E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 163058781DB257DD000D914E /* LaunchScreen.storyboard */; };
 		1630589F1DB25C29000D914E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 163058841DB25C29000D914E /* AppDelegate.m */; };
@@ -117,6 +120,11 @@
 		162E74C81DC61ABE0062F21D /* BWRecommandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWRecommandViewController.h; sourceTree = "<group>"; };
 		162E74C91DC61ABE0062F21D /* BWRecommandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWRecommandViewController.m; sourceTree = "<group>"; };
 		162E74CA1DC61ABE0062F21D /* BWRecommandViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWRecommandViewController.xib; sourceTree = "<group>"; };
+		162E74CD1DC628B60062F21D /* BWCategoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCategoryItem.h; sourceTree = "<group>"; };
+		162E74CE1DC628B60062F21D /* BWCategoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCategoryItem.m; sourceTree = "<group>"; };
+		162E74D01DC628F90062F21D /* BWCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCategoryCell.h; sourceTree = "<group>"; };
+		162E74D11DC628F90062F21D /* BWCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCategoryCell.m; sourceTree = "<group>"; };
+		162E74D21DC628F90062F21D /* BWCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWCategoryCell.xib; sourceTree = "<group>"; };
 		163058671DB257DC000D914E /* Miss-Scarlett.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Miss-Scarlett.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		163058761DB257DD000D914E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		163058791DB257DD000D914E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -410,6 +418,8 @@
 		1630588B1DB25C29000D914E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				162E74CD1DC628B60062F21D /* BWCategoryItem.h */,
+				162E74CE1DC628B60062F21D /* BWCategoryItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -424,6 +434,9 @@
 				162344361DB87757000EB4C6 /* BWFastLoginButton.m */,
 				162344381DB87CEE000EB4C6 /* BWTextField.h */,
 				162344391DB87CEE000EB4C6 /* BWTextField.m */,
+				162E74D01DC628F90062F21D /* BWCategoryCell.h */,
+				162E74D11DC628F90062F21D /* BWCategoryCell.m */,
+				162E74D21DC628F90062F21D /* BWCategoryCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -841,6 +854,7 @@
 				162E74CC1DC61ABE0062F21D /* BWRecommandViewController.xib in Resources */,
 				16D656571DB637BB00E74ECE /* BWADViewController.xib in Resources */,
 				162A8A5D1DC1A7880051F053 /* BWBottomView.xib in Resources */,
+				162E74D41DC628F90062F21D /* BWCategoryCell.xib in Resources */,
 				16D656661DB639EC00E74ECE /* LaunchImage@2x.png in Resources */,
 				162A8A581DC199140051F053 /* BWCmtView.xib in Resources */,
 				16AD1FC61DC0CE0E003833F5 /* BWVideoView.xib in Resources */,
@@ -917,6 +931,7 @@
 				167DF1C11DB393DD0042640C /* BWSettingTabVC.m in Sources */,
 				162A8A601DC1F4F40051F053 /* NSDate+BWDate.m in Sources */,
 				16ABD2C01DBF83E700A4B31D /* BWTopicViewModel.m in Sources */,
+				162E74D31DC628F90062F21D /* BWCategoryCell.m in Sources */,
 				162A8A531DC190830051F053 /* BWUserItem.m in Sources */,
 				16D656691DB6449C00E74ECE /* AFHTTPSessionManager+BWManager.m in Sources */,
 				16AD1FCD1DC0E2B9003833F5 /* BWVoiceView.m in Sources */,
@@ -947,6 +962,7 @@
 				160A34061DBE302F001EF255 /* BWBaseTableViewController.m in Sources */,
 				163058A31DB25D8C000D914E /* BWTabBarController.m in Sources */,
 				16DCD8551DBB2B0B00B879B3 /* BWCollectionViewCell.m in Sources */,
+				162E74CF1DC628B60062F21D /* BWCategoryItem.m in Sources */,
 				166BE5DE1DC4B7BF00C5E8F3 /* BWPhotoManager.m in Sources */,
 				16ABD2C41DBF890400A4B31D /* BWBaseTopicView.m in Sources */,
 				16D656721DB65E5500E74ECE /* BWSubTagItem.m in Sources */,
