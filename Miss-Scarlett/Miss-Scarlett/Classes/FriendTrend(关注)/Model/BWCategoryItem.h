@@ -11,5 +11,6 @@
 @interface BWCategoryItem : NSObject
 
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *id;
 
 @end

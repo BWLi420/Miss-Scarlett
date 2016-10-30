@@ -28,6 +28,9 @@
 		162E74CF1DC628B60062F21D /* BWCategoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 162E74CE1DC628B60062F21D /* BWCategoryItem.m */; };
 		162E74D31DC628F90062F21D /* BWCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 162E74D11DC628F90062F21D /* BWCategoryCell.m */; };
 		162E74D41DC628F90062F21D /* BWCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 162E74D21DC628F90062F21D /* BWCategoryCell.xib */; };
+		162E74D81DC62EF70062F21D /* BWUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 162E74D61DC62EF70062F21D /* BWUserCell.m */; };
+		162E74D91DC62EF70062F21D /* BWUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 162E74D71DC62EF70062F21D /* BWUserCell.xib */; };
+		162E74DC1DC62F840062F21D /* BWUserDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 162E74DB1DC62F840062F21D /* BWUserDataItem.m */; };
 		163058771DB257DD000D914E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 163058761DB257DD000D914E /* Assets.xcassets */; };
 		1630587A1DB257DD000D914E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 163058781DB257DD000D914E /* LaunchScreen.storyboard */; };
 		1630589F1DB25C29000D914E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 163058841DB25C29000D914E /* AppDelegate.m */; };
@@ -125,6 +128,11 @@
 		162E74D01DC628F90062F21D /* BWCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCategoryCell.h; sourceTree = "<group>"; };
 		162E74D11DC628F90062F21D /* BWCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCategoryCell.m; sourceTree = "<group>"; };
 		162E74D21DC628F90062F21D /* BWCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWCategoryCell.xib; sourceTree = "<group>"; };
+		162E74D51DC62EF70062F21D /* BWUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWUserCell.h; sourceTree = "<group>"; };
+		162E74D61DC62EF70062F21D /* BWUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWUserCell.m; sourceTree = "<group>"; };
+		162E74D71DC62EF70062F21D /* BWUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWUserCell.xib; sourceTree = "<group>"; };
+		162E74DA1DC62F840062F21D /* BWUserDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWUserDataItem.h; sourceTree = "<group>"; };
+		162E74DB1DC62F840062F21D /* BWUserDataItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWUserDataItem.m; sourceTree = "<group>"; };
 		163058671DB257DC000D914E /* Miss-Scarlett.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Miss-Scarlett.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		163058761DB257DD000D914E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		163058791DB257DD000D914E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -420,6 +428,8 @@
 			children = (
 				162E74CD1DC628B60062F21D /* BWCategoryItem.h */,
 				162E74CE1DC628B60062F21D /* BWCategoryItem.m */,
+				162E74DA1DC62F840062F21D /* BWUserDataItem.h */,
+				162E74DB1DC62F840062F21D /* BWUserDataItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -437,6 +447,9 @@
 				162E74D01DC628F90062F21D /* BWCategoryCell.h */,
 				162E74D11DC628F90062F21D /* BWCategoryCell.m */,
 				162E74D21DC628F90062F21D /* BWCategoryCell.xib */,
+				162E74D51DC62EF70062F21D /* BWUserCell.h */,
+				162E74D61DC62EF70062F21D /* BWUserCell.m */,
+				162E74D71DC62EF70062F21D /* BWUserCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -844,6 +857,7 @@
 				163058771DB257DD000D914E /* Assets.xcassets in Resources */,
 				162A8A651DC1FE200051F053 /* BWSeeBigViewController.xib in Resources */,
 				16D656621DB639EC00E74ECE /* LaunchImage-700@2x.png in Resources */,
+				162E74D91DC62EF70062F21D /* BWUserCell.xib in Resources */,
 				16AD1FCF1DC0E2DC003833F5 /* BWVoiceView.xib in Resources */,
 				16DCD8811DBB8BFF00B879B3 /* BWWKWebViewController.xib in Resources */,
 				16D656641DB639EC00E74ECE /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
@@ -921,6 +935,7 @@
 				16ABD2B31DBF6EE100A4B31D /* BWTopicCell.m in Sources */,
 				163058AF1DB25FA0000D914E /* BWFriendTrendVC.m in Sources */,
 				16ABD2B71DBF72EC00A4B31D /* BWTopTopicView.m in Sources */,
+				162E74D81DC62EF70062F21D /* BWUserCell.m in Sources */,
 				163058B21DB25FCF000D914E /* BWMeTabVC.m in Sources */,
 				167DF1BA1DB374DF0042640C /* UIBarButtonItem+BWItem.m in Sources */,
 				16DCD84F1DBB220100B879B3 /* UITextField+BWPlacehodler.m in Sources */,
@@ -958,6 +973,7 @@
 				163058A01DB25C29000D914E /* main.m in Sources */,
 				162A8A5B1DC1A6C00051F053 /* BWBottomView.m in Sources */,
 				16ABD2C71DBF89D500A4B31D /* BWPictureView.m in Sources */,
+				162E74DC1DC62F840062F21D /* BWUserDataItem.m in Sources */,
 				167DF1C41DB397980042640C /* BWNavController.m in Sources */,
 				160A34061DBE302F001EF255 /* BWBaseTableViewController.m in Sources */,
 				163058A31DB25D8C000D914E /* BWTabBarController.m in Sources */,
