@@ -50,17 +50,22 @@ static NSString *const ID = @"cell";
     return _manager;
 }
 
+- (void)reload {
+    [self.tableView.mj_header beginRefreshing];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.backgroundColor = [UIColor lightGrayColor];
     
     //只要通过注册创建 cell，就会调用 initWithStyle
     [self.tableView registerClass:[BWTopicCell class] forCellReuseIdentifier:ID];
-    //请求数据
-    [self loadData];
     
     //添加上下拉刷新
     [self setUpRefresh];
+    
+    //初始请求数据
+    [self.tableView.mj_header beginRefreshing];
     
     //取消 cell 之间的分割线
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;

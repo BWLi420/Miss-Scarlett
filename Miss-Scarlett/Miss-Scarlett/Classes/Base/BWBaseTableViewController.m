@@ -7,6 +7,7 @@
 //
 
 #import "BWBaseTableViewController.h"
+#import "BWBaseEssenceViewController.h"
 
 static NSString *const ID = @"collectionCell";
 
@@ -133,14 +134,29 @@ static NSString *const ID = @"collectionCell";
     }
 }
 
+#pragma mark - 标题点击
 - (void)btnClick:(UIButton *)btn {
+   
+    NSInteger i = btn.tag;
+    if (btn == self.selectedBtn) {
+        //重复点击当前控制器
+        BWBaseEssenceViewController *VC = self.childViewControllers[i];
+        //刷新当前数据
+        [VC reload];
+    }
+    
+    [self selBtn:btn];
+    //移动要显示的 view
+    self.bottomCollectionView.contentOffset = CGPointMake(i * screenW, 0);
+    
+}
+
+#pragma mark - 选中标题
+- (void)selBtn:(UIButton *)btn {
+    
     self.selectedBtn.selected = NO;
     btn.selected = YES;
     self.selectedBtn = btn;
-    
-    //移动要显示的 view
-    NSInteger i = btn.tag;
-    self.bottomCollectionView.contentOffset = CGPointMake(i * screenW, 0);
     
     //移动下划线的位置
     [UIView animateWithDuration:0.25 animations:^{
