@@ -8,6 +8,7 @@
 
 #import "BWFriendTrendVC.h"
 #import "BWLoginRegVC.h"
+#import "BWRecommandViewController.h"
 
 @interface BWFriendTrendVC ()
 
@@ -28,7 +29,7 @@
     
     self.navigationItem.title = @"我的关注";
     //左边视图
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"friendsRecommentIcon"] highImage:[UIImage imageNamed:@"friendsRecommentIcon-click"] target:nil action:nil];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"friendsRecommentIcon"] highImage:[UIImage imageNamed:@"friendsRecommentIcon-click"] target:self action:@selector(leftClick)];
 }
 
 - (IBAction)regLoginBtnClick:(id)sender {
@@ -39,4 +40,10 @@
     
     [self presentViewController:loginRegVC animated:YES completion:nil];
 }
+
+- (void)leftClick {
+    BWRecommandViewController *recommandVC = [[BWRecommandViewController alloc] init];
+    [self.navigationController pushViewController:recommandVC animated:YES];
+}
+
 @end

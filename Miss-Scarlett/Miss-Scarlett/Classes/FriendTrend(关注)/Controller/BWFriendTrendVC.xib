@@ -54,7 +54,7 @@
                 <constraint firstItem="jDO-3N-max" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="bCX-rg-Vg3"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
-            <point key="canvasLocation" x="-400" y="33"/>
+            <point key="canvasLocation" x="6" y="-68"/>
         </view>
     </objects>
     <resources>

@@ -68,6 +68,7 @@ static NSString *const ID = @"collectionCell";
     //创建 collectionView，指定流水布局
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
     collectionView.scrollsToTop = NO;
+//    collectionView.prefetchingEnabled = NO;
     collectionView.dataSource = self;
     collectionView.delegate = self;
     
