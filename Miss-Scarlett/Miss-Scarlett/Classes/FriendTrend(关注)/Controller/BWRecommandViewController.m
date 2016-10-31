@@ -13,6 +13,7 @@
 #import "BWUserDataItem.h"
 
 #import <MJExtension.h>
+#import <MJRefresh.h>
 
 static NSString *const cateGoryID = @"cateGoryID";
 static NSString *const userID = @"userID";
@@ -30,6 +31,18 @@ static NSString *const userID = @"userID";
     [super viewDidLoad];
     
     self.navigationController.title = @"推荐关注";
+    //初始化
+    [self initialization];
+    
+    //加载左边数据
+    [self loadLeftData];
+    
+    //给右边用户列表添加上下拉刷新
+    [self setUpRefresh];
+}
+
+//初始化
+- (void)initialization {
     
     self.categoryTableView.dataSource = self;
     self.categoryTableView.delegate = self;
@@ -44,11 +57,20 @@ static NSString *const userID = @"userID";
     
     self.categoryTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
     self.userTableView.contentInset = self.categoryTableView.contentInset;
-    
-    //加载左边数据
-    [self loadLeftData];
 }
 
+//给右边用户列表添加上下拉刷新
+- (void)setUpRefresh {
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadRightData)];
+    header.automaticallyChangeAlpha = YES;
+    self.userTableView.mj_header = header;
+    
+    MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreRightData)];
+    footer.automaticallyHidden = YES;
+    self.userTableView.mj_footer = footer;
+}
+
+//加载左边数据
 - (void)loadLeftData {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager BWMangeer];
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
@@ -73,7 +95,11 @@ static NSString *const userID = @"userID";
     }];
 }
 
+//加载右边数据
 - (void)loadRightData {
+    
+    self.selectedCategory.page = 1;
+    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager BWMangeer];
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
@@ -83,10 +109,62 @@ static NSString *const userID = @"userID";
     
     [manager GET:BASEURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
+        //下一次要加载的数据页
+        self.selectedCategory.page ++;
+        //记录当前分类的总页数
+        self.selectedCategory.total_page = [responseObject[@"total_page"] integerValue];
+        
+        //结束下拉刷新
+        [self.userTableView.mj_header endRefreshing];
+        //结束上拉刷新
+        [self.userTableView.mj_footer endRefreshing];
+        
         self.selectedCategory.users = [BWUserDataItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
         //刷新数据
         [self.userTableView reloadData];
+        
+        //如果超出总页数则隐藏上拉刷新
+        if (self.selectedCategory.page > self.selectedCategory.total_page) {
+            self.userTableView.mj_footer.hidden = YES;
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@", error);
+    }];
+}
+
+//加载更多右边数据
+- (void)loadMoreRightData {
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager BWMangeer];
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"a"] = @"list";
+    parameters[@"c"] = @"subscribe";
+    // 获取当前分类ID
+    parameters[@"category_id"] = self.selectedCategory.id;
+    //获取当前页码对应数据
+    parameters[@"page"] = @(self.selectedCategory.page);
+    
+    [manager GET:BASEURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        //下一次要加载的数据页
+        self.selectedCategory.page ++;
+        
+        //结束下拉刷新
+        [self.userTableView.mj_header endRefreshing];
+        //结束上拉刷新
+        [self.userTableView.mj_footer endRefreshing];
+        
+        NSArray *arr = [BWUserDataItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        [self.selectedCategory.users addObjectsFromArray:arr];
+        //刷新数据
+        [self.userTableView reloadData];
+        
+        //如果超出总页数则隐藏上拉刷新
+        if (self.selectedCategory.page > self.selectedCategory.total_page) {
+            self.userTableView.mj_footer.hidden = YES;
+        }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);

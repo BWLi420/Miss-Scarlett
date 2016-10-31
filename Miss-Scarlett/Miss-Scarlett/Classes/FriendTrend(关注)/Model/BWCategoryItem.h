@@ -13,6 +13,9 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *id;
 /** 保存已加载的对应右边的信息 */
-@property (strong, nonatomic) NSArray *users;
+@property (strong, nonatomic) NSMutableArray *users;
+
+@property (nonatomic, assign) NSInteger page;
+@property (nonatomic, assign) NSInteger total_page;
 
 @end
