@@ -12,5 +12,7 @@
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *id;
+/** 保存已加载的对应右边的信息 */
+@property (strong, nonatomic) NSArray *users;
 
 @end

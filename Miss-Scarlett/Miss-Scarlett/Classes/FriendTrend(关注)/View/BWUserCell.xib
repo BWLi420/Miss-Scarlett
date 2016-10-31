@@ -21,7 +21,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="EzE-Ay-1oG"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -56,6 +56,7 @@
                 <constraint firstItem="cq0-n7-b8i" firstAttribute="bottom" secondItem="qX7-zj-4WH" secondAttribute="bottom" id="inJ-L6-L9A"/>
                 <constraint firstItem="qX7-zj-4WH" firstAttribute="leading" secondItem="ZMw-FT-w3X" secondAttribute="leading" constant="20" id="jJ1-NW-lXh"/>
                 <constraint firstAttribute="bottom" secondItem="Qwa-nS-nTc" secondAttribute="bottom" constant="20" id="mun-TE-5g5"/>
+                <constraint firstItem="Qwa-nS-nTc" firstAttribute="leading" secondItem="nN7-VV-aCh" secondAttribute="trailing" id="zSN-3C-duJ"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -64,7 +65,7 @@
                 <outlet property="nameLable" destination="nN7-VV-aCh" id="4Pf-48-mz7"/>
                 <outlet property="numLable" destination="cq0-n7-b8i" id="Gbn-lC-fhg"/>
             </connections>
-            <point key="canvasLocation" x="-278" y="-45"/>
+            <point key="canvasLocation" x="-278.5" y="-45"/>
         </view>
     </objects>
     <resources>

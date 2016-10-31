@@ -21,7 +21,6 @@ static NSString *const userID = @"userID";
 @property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
 @property (weak, nonatomic) IBOutlet UITableView *userTableView;
 @property (strong, nonatomic) NSArray *categorys;
-@property (strong, nonatomic) NSArray *users;
 @property (strong, nonatomic) BWCategoryItem *selectedCategory;
 @end
 
@@ -35,6 +34,7 @@ static NSString *const userID = @"userID";
     self.categoryTableView.dataSource = self;
     self.categoryTableView.delegate = self;
     self.userTableView.dataSource = self;
+    self.userTableView.delegate = self;
     
     [self.categoryTableView registerNib:[UINib nibWithNibName:@"BWCategoryCell" bundle:nil] forCellReuseIdentifier:cateGoryID];
     [self.userTableView registerNib:[UINib nibWithNibName:@"BWUserCell" bundle:nil] forCellReuseIdentifier:userID];
@@ -62,6 +62,12 @@ static NSString *const userID = @"userID";
         //刷新数据
         [self.categoryTableView reloadData];
         
+        //默认选中第0行
+        NSIndexPath *index = [NSIndexPath indexPathForRow:0 inSection:0];
+        [self.categoryTableView selectRowAtIndexPath:index animated:YES scrollPosition:UITableViewScrollPositionNone];
+        //手动加载第0行对应的数据
+        [self tableView:self.categoryTableView didSelectRowAtIndexPath:index];
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
     }];
@@ -77,7 +83,7 @@ static NSString *const userID = @"userID";
     
     [manager GET:BASEURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        self.users = [BWUserDataItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        self.selectedCategory.users = [BWUserDataItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
         //刷新数据
         [self.userTableView reloadData];
@@ -92,8 +98,16 @@ static NSString *const userID = @"userID";
     if (tableView == self.categoryTableView) {
         //记录当前选择的分类模型
         self.selectedCategory = self.categorys[indexPath.row];
-        //根据点击的模型，加载右边的数据
-        [self loadRightData];
+        
+        //刷新数据
+        [self.userTableView reloadData];
+        
+        //判断之前是否已经加载过数据
+        if (self.selectedCategory.users.count == 0) {
+            
+            //根据点击的模型，加载右边的数据
+            [self loadRightData];
+        }
     }
 }
 
@@ -109,7 +123,7 @@ static NSString *const userID = @"userID";
     if (tableView == self.categoryTableView) {
         return self.categorys.count;
     }
-    return self.users.count;
+    return self.selectedCategory.users.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -121,7 +135,7 @@ static NSString *const userID = @"userID";
     }
     
     BWUserCell *cell = [tableView dequeueReusableCellWithIdentifier:userID];
-    cell.item = self.users[indexPath.row];
+    cell.item = self.selectedCategory.users[indexPath.row];
     return cell;
 }
 
