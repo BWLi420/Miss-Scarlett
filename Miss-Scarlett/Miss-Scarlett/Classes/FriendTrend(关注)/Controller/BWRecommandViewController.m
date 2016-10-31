@@ -23,14 +23,22 @@ static NSString *const userID = @"userID";
 @property (weak, nonatomic) IBOutlet UITableView *userTableView;
 @property (strong, nonatomic) NSArray *categorys;
 @property (strong, nonatomic) BWCategoryItem *selectedCategory;
+@property (strong, nonatomic) AFHTTPSessionManager *manager;
 @end
 
 @implementation BWRecommandViewController
 
+- (AFHTTPSessionManager *)manager {
+    if (_manager == nil) {
+        _manager = [AFHTTPSessionManager BWMangeer];
+    }
+    return _manager;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationController.title = @"推荐关注";
+    self.title = @"推荐关注";
     //初始化
     [self initialization];
     
@@ -100,14 +108,14 @@ static NSString *const userID = @"userID";
     
     self.selectedCategory.page = 1;
     
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager BWMangeer];
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"subscribe";
     // 获取当前分类ID
     parameters[@"category_id"] = self.selectedCategory.id;
     
-    [manager GET:BASEURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.manager GET:BASEURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         //下一次要加载的数据页
         self.selectedCategory.page ++;
@@ -137,7 +145,7 @@ static NSString *const userID = @"userID";
 //加载更多右边数据
 - (void)loadMoreRightData {
     
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager BWMangeer];
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"subscribe";
@@ -146,7 +154,7 @@ static NSString *const userID = @"userID";
     //获取当前页码对应数据
     parameters[@"page"] = @(self.selectedCategory.page);
     
-    [manager GET:BASEURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.manager GET:BASEURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         //下一次要加载的数据页
         self.selectedCategory.page ++;
